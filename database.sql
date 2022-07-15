@@ -24,13 +24,13 @@ CREATE TABLE linkPassword(
  fechaCreacion TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
  CONSTRAINT PK_linkPassword PRIMARY KEY (idLink),
  CONSTRAINT FK_LinkUser FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
-)GO
+);
 
 CREATE TABLE Permisos(
  idPermiso INT NOT NULL AUTO_INCREMENT,
  nombre VARCHAR(40) NOT NULL,
  CONSTRAINT PK_Permisos PRIMARY KEY (idPermiso)
-)GO
+);
 
 CREATE TABLE permisosUsuario(
  idPermisoUsuario INT NOT NULL AUTO_INCREMENT,
@@ -39,19 +39,16 @@ CREATE TABLE permisosUsuario(
  CONSTRAINT PK_PermisosUsuario PRIMARY KEY (idPermisoUsuario),
  CONSTRAINT FK_UsuarioPermiso FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario),
  CONSTRAINT FK_Permiso FOREIGN KEY (idPermiso) REFERENCES Permisos(idPermiso)
-)GO
+);
 
 CREATE TABLE Asignacion(
  idAsignacion INT NOT NULL AUTO_INCREMENT,
- idEquipo INT NOT NULL,
  fechaAsignacion DATE NOT NULL,
  usuarioAsigna INT NOT NULL,
  usuarioAsignado INT NOT NULL,
  observaciones VARCHAR(MAX),
  CONSTRAINT PK_Asignacion PRIMARY KEY (idAsignacion),
  CONSTRAINT FK_UsuarioAsignado FOREIGN KEY (usuarioAsignado) REFERENCES Usuario(idUsuario), 
- CONSTRAINT FK_ActivoAsignacion FOREIGN KEY (idEquipo) REFERENCES Activo(idActivo), 
- CONSTRAINT FK_AsignacionAsignacion FOREIGN KEY (idEquipo) REFERENCES Accesorio(idAccesorio) 
 );
 
 CREATE TABLE Activo(
@@ -64,7 +61,12 @@ CREATE TABLE Activo(
  discoDuro VARCHAR(10),
  procesador VARCHAR(30),
  fechaAlta TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
- CONSTRAINT PK_Activo PRIMARY KEY (idActivo)
+ idAsignacion INT,
+ estado BIT NOT NULL,
+ usuarioBaja INT,
+ fechabaja DATE,
+ CONSTRAINT PK_Activo PRIMARY KEY (idActivo),
+ CONSTRAINT FK_ActivoAsignado FOREIGN KEY (idAsignacion) REFERENCES Asignacion(idAsignacion)
 );
 
 CREATE TABLE Accesorio(
@@ -76,5 +78,14 @@ CREATE TABLE Aplicaciones(
  idAplicacion INT NOT NULL AUTO_INCREMENT,
  nombre VARCHAR(40) NOT NULL,
  CONSTRAINT PK_Aplicaciones PRIMARY KEY (idAplicacion)
-)GO
+);
+
+CREATE TABLE ActivoAplicaciones(
+ idActivoAplicacion INT NOT NULL AUTO_INCREMENT,
+ idActivo INT NOT NULL,
+ idAplicacion INT NOT NULL,
+ CONSTRAINT PK_ActivoAplicacion PRIMARY KEY (idActivoAplicacion),
+ CONSTRAIN FK_Activo FOREIGN KEY (idActivo) REFERENCES Activo(idActivo),
+ CONSTRAIN FK_Aplicacion FOREIGN KEY (idAplicacion) REFERENCES Aplicaciones(idAplicacion)
+);
 
