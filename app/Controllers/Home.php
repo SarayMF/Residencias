@@ -6,14 +6,23 @@ class Home extends BaseController
 {
     public function index()
     { 
-        return view('login');
+        echo view('templates/header');
+        echo view('login');
+        echo view('templates/footer');
+        echo view('templates/footer_js');
     }
 
-    public function login(){
-        return view('login');
+    public function attemptLogin(){
+        echo view('templates/header');
+        echo view('login');
+        echo view('templates/footer');
+        echo view('templates/footer_js');
     }
 
     public function register(){
-        return view('register');
+        echo view('templates/header');
+        echo view('register');
+        echo view('templates/footer');
+        echo view('templates/footer_js');
     }
 }

@@ -1,7 +1,5 @@
 create database activosbd;
 
-use database activosbd;
-
 SET time_zone='-05:00';
 
 CREATE TABLE Usuario(
