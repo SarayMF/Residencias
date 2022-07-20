@@ -48,7 +48,7 @@ CREATE TABLE Asignacion(
  usuarioAsignado INT NOT NULL,
  observaciones VARCHAR(500),
  CONSTRAINT PK_Asignacion PRIMARY KEY (idAsignacion),
- CONSTRAINT FK_UsuarioAsignado FOREIGN KEY (usuarioAsignado) REFERENCES Usuario(idUsuario), 
+ CONSTRAINT FK_UsuarioAsignado FOREIGN KEY (usuarioAsignado) REFERENCES Usuario(idUsuario)
 );
 
 CREATE TABLE Activo(
@@ -85,7 +85,7 @@ CREATE TABLE ActivoAplicaciones(
  idActivo INT NOT NULL,
  idAplicacion INT NOT NULL,
  CONSTRAINT PK_ActivoAplicacion PRIMARY KEY (idActivoAplicacion),
- CONSTRAIN FK_Activo FOREIGN KEY (idActivo) REFERENCES Activo(idActivo),
- CONSTRAIN FK_Aplicacion FOREIGN KEY (idAplicacion) REFERENCES Aplicaciones(idAplicacion)
+ CONSTRAINT FK_Activo FOREIGN KEY (idActivo) REFERENCES Activo(idActivo),
+ CONSTRAINT FK_Aplicacion FOREIGN KEY (idAplicacion) REFERENCES Aplicaciones(idAplicacion)
 );
 
