@@ -2,6 +2,8 @@
 
 <?= $this->section('content')?>
 
-<h1>soy el login</h1>
+<div class="main-container">
+
+</div>
 
 <?= $this->endSection()?>
