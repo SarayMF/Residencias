@@ -4,25 +4,29 @@
             <img src="<?php echo base_url('resources/img/logo-gto.png')?>" alt="logo de juventudEsGto">
         </div>
         <br>
-        <form action="" method="post">
+        <form action="" id="formulario" method="post">
             <div class="grid-form">
-                <div class="input-group mb-3 curp">
+
+                <div class="input-group mb-3 curp" id="grupo_curp">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                        <span class="span input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
                     </div>
-                    <input type="text" class="form-control" name="curp" placeholder="Curp" aria-label="curp" aria-describedby="basic-addon1">
+                    <input type="text" class="input form-control" name="curp" id="curp" placeholder="Curp" aria-label="curp" aria-describedby="basic-addon1">
                 </div>
+
                 <div class="input-group mb-3 nombres">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-card"></i></span>
                     </div>
-                    <input type="text" class="form-control" name="nombre" placeholder="Curp" aria-label="curp" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombres" aria-label="nombre" aria-describedby="basic-addon1">
                 </div>
+
                 <div class="input-group mb-3 apellidoP">
-                    <input type="text" class="form-control" name="apellidoP" placeholder="Apellido paterno" aria-label="apellidoPaterno" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" name="apellidoP" id="apellidoP" placeholder="Apellido paterno" aria-label="apellidoPaterno" aria-describedby="basic-addon1">
                 </div>
+
                 <div class="input-group mb-3 apellidoM">
-                    <input type="text" class="form-control" name="apellidoM" placeholder="Apellido materno" aria-label="apellidoMaterno" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" name="apellidoM" id="apellidoM" placeholder="Apellido materno" aria-label="apellidoMaterno" aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-3 puesto">
@@ -49,11 +53,11 @@
                     </select>
                 </div>
 
-                <div class="input-group mb-3 correo">
+                <div class="input-group mb-3 correo" id="grupo_correo">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">@</span>
                     </div>
-                    <input type="email" class="form-control" name="correo" placeholder="Correo" aria-label="correo" aria-describedby="basic-addon1">
+                    <input type="email" class="form-control" name="correo" id="correo" placeholder="Correo" aria-label="correo" aria-describedby="basic-addon1">
                 </div>
             </div>
             <div>

@@ -60,6 +60,10 @@
     grid-row: 4;
 }
 
+.input-form-incorrect{
+    background-color: red;
+}
+
 @media only screen and (max-width: 1400px) {
     .form-container{
         width: 50%;

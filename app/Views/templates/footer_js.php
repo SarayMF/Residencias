@@ -7,6 +7,7 @@
 <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
 <script  src="<?php echo base_url('resources/js/script.js');?>" ></script>
 <script  src="<?php echo base_url('resources/slide/js/swiper.min.js');?>" ></script>
+<script  src="<?php echo base_url('resources/js/customScript.js');?>" ></script>
 
   
     <!-- Initialize Swiper -->
