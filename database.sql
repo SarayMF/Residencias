@@ -20,7 +20,7 @@ CREATE TABLE Usuario(
 CREATE TABLE linkPassword(
  idLink INT NOT NULL AUTO_INCREMENT,
  idUsuario INT NOT NULL UNIQUE,
- token VARCHAR(MAX) NOT NULL,
+ token VARCHAR(500) NOT NULL,
  fechaCreacion TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
  CONSTRAINT PK_linkPassword PRIMARY KEY (idLink),
  CONSTRAINT FK_LinkUser FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
@@ -46,7 +46,7 @@ CREATE TABLE Asignacion(
  fechaAsignacion DATE NOT NULL,
  usuarioAsigna INT NOT NULL,
  usuarioAsignado INT NOT NULL,
- observaciones VARCHAR(MAX),
+ observaciones VARCHAR(500),
  CONSTRAINT PK_Asignacion PRIMARY KEY (idAsignacion),
  CONSTRAINT FK_UsuarioAsignado FOREIGN KEY (usuarioAsignado) REFERENCES Usuario(idUsuario), 
 );
