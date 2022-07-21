@@ -10,14 +10,24 @@ const expresiones = {
 const validarFormulario = (e) => {
     switch(e.target.name){
         case "curp":
-            if(expresiones.curp.test(e.target.value)){
-                document.getElementById('grupo_curp').classList.remove('input-form-incorrecto');
-            }else{
-                document.getElementById('grupo_curp').classList.add('input-form-incorrecto');
-            }
+            let curpMayus = e.target.value;
+            e.target.value = "";
+            e.target.value = curpMayus.toUpperCase();
+            validarCampo(expresiones.curp, e.target, 'curp');
         break;
         case "correo":
+            validarCampo(expresiones.correo, e.target, 'correo');
         break;
+    }
+};
+
+const validarCampo = (expresion, input, campo) => {
+    if(expresion.test(input.value)){
+        document.getElementById(`grupo_${campo}`).classList.remove('input-form-incorrecto');
+        document.querySelector(`#grupo_${campo} .form-input-err`).classList.remove('form-input-err-activo');
+    }else{
+        document.getElementById(`grupo_${campo}`).classList.add('input-form-incorrecto');
+        document.querySelector(`#grupo_${campo} .form-input-err`).classList.add('form-input-err-activo');
     }
 }
 
