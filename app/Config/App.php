@@ -24,7 +24,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://residencias.local/';
+    public $baseURL = 'http://localhost/ResidenciasSaray/public/';
 
     /**
      * --------------------------------------------------------------------------

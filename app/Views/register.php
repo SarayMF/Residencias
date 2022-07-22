@@ -4,7 +4,7 @@
             <img src="<?php echo base_url('resources/img/logo-gto.png')?>" alt="logo de juventudEsGto">
         </div>
         <br>
-        <form action="" id="formulario" method="post">
+        <form action="<?php echo base_url('register')?>" id="formulario" method="post">
             <div class="grid-form">
 
                 <div class="curp" id="grupo_curp">
@@ -21,22 +21,22 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-card"></i></span>
                     </div>
-                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombres" aria-label="nombre" aria-describedby="basic-addon1" >
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombres" aria-label="nombre" aria-describedby="basic-addon1" required>
                 </div>
 
                 <div class="input-group mb-3 apellidoP">
-                    <input type="text" class="form-control" name="apellidoP" id="apellidoP" placeholder="Apellido paterno" aria-label="apellidoPaterno" aria-describedby="basic-addon1" >
+                    <input type="text" class="form-control" name="apellidoP" id="apellidoP" placeholder="Apellido paterno" aria-label="apellidoPaterno" aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-3 apellidoM">
-                    <input type="text" class="form-control" name="apellidoM" id="apellidoM" placeholder="Apellido materno" aria-label="apellidoMaterno" aria-describedby="basic-addon1" >
+                    <input type="text" class="form-control" name="apellidoM" id="apellidoM" placeholder="Apellido materno" aria-label="apellidoMaterno" aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-3 puesto">
                     <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01"><i class="fa fa-building"></i></label>
+                        <label class="input-group-text" for="puesto"><i class="fa fa-building"></i></label>
                     </div>
-                    <select class="custom-select" name="puesto" id="inputGroupSelect01" required>
+                    <select class="custom-select" name="puesto" id="puesto" required>
                         <option disabled="disabled" value="" selected>Selecciona puesto</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -46,9 +46,9 @@
 
                 <div class="input-group mb-3 area">
                     <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01"><i class="fa fa-briefcase"></i></label>
+                        <label class="input-group-text" for="area"><i class="fa fa-briefcase"></i></label>
                     </div>
-                    <select class="custom-select" name="area" id="inputGroupSelect01" required>
+                    <select class="custom-select" name="area" id="area" required>
                         <option disabled="disabled" value="" selected>Selecciona area</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -70,6 +70,15 @@
             <div>
                 <p class="text-muted">¿Ya tienes una cuenta? <a href="<?php echo base_url()?>">Ingresa aqui</a></p>
             </div>
+
+            <?php if(isset($error)):?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Error</strong> el curp o el correo ya estan registrados.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <?php endif;?>
 
             <div class="center">
                 <button type="submit" class="btn btn-primary center">Registrarme</button>

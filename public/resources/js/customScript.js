@@ -7,13 +7,19 @@ const expresiones = {
     correo:  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ 
 };
 
+const campos = {
+    curp: false,
+    correo: false,
+};
+
 const validarFormulario = (e) => {
     switch(e.target.name){
         case "curp":
             let curpMayus = e.target.value;
             e.target.value = "";
-            e.target.value = curpMayus.toUpperCase();
+            e.target.value = curpMayus.toUpperCase().trim();
             validarCampo(expresiones.curp, e.target, 'curp');
+            $
         break;
         case "correo":
             validarCampo(expresiones.correo, e.target, 'correo');
@@ -25,12 +31,21 @@ const validarCampo = (expresion, input, campo) => {
     if(expresion.test(input.value)){
         document.getElementById(`grupo_${campo}`).classList.remove('input-form-incorrecto');
         document.querySelector(`#grupo_${campo} .form-input-err`).classList.remove('form-input-err-activo');
+        campos[campo] = true;
     }else{
         document.getElementById(`grupo_${campo}`).classList.add('input-form-incorrecto');
         document.querySelector(`#grupo_${campo} .form-input-err`).classList.add('form-input-err-activo');
+        campos[campo] = false;
     }
 };
 
 inputs.forEach((input) => {
     input.addEventListener('blur', validarFormulario);
 });
+
+formulario.addEventListener('submit', (e) =>{
+    if(!campos.curp || !campos.correo){
+        e.preventDefault();
+        swal ( "Error" ,  "Corrige los campos erroneos" ,  "error" );
+    }
+})
