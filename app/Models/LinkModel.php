@@ -11,4 +11,6 @@ class LinkModel extends Model
 
     protected $useTimestamps = true;
     protected $createdField  = 'fechaCreacion';
+
+    protected $updatedField  = false;
 }

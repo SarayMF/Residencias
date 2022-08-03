@@ -1,0 +1,99 @@
+CRITICAL - 2022-08-03 11:27:52 --> syntax error, unexpected token "="
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-03 11:29:39 --> Unknown column 'updated_at' in 'field list'
+CRITICAL - 2022-08-03 11:29:39 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`, `updated_at`) VALUES (\'8\', \'f51e6bfd4e6f995023bc264007cf2d98c8a15ae5\', \'2022-08-03 11:29:39\', \'2022-08-03 11:29:39\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`, `updated_at`) VALUES (\'8\', \'f51e6bfd4e6f995023bc264007cf2d98c8a15ae5\', \'2022-08-03 11:29:39\', \'2022-08-03 11:29:39\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`, `updated_at`) VALUES (\'8\', \'f51e6bfd4e6f995023bc264007cf2d98c8a15ae5\', \'2022-08-03 11:29:39\', \'2022-08-03 11:29:39\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`, `updated_at`) VALUES (:idUsuario:, :token:, :fechaCreacion:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Home.php(73): CodeIgniter\BaseModel->save([...])
+10 APPPATH\Controllers\Home.php(38): App\Controllers\Home->generarLinkTemporal('MAFA971218MGTDRL03')
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->register()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-03 11:35:35 --> Unknown column 'updated_at' in 'field list'
+CRITICAL - 2022-08-03 11:35:35 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`, `updated_at`) VALUES (\'9\', \'7141ca36845960945107d318ca2e708be1059dda\', \'2022-08-03 11:35:35\', \'2022-08-03 11:35:35\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`, `updated_at`) VALUES (\'9\', \'7141ca36845960945107d318ca2e708be1059dda\', \'2022-08-03 11:35:35\', \'2022-08-03 11:35:35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`, `updated_at`) VALUES (\'9\', \'7141ca36845960945107d318ca2e708be1059dda\', \'2022-08-03 11:35:35\', \'2022-08-03 11:35:35\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`, `updated_at`) VALUES (:idUsuario:, :token:, :fechaCreacion:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Home.php(73): CodeIgniter\BaseModel->save([...])
+10 APPPATH\Controllers\Home.php(38): App\Controllers\Home->generarLinkTemporal('MAFA971218MGTDRL03')
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->register()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 11:38:32 --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+in APPPATH\Controllers\Home.php on line 98.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()', 'APPPATH\\Controllers\\Home.php', 98)
+ 2 APPPATH\Controllers\Home.php(98): mail('smadrigal@gmail.com', 'Recuperar contraseña', '<html>
+        <head>
+        <title>Generar contraseña</title>
+        </head>
+        <body>
+        <p>Hemos recibido una petición para registrarte en el portal de activos juventudesGTO.</p>
+        <p>Si hiciste esta petición, haz clic en el siguiente enlace, si no hiciste esta petición puedes ignorar este correo.</p>
+        <p>
+        <strong>Enlace para generar tu contraseña</strong><br>
+        <a href="http://localhost/ResidenciasSaray/public/registrar/contraseña/b1d5781111d84f7b3fe45a0852e59758cd7a87e5/76fad560206f5b03a94cd01d60c68e773119f92d"> Generar contraseña </a>
+        </p>
+        </body>
+        </html>', 'MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: JuventudesGTO <activosJuventudesGTO@juventudesGTO.com>
+')
+ 3 APPPATH\Controllers\Home.php(41): App\Controllers\Home->enviarEmail('smadrigal@gmail.com', 'http://localhost/ResidenciasSaray/public/registrar/contraseña/b1d5781111d84f7b3fe45a0852e59758cd7a87e5/76fad560206f5b03a94cd01d60c68e773119f92d')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->register()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 11:47:01 --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+in APPPATH\Controllers\Home.php on line 98.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()', 'APPPATH\\Controllers\\Home.php', 98)
+ 2 APPPATH\Controllers\Home.php(98): mail('smadrigal@gmail.com', 'Recuperar contraseña', '<html>
+        <head>
+        <title>Generar contraseña</title>
+        </head>
+        <body>
+        <p>Hemos recibido una petición para registrarte en el portal de activos juventudesGTO.</p>
+        <p>Si hiciste esta petición, haz clic en el siguiente enlace, si no hiciste esta petición puedes ignorar este correo.</p>
+        <p>
+        <strong>Enlace para generar tu contraseña</strong><br>
+        <a href="http://localhost/ResidenciasSaray/public/registrar/contraseña/17ba0791499db908433b80f37c5fbc89b870084b/d5ec1ef7ecf6c6cec7a17ec529fa7122b6c027c2"> Generar contraseña </a>
+        </p>
+        </body>
+        </html>', 'MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: JuventudesGTO <activosJuventudesGTO@juventudesGTO.com>
+')
+ 3 APPPATH\Controllers\Home.php(41): App\Controllers\Home->enviarEmail('smadrigal@gmail.com', 'http://localhost/ResidenciasSaray/public/registrar/contraseña/17ba0791499db908433b80f37c5fbc89b870084b/d5ec1ef7ecf6c6cec7a17ec529fa7122b6c027c2')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->register()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 12:34:53 --> explode(): Argument #2 ($string) must be of type string, array given
+in SYSTEMPATH\Router\Router.php on line 462.
+ 1 SYSTEMPATH\Router\Router.php(462): explode('::', [...])
+ 2 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('completarRegistro/fa35e192121eabf3dabf9f5ea6abdbcbc107ac3b/ebb5e37a4d9afd6a0fc4ff71c13ec98b400981dd')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('completarRegistro/fa35e192121eabf3dabf9f5ea6abdbcbc107ac3b/ebb5e37a4d9afd6a0fc4ff71c13ec98b400981dd')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

@@ -4,7 +4,7 @@
             <img src="<?php echo base_url('resources/img/logo-gto.png')?>" alt="logo de juventudEsGto">
         </div>
         <br>
-        <form action="<?php echo base_url('register')?>" id="formulario" method="post">
+        <form action="<?php echo base_url('registro')?>" id="formulario" method="post">
             <div class="grid-form">
 
                 <div class="curp" id="grupo_curp">
