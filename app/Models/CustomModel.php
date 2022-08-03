@@ -10,7 +10,7 @@ class CustomModel{
         $this->db = \Config\Database::connect();
     }
 
-    public function validateUsuario($curp, $correo){
+    public function validarUsuario($curp, $correo){
         $sql  = 'SELECT * FROM usuario WHERE curp = ?';
         $query = $this->db->query($sql, [$curp]);
         $results = $query->getResult();
@@ -29,5 +29,15 @@ class CustomModel{
         $query = $this->db->query('SELECT idUsuario FROM usuario WHERE curp = ?', [$curp]);
         $result = $query->getRow();
         return $result->idUsuario;
+    }
+
+    public function verificarToken($token){
+        $query = $this->db->query('SELECT * FROM linkpassword WHERE token = ?', [$token]);
+        $result = $query->getResult();
+        if(count($result) > 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

@@ -40,6 +40,7 @@ $routes->post('/login', 'Home::attemptLogin');
 $routes->get('/registro', 'Home::registro');
 $routes->post('/registro', 'Home::registro');
 $routes->get('/completarRegistro/(:any)/(:any)', 'Registrar::completar/$1/$2');
+$routes->post('/registrarContraseña', 'Registrar::guardarContraseña');
 
 /*
  * --------------------------------------------------------------------

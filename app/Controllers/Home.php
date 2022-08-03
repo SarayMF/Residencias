@@ -31,7 +31,7 @@ class Home extends BaseController
 
     public function registro(){
         if($this->request->getMethod() == 'post'){
-            if($this->cModel->validateUsuario($_POST['curp'], $_POST['correo'])){ 
+            if($this->cModel->validarUsuario($_POST['curp'], $_POST['correo'])){ 
                 $this->usuarioModel->save($_POST);
                 //$this->request->getPost('filter'); 
 

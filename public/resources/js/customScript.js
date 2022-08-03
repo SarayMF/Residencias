@@ -18,8 +18,8 @@ const campos = {
 const validarFormulario = (e) => {
     switch(e.target.name){
         case "curp":
-            campos[password1]=true;
-            campos[password2]=true;
+            campos["password1"]=true;
+            campos["password2"]=true;
             let curpMayus = e.target.value;
             e.target.value = "";
             e.target.value = curpMayus.toUpperCase().trim();
@@ -71,10 +71,10 @@ const validarPass2 = () => {
     if(inputPass1.value == inputPass2.value){
         document.getElementById(`grupo_password2`).classList.remove('input-form-incorrecto');
         document.querySelector(`#grupo_password2 .form-input-err`).classList.remove('form-input-err-activo');
-        campos[password2]=true;
+        campos["password2"]=true;
     }else{
         document.getElementById(`grupo_password2`).classList.add('input-form-incorrecto');
         document.querySelector(`#grupo_password2 .form-input-err`).classList.add('form-input-err-activo');
-        campos[password2]=false;
+        campos["password2"]=false;
     }
 }
