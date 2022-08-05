@@ -10,9 +10,7 @@ const expresiones = {
 
 const campos = {
     curp: false,
-    correo: false,
-    password1: false,
-    password2: false,
+    correo: false
 };
 
 const validarFormulario = (e) => {
@@ -27,15 +25,6 @@ const validarFormulario = (e) => {
         break;
         case "correo":
             validarCampo(expresiones.correo, e.target, 'correo');
-        break;
-        case "password1":
-            validarCampo(expresiones.contraseña, e.target, 'password1');
-            validarPass2();
-            campos["curp"]=true;
-            campos["correo"]=true;
-        break;
-        case "password2":
-            validarPass2();
         break;
     }
 };
@@ -58,23 +47,10 @@ inputs.forEach((input) => {
 });
 
 formulario.addEventListener('submit', (e) =>{
-    if(!campos.curp || !campos.correo || !campos.password1 || !campos.password2){
+    if(!campos.curp || !campos.correo){
         e.preventDefault();
         swal ( "Error" ,  "Corrige el formulario" ,  "error" );
     }
 })
 
-const validarPass2 = () => {
-    const inputPass1 = document.getElementById('password1');
-    const inputPass2 = document.getElementById('password2');
 
-    if(inputPass1.value == inputPass2.value){
-        document.getElementById(`grupo_password2`).classList.remove('input-form-incorrecto');
-        document.querySelector(`#grupo_password2 .form-input-err`).classList.remove('form-input-err-activo');
-        campos["password2"]=true;
-    }else{
-        document.getElementById(`grupo_password2`).classList.add('input-form-incorrecto');
-        document.querySelector(`#grupo_password2 .form-input-err`).classList.add('form-input-err-activo');
-        campos["password2"]=false;
-    }
-}

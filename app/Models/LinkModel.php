@@ -13,4 +13,9 @@ class LinkModel extends Model
     protected $createdField  = 'fechaCreacion';
 
     protected $updatedField  = false;
+
+    protected $skipValidation  = false;
+    protected $validationRules = [
+        "idUsuario" => 'required|is_unique[linkpassword.idUsuario]',
+    ]; 
 }

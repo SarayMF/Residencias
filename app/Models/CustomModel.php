@@ -31,13 +31,17 @@ class CustomModel{
         return $result->idUsuario;
     }
 
-    public function verificarToken($token){
-        $query = $this->db->query('SELECT * FROM linkpassword WHERE token = ?', [$token]);
+    public function verificarToken($token, $id){
+        $query = $this->db->query('SELECT * FROM linkpassword WHERE token = ? AND idUsuario = ?', [$token, $id] );
         $result = $query->getResult();
         if(count($result) > 0){
             return true;
         }else{
             return false;
         }
+    }
+
+    public function guardarContraseña($pass, $id){
+        $query = $this->db->query('UPDATE usuario SET password = ? WHERE idUsuario = ');
     }
 }

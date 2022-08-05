@@ -12,6 +12,7 @@ class Home extends BaseController
     private $linkModel;
 
     public function __construct(){
+        helper(['form']);
         $this->cModel = new CustomModel();  
         $this->usuarioModel = new UsuarioModel();
         $this->linkModel = new LinkModel();
@@ -31,10 +32,8 @@ class Home extends BaseController
 
     public function registro(){
         if($this->request->getMethod() == 'post'){
-            if($this->cModel->validarUsuario($_POST['curp'], $_POST['correo'])){ 
-                $this->usuarioModel->save($_POST);
+            if($this->usuarioModel->save($_POST)){
                 //$this->request->getPost('filter'); 
-
                 $link = $this->generarLinkTemporal($this->request->getPost('curp'));
                 $correo = $this->request->getPost('correo');
 
@@ -44,11 +43,8 @@ class Home extends BaseController
                         window.location.href = "'.base_url().'";
                         </script>';
             }else{
-                $data = [
-                    'error' => 1
-                ]; 
                 echo view('templates/header');
-                echo view('register',$data);
+                echo view('register', ['errors' => $this->usuarioModel->errors(),]);
                 echo view('templates/footer');
                 echo view('templates/footer_js');
             }
@@ -72,7 +68,7 @@ class Home extends BaseController
         
         $this->linkModel->save($datos);
 
-        $enlace = base_url().'/completarRegistro/'.sha1($idusuario).'/'.$token;
+        $enlace = base_url().'/completarRegistro/'.$idusuario.'/'.$token;
         return $enlace;
     }
 

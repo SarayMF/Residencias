@@ -1,0 +1,256 @@
+ERROR - 2022-08-05 13:12:36 --> Duplicate entry '15' for key 'idUsuario'
+CRITICAL - 2022-08-05 13:12:36 --> Duplicate entry '15' for key 'idUsuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`) VALUES (\'15\', \'63153a8ca5f24eea22261168a4d6d6136569708c\', \'2022-08-05 13:12:36\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`) VALUES (\'15\', \'63153a8ca5f24eea22261168a4d6d6136569708c\', \'2022-08-05 13:12:36\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`) VALUES (\'15\', \'63153a8ca5f24eea22261168a4d6d6136569708c\', \'2022-08-05 13:12:36\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`) VALUES (:idUsuario:, :token:, :fechaCreacion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Home.php(65): CodeIgniter\BaseModel->save([...])
+10 APPPATH\Controllers\Home.php(37): App\Controllers\Home->generarLinkTemporal('MAFA971218MGTDRL03')
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->registro()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-05 13:17:52 --> Duplicate entry '15' for key 'idUsuario'
+CRITICAL - 2022-08-05 13:17:52 --> Duplicate entry '15' for key 'idUsuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`) VALUES (\'15\', \'44b0915d8c78d8119a8f6e33c721de2694e42011\', \'2022-08-05 13:17:52\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`) VALUES (\'15\', \'44b0915d8c78d8119a8f6e33c721de2694e42011\', \'2022-08-05 13:17:52\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`) VALUES (\'15\', \'44b0915d8c78d8119a8f6e33c721de2694e42011\', \'2022-08-05 13:17:52\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `linkpassword` (`idUsuario`, `token`, `fechaCreacion`) VALUES (:idUsuario:, :token:, :fechaCreacion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Home.php(65): CodeIgniter\BaseModel->save([...])
+10 APPPATH\Controllers\Home.php(37): App\Controllers\Home->generarLinkTemporal('MAFA971218MGTDRL03')
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->registro()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-05 13:22:18 --> Unknown column 'isUduario' in 'where clause'
+CRITICAL - 2022-08-05 13:22:18 --> Unknown column 'isUduario' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `linkpassword`
+WHERE `isUduario` = \'15\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `linkpassword`
+WHERE `isUduario` = \'15\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `linkpassword`
+WHERE `isUduario` = \'15\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `linkpassword`
+WHERE `isUduario` = :isUduario:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(306): CodeIgniter\Validation\Rules->is_unique('15', 'isUduario', [...], null)
+ 7 SYSTEMPATH\Validation\Validation.php(173): CodeIgniter\Validation\Validation->processRules('idUsuario', 'idUsuario', '15', [...], [...])
+ 8 SYSTEMPATH\BaseModel.php(1349): CodeIgniter\Validation\Validation->run([...], null, null)
+ 9 SYSTEMPATH\BaseModel.php(707): CodeIgniter\BaseModel->validate([...])
+10 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+11 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+12 APPPATH\Controllers\Home.php(65): CodeIgniter\BaseModel->save([...])
+13 APPPATH\Controllers\Home.php(37): App\Controllers\Home->generarLinkTemporal('MAFA971218MGTDRL03')
+14 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->registro()
+15 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+16 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-05 13:24:53 --> Unknown column 'isUduario' in 'where clause'
+CRITICAL - 2022-08-05 13:24:53 --> Unknown column 'isUduario' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `linkpassword`
+WHERE `isUduario` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `linkpassword`
+WHERE `isUduario` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `linkpassword`
+WHERE `isUduario` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `linkpassword`
+WHERE `isUduario` = :isUduario:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(306): CodeIgniter\Validation\Rules->is_unique('1', 'isUduario', [...], null)
+ 7 SYSTEMPATH\Validation\Validation.php(173): CodeIgniter\Validation\Validation->processRules('idUsuario', 'idUsuario', '1', [...], [...])
+ 8 SYSTEMPATH\BaseModel.php(1349): CodeIgniter\Validation\Validation->run([...], null, null)
+ 9 SYSTEMPATH\BaseModel.php(707): CodeIgniter\BaseModel->validate([...])
+10 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+11 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+12 APPPATH\Controllers\Home.php(63): CodeIgniter\BaseModel->save([...])
+13 APPPATH\Controllers\Home.php(36): App\Controllers\Home->generarLinkTemporal('MAFA971218MGTDRL03')
+14 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->registro()
+15 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+16 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-05 13:25:50 --> Unknown column 'idUduario' in 'where clause'
+CRITICAL - 2022-08-05 13:25:50 --> Unknown column 'idUduario' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `linkpassword`
+WHERE `idUduario` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `linkpassword`
+WHERE `idUduario` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `linkpassword`
+WHERE `idUduario` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `linkpassword`
+WHERE `idUduario` = :idUduario:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(306): CodeIgniter\Validation\Rules->is_unique('1', 'idUduario', [...], null)
+ 7 SYSTEMPATH\Validation\Validation.php(173): CodeIgniter\Validation\Validation->processRules('idUsuario', 'idUsuario', '1', [...], [...])
+ 8 SYSTEMPATH\BaseModel.php(1349): CodeIgniter\Validation\Validation->run([...], null, null)
+ 9 SYSTEMPATH\BaseModel.php(707): CodeIgniter\BaseModel->validate([...])
+10 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+11 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+12 APPPATH\Controllers\Home.php(63): CodeIgniter\BaseModel->save([...])
+13 APPPATH\Controllers\Home.php(36): App\Controllers\Home->generarLinkTemporal('MAFA971218MGTDRL03')
+14 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->registro()
+15 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+16 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 13:26:29 --> syntax error, unexpected double-quoted string "password2", expecting "]"
+in APPPATH\Controllers\Registrar.php on line 32.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 13:34:05 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Home.php(45): redirect('Home/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 13:39:46 --> Undefined variable $model
+in APPPATH\Controllers\Home.php on line 47.
+ 1 APPPATH\Controllers\Home.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $model', 'APPPATH\\Controllers\\Home.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->registro()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 13:57:19 --> Call to undefined function set_value()
+in APPPATH\Views\register.php on line 15.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('register', [], true)
+ 4 APPPATH\Controllers\Home.php(53): view('register')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 14:08:49 --> Undefined variable $validation
+in APPPATH\Views\contraseña.php on line 39.
+ 1 APPPATH\Views\contraseña.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\contraseña.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contraseña.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('contraseña', [], true)
+ 5 APPPATH\Controllers\Registrar.php(20): view('contraseña')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->completar('da4b9237bacccdf19c0760cab7aec4a8359010b0', '130f22fc4ff4ca00fe57bf75c520e68a97c45c3e')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 14:57:18 --> syntax error, unexpected token "}"
+in APPPATH\Models\CustomModel.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\CustomModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\CustomModel')
+ 3 APPPATH\Controllers\Registrar.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\CustomModel')
+ 4 SYSTEMPATH\CodeIgniter.php(858): App\Controllers\Registrar->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 15:01:32 --> syntax error, unexpected token "}"
+in APPPATH\Models\CustomModel.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\CustomModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\CustomModel')
+ 3 APPPATH\Controllers\Registrar.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\CustomModel')
+ 4 SYSTEMPATH\CodeIgniter.php(858): App\Controllers\Registrar->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 15:07:36 --> Too few arguments to function App\Models\CustomModel::verificarToken(), 1 passed in C:\xampp\htdocs\ResidenciasSaray\app\Controllers\Registrar.php on line 20 and exactly 2 expected
+in APPPATH\Models\CustomModel.php on line 34.
+ 1 APPPATH\Controllers\Registrar.php(20): App\Models\CustomModel->verificarToken('130f22fc4ff4ca00fe57bf75c520e68a97c45c3e')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->completar('da4b9237bacccdf19c0760cab7aec4a8359010b0', '130f22fc4ff4ca00fe57bf75c520e68a97c45c3e')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 15:25:00 --> Too few arguments to function App\Controllers\Registrar::completar(), 0 passed in C:\xampp\htdocs\ResidenciasSaray\system\CodeIgniter.php on line 896 and exactly 2 expected
+in APPPATH\Controllers\Registrar.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->completar()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 15:27:30 --> syntax error, unexpected token ";", expecting "]"
+in APPPATH\Controllers\Registrar.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 15:27:49 --> syntax error, unexpected token "echo"
+in APPPATH\Controllers\Registrar.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 15:27:51 --> syntax error, unexpected token "echo"
+in APPPATH\Controllers\Registrar.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 15:27:57 --> Undefined variable $datos
+in APPPATH\Views\contraseña.php on line 9.
+ 1 APPPATH\Views\contraseña.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'APPPATH\\Views\\contraseña.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contraseña.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('contraseña', [], true)
+ 5 APPPATH\Controllers\Registrar.php(26): view('contraseña', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->completar('2', '130f22fc4ff4ca00fe57bf75c520e68a97c45c3e')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-05 15:28:45 --> Undefined variable $datos
+in APPPATH\Views\contraseña.php on line 9.
+ 1 APPPATH\Views\contraseña.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'APPPATH\\Views\\contraseña.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contraseña.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('contraseña', [], true)
+ 5 APPPATH\Controllers\Registrar.php(26): view('contraseña', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->completar('2', '130f22fc4ff4ca00fe57bf75c520e68a97c45c3e')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
