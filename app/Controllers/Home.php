@@ -28,10 +28,15 @@ class Home extends BaseController
     }
 
     public function inicio(){
-        echo view('templates/header');
-        echo '<h1>Estas en el inicio</h1>';
-        echo view('templates/footer');
-        echo view('templates/footer_js');
+        $session = session();
+        if($session->has('idUsuario')){
+            $permisosUsuario = $this->cModel->obtenerPermisos($session->idUsuario);
+            echo view('templates/header', $permisosUsuario);
+            echo view('templates/footer');
+            echo view('templates/footer_js');
+        }else{
+            return redirect()->to(base_url('/'));
+        }
     }
 
     public function salir(){

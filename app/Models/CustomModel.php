@@ -53,4 +53,13 @@ class CustomModel{
         if($query == true) return true;
         else return false;
     }
+
+    public function obtenerPermisos($idUsuario){
+        $sql = 'SELECT permisosusuario.idUsuario, permisos.nombre
+                FROM permisosusuario 
+                LEFT JOIN permisos ON permisosusuario.idPermiso = permisos.idPermiso
+                WHERE permisosusuario.idUsuario = ?';
+        $query = $this->db->query($sql, [$idUsuario]);
+        return $result = $query->getResult();
+    }
 }

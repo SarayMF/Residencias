@@ -81,8 +81,8 @@
       </div>
 
       <?php $session = session();?>
+    
       
-      <?php echo $session->idUsuario;?>
       <?php if($session->has('idUsuario')):?>
       <div class="col-12 veda">
 
