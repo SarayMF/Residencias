@@ -5,9 +5,9 @@
                     <img src="<?php echo base_url('resources/img/logo-gto.png')?>" alt="logo de juventudEsGto">
                 </div>
                 <p class="text-muted center">Completa tu registro capturando una contraseña</p>
-
-                <input type="text" name="id" value="<?= $datos->id ?>">
-                <input type="text" name="token" id="">
+                
+                <input type="hidden" name="idUsuario" value="<?php echo $idUsuario?>" >
+                <input type="hidden" name="token" value="<?php echo $token?>">
                 
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">

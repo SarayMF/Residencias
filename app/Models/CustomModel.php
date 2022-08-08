@@ -42,6 +42,15 @@ class CustomModel{
     }
 
     public function guardarContraseña($pass, $id){
-        $query = $this->db->query('UPDATE usuario SET password = ? WHERE idUsuario = ');
+        $query = $this->db->query('UPDATE usuario SET password = ? WHERE idUsuario = ?', [$pass, $id]);
+        if($query==true){
+            return true;
+        }else return false;
+    }
+
+    public function borrarToken($token){
+        $query = $this->db->query('DELETE FROM linkpassword WHERE token= ?', [$token]);
+        if($query == true) return true;
+        else return false;
     }
 }

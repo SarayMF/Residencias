@@ -18,12 +18,14 @@ class Registrar extends BaseController{
 
     public function completar($id, $token){
         if($this->cModel->verificarToken($token, $id)){
+            $mensaje = 'Hola';
             $datos = [
                 'token' => $token,
-                'id' => $id,    
+                'id' => $id    
             ];
             echo view('templates/header');
-            echo view('contraseña', $datos);
+            echo view('contraseña', ['token' => $token,
+                                     'idUsuario' => $id,]);
             echo view('templates/footer');
             echo view('templates/footer_js');
         }else{
@@ -38,13 +40,20 @@ class Registrar extends BaseController{
                 "password2" => 'required|matches[password1]',
             ];
             if($this->validate($rules)){
-                echo '<script type="text/javascript">
+
+                $pass = $this->request->getPost('password1');
+                $usuario = $this->request->getPost('idUsuario');
+                $token = $this->request->getPost('token');
+                
+                if($this->cModel->guardarContraseña(sha1($pass), $usuario)){
+                    if($this->cModel->borrarToken($token)){
+                        echo '<script type="text/javascript">
                         alert("Registro completo, ya puedes ingresar");
                         window.location.href = "'.base_url().'";
                         </script>';
+                    }
+                }
             }
-        }else{
-            return redirect()->route('');
         }
     }
 
