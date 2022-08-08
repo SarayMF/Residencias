@@ -80,14 +80,18 @@
         </div>
       </div>
 
-
+      <?php $session = session();?>
+      
+      <?php echo $session->idUsuario;?>
+      <?php if($session->has('idUsuario')):?>
       <div class="col-12 veda">
+
         <div class="col-6 col-md-3 col-lg-3">
           <div class="navbar-header">
             <a href="#"></a>
           </div>
-
         </div>
+
         <div class="col-6 col-md-9 col-lg-9 justify-content-end">
           <ul class="nav d-flex justify-content-end main-menu">
             <li class="nav-item">
@@ -103,11 +107,13 @@
               <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <a class="nav-link" href="<?php echo base_url('salir')?>">Salir</a>
             </li>
           </ul>
-          </div>
         </div>
+
+      </div>
+      <?php endif?>
 
       <div class="botbar">
        <div class="barC1"></div>

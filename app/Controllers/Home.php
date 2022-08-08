@@ -10,6 +10,7 @@ class Home extends BaseController
     private $cModel;
     private $usuarioModel;
     private $linkModel;
+    
 
     public function __construct(){
         helper(['form']);
@@ -26,18 +27,54 @@ class Home extends BaseController
         echo view('templates/footer_js');
     }
 
-    public function login(){
-        redirect('Home/');
+    public function inicio(){
+        echo view('templates/header');
+        echo '<h1>Estas en el inicio</h1>';
+        echo view('templates/footer');
+        echo view('templates/footer_js');
+    }
+
+    public function salir(){
+        $session = session();
+        $session->destroy();
+        return redirect()->to(base_url('/'));
+    }
+
+    public function attemptLogin(){
+        $email = trim($this->request->getPost('correo'));
+        $contraseña = trim($this->request->getPost('contraseña'));
+
+        $datosUsuario = $this->usuarioModel->where('correo', $email)->find();
+
+        if(count($datosUsuario) > 0){
+            if(password_verify($contraseña, $datosUsuario[0]['password'])){
+                $data = [
+                    "idUsuario" => $datosUsuario[0]['idUsuario'],                
+                ];
+    
+                $session = session();
+                $session->set($data);
+                return redirect()->to(base_url('/inicio'));
+            }else{
+                return redirect()->to(base_url('/'))->with('msg', [
+                    'body' => 'Credenciales invalidas',
+                ]);
+            }
+        }else{
+            return redirect()->to(base_url('/'))->with('msg', [
+                'body' => 'Este usuario no se encuentra resigtrado en el sistema',
+            ]);
+        }
+
     }
 
     public function registro(){
         if($this->request->getMethod() == 'post'){
             if($this->usuarioModel->save($_POST)){
-                //$this->request->getPost('filter'); 
-                $link = $this->generarLinkTemporal($this->request->getPost('curp'));
+                $link = $this->generarLinkTemporal($this->request->getPost('curp')); //manda a llamar al metodo que genera un link
                 $correo = $this->request->getPost('correo');
 
-                $this->enviarEmail($correo,$link);
+                $this->enviarEmail($correo,$link); //se envia el link al correo registrado
                 echo '<script type="text/javascript">
                         alert("Te hemos enviado un correo para que completes tu registro");
                         window.location.href = "'.base_url().'";

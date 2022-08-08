@@ -29,7 +29,7 @@ class Registrar extends BaseController{
             echo view('templates/footer');
             echo view('templates/footer_js');
         }else{
-            return redirect()->route('Home');
+            return redirect()->to(base_url('/'));
         }
     }
 
@@ -45,7 +45,7 @@ class Registrar extends BaseController{
                 $usuario = $this->request->getPost('idUsuario');
                 $token = $this->request->getPost('token');
                 
-                if($this->cModel->guardarContraseña(sha1($pass), $usuario)){
+                if($this->cModel->guardarContraseña(password_hash($pass, PASSWORD_DEFAULT), $usuario)){
                     if($this->cModel->borrarToken($token)){
                         echo '<script type="text/javascript">
                         alert("Registro completo, ya puedes ingresar");
