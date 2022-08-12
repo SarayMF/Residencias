@@ -10,13 +10,14 @@ class Home extends BaseController
     private $cModel;
     private $usuarioModel;
     private $linkModel;
-    
+    private $permisoModel;
 
     public function __construct(){
         helper(['form']);
         $this->cModel = new CustomModel();  
         $this->usuarioModel = new UsuarioModel();
         $this->linkModel = new LinkModel();
+        $this->permisoModel = new PermisosModel();
     }
 
     public function index()
@@ -78,6 +79,12 @@ class Home extends BaseController
                 if($this->usuarioModel->save($_POST)){
                     $link = $this->generarLinkTemporal($this->request->getPost('curp')); //manda a llamar al metodo que genera un link
                     $correo = $this->request->getPost('correo');
+
+                    $datos = [
+                        idUsuario => $session->idUsuario,
+                        idPermiso => 2
+                    ];
+                    $this->permisoModel->save($datos);
 
                     $this->enviarEmail($correo,$link); //se envia el link al correo registrado
                     echo '<script type="text/javascript">
