@@ -55,7 +55,7 @@ class CustomModel{
     }
 
     public function obtenerPermisos($idUsuario){
-        $sql = 'SELECT permisosusuario.idUsuario, permisos.nombre
+        $sql = 'SELECT permisos.nombre
                 FROM permisosusuario 
                 LEFT JOIN permisos ON permisosusuario.idPermiso = permisos.idPermiso
                 WHERE permisosusuario.idUsuario = ?';

@@ -21,21 +21,19 @@ class Home extends BaseController
 
     public function index()
     { 
-        echo view('templates/header');
-        echo view('login');
-        echo view('templates/footer');
-        echo view('templates/footer_js');
-    }
-
-    public function inicio(){
         $session = session();
         if($session->has('idUsuario')){
-            $permisosUsuario = $this->cModel->obtenerPermisos($session->idUsuario);
-            echo view('templates/header', $permisosUsuario);
+            $datos = [
+                'permisos' => $this->cModel->obtenerPermisos($session->idUsuario)
+            ];
+            echo view('templates/header', $datos);
             echo view('templates/footer');
             echo view('templates/footer_js');
         }else{
-            return redirect()->to(base_url('/'));
+            echo view('templates/header');
+            echo view('login');
+            echo view('templates/footer');
+            echo view('templates/footer_js');
         }
     }
 
@@ -59,7 +57,7 @@ class Home extends BaseController
     
                 $session = session();
                 $session->set($data);
-                return redirect()->to(base_url('/inicio'));
+                return redirect()->to(base_url('/'));
             }else{
                 return redirect()->to(base_url('/'))->with('msg', [
                     'body' => 'Credenciales invalidas',
@@ -74,27 +72,32 @@ class Home extends BaseController
     }
 
     public function registro(){
-        if($this->request->getMethod() == 'post'){
-            if($this->usuarioModel->save($_POST)){
-                $link = $this->generarLinkTemporal($this->request->getPost('curp')); //manda a llamar al metodo que genera un link
-                $correo = $this->request->getPost('correo');
+        $session = session();
+        if(!$session->has('idUsuario')){
+            if($this->request->getMethod() == 'post'){
+                if($this->usuarioModel->save($_POST)){
+                    $link = $this->generarLinkTemporal($this->request->getPost('curp')); //manda a llamar al metodo que genera un link
+                    $correo = $this->request->getPost('correo');
 
-                $this->enviarEmail($correo,$link); //se envia el link al correo registrado
-                echo '<script type="text/javascript">
-                        alert("Te hemos enviado un correo para que completes tu registro");
-                        window.location.href = "'.base_url().'";
-                        </script>';
+                    $this->enviarEmail($correo,$link); //se envia el link al correo registrado
+                    echo '<script type="text/javascript">
+                            alert("Te hemos enviado un correo para que completes tu registro");
+                            window.location.href = "'.base_url().'";
+                            </script>';
+                }else{
+                    echo view('templates/header');
+                    echo view('register', ['errors' => $this->usuarioModel->errors(),]);
+                    echo view('templates/footer');
+                    echo view('templates/footer_js');
+                }
             }else{
                 echo view('templates/header');
-                echo view('register', ['errors' => $this->usuarioModel->errors(),]);
+                echo view('register');
                 echo view('templates/footer');
                 echo view('templates/footer_js');
             }
         }else{
-            echo view('templates/header');
-            echo view('register');
-            echo view('templates/footer');
-            echo view('templates/footer_js');
+            return redirect()->to(base_url('/'));
         }
     }
 

@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <!-- Traductor -->
   <style type="text/css">
-    <!--
+    
     a.gflag {vertical-align:middle;font-size:32px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/32.png);}
     a.gflag img {border:0;}
     a.gflag:hover {background-image:url(//gtranslate.net/flags/32a.png);}
@@ -25,7 +25,7 @@
     .goog-te-menu-value:hover {text-decoration:none !important;}
     body {top:0 !important;}
     #google_translate_element2 {display:none!important;}
-    -->
+    
   </style>
 
   <title>JuventudEsGto</title>
@@ -81,38 +81,37 @@
       </div>
 
       <?php $session = session();?>
-    
       
       <?php if($session->has('idUsuario')):?>
-      <div class="col-12 veda">
+        <div class="col-12 veda">
 
-        <div class="col-6 col-md-3 col-lg-3">
-          <div class="navbar-header">
-            <a href="#"></a>
+          <div class="col-6 col-md-3 col-lg-3">
+            <div class="navbar-header">
+              <a href="#"></a>
+            </div>
           </div>
-        </div>
 
-        <div class="col-6 col-md-9 col-lg-9 justify-content-end">
-          <ul class="nav d-flex justify-content-end main-menu">
-            <li class="nav-item">
-              <a class="nav-link active" href="#"><span class="fas fa-home"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('salir')?>">Salir</a>
-            </li>
-          </ul>
-        </div>
+          <div class="col-6 col-md-9 col-lg-9 justify-content-end">
+            <ul class="nav d-flex justify-content-end main-menu">
+              <li class="nav-item">
+                  <a class="nav-link active" href="#"><span class="fas fa-home"></span></a>
+              </li>
 
-      </div>
+              <!--echo base_url($permiso->nombre)-->
+
+              <?php foreach($permisos as $permiso):?>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><?php echo $permiso->nombre ?></a>
+                </li>
+              <?php endforeach?>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('salir')?>">Salir</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
       <?php endif?>
 
       <div class="botbar">
