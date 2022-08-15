@@ -62,4 +62,11 @@ class CustomModel{
         $query = $this->db->query($sql, [$idUsuario]);
         return $result = $query->getResult();
     }
+
+    public function obtenerUsuarios($nombre){
+        $cadena = "%".$nombre."%";
+        $sql = 'SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ?';
+        $query = $this->db->query($sql,[$cadena]);
+        return $result = $query->getResult();
+    }
 }

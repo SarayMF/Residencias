@@ -41,6 +41,8 @@ $routes->match(['get', 'post'],'/registro', 'Home::registro');
 $routes->get('/completarRegistro/(:any)/(:any)', 'Registrar::completar/$1/$2');
 $routes->post('/registrarContraseña', 'Registrar::guardarContraseña');
 $routes->get('/salir', 'Home::salir');
+$routes->get('/Permisos', 'Permisos::index');
+$routes->post('/Permisos/mostrar', 'Permisos::mostrar');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

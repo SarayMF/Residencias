@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Models\UsuarioModel;
 use App\Models\CustomModel;
 use App\Models\LinkModel;
+use App\Models\PermisosUsuarioModel;
 
 class Home extends BaseController
 {
@@ -17,7 +18,7 @@ class Home extends BaseController
         $this->cModel = new CustomModel();  
         $this->usuarioModel = new UsuarioModel();
         $this->linkModel = new LinkModel();
-        $this->permisoModel = new PermisosModel();
+        $this->permisoModel = new PermisosUsuarioModel();
     }
 
     public function index()
@@ -79,10 +80,11 @@ class Home extends BaseController
                 if($this->usuarioModel->save($_POST)){
                     $link = $this->generarLinkTemporal($this->request->getPost('curp')); //manda a llamar al metodo que genera un link
                     $correo = $this->request->getPost('correo');
+                    $idusuario=$this->cModel->obtenerIdUsuario($this->request->getPost('curp'));
 
                     $datos = [
-                        idUsuario => $session->idUsuario,
-                        idPermiso => 2
+                        'idUsuario' => $idusuario,
+                        'idPermiso' => 2
                     ];
                     $this->permisoModel->save($datos);
 

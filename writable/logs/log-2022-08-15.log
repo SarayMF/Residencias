@@ -1,0 +1,323 @@
+CRITICAL - 2022-08-15 13:26:49 --> Attempt to read property "nombre" on array
+in APPPATH\Views\permisos.php on line 7.
+ 1 APPPATH\Views\permisos.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\permisos.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\permisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:27:29 --> Attempt to read property "nombre" on array
+in APPPATH\Views\permisos.php on line 7.
+ 1 APPPATH\Views\permisos.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\permisos.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\permisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:28:11 --> Attempt to read property "nombre" on array
+in APPPATH\Views\permisos.php on line 8.
+ 1 APPPATH\Views\permisos.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\permisos.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\permisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:29:14 --> Attempt to read property "nombre" on array
+in APPPATH\Views\permisos.php on line 8.
+ 1 APPPATH\Views\permisos.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\permisos.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\permisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:29:34 --> Attempt to read property "nombre" on array
+in APPPATH\Views\permisos.php on line 8.
+ 1 APPPATH\Views\permisos.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\permisos.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\permisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:31:11 --> syntax error, unexpected end of file
+in APPPATH\Views\permisos.php on line 14.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 3 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:31:24 --> syntax error, unexpected end of file
+in APPPATH\Views\permisos.php on line 12.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 3 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:32:01 --> syntax error, unexpected end of file
+in APPPATH\Views\permisos.php on line 12.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 3 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:32:03 --> syntax error, unexpected end of file
+in APPPATH\Views\permisos.php on line 12.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 3 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:32:53 --> Attempt to read property "nombre" on array
+in APPPATH\Views\permisos.php on line 8.
+ 1 APPPATH\Views\permisos.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\permisos.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\permisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:33:23 --> Attempt to read property "nombre" on array
+in APPPATH\Views\permisos.php on line 8.
+ 1 APPPATH\Views\permisos.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\permisos.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\permisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:33:30 --> Attempt to read property "nombre" on array
+in APPPATH\Views\permisos.php on line 8.
+ 1 APPPATH\Views\permisos.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\permisos.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\permisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:34:02 --> Attempt to read property "nombre" on array
+in APPPATH\Views\permisos.php on line 9.
+ 1 APPPATH\Views\permisos.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\permisos.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\permisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:34:08 --> syntax error, unexpected token "endif"
+in APPPATH\Views\permisos.php on line 9.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 3 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:35:10 --> Attempt to read property "nombre" on array
+in APPPATH\Views\permisos.php on line 8.
+ 1 APPPATH\Views\permisos.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\permisos.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\permisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:40:30 --> Undefined constant "App\Controllers\idUsuario"
+in APPPATH\Controllers\Home.php on line 85.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->registro()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:43:31 --> Undefined constant "App\Controllers\idUsuario"
+in APPPATH\Controllers\Home.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->registro()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 13:57:17 --> Attempt to read property "nombre" on array
+in APPPATH\Views\permisos.php on line 8.
+ 1 APPPATH\Views\permisos.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\permisos.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\permisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('permisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(25): view('permisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 14:28:18 --> syntax error, unexpected token "->", expecting identifier or variable or "{" or "$"
+in APPPATH\Controllers\Permisos.php on line 37.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Permisos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Permisos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Permisos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Permisos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 14:54:24 --> Undefined property: App\Controllers\Permisos::$input
+in APPPATH\Controllers\Permisos.php on line 34.
+ 1 APPPATH\Controllers\Permisos.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Permisos::$input', 'APPPATH\\Controllers\\Permisos.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 14:55:13 --> Undefined property: App\Controllers\Permisos::$input
+in APPPATH\Controllers\Permisos.php on line 34.
+ 1 APPPATH\Controllers\Permisos.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Permisos::$input', 'APPPATH\\Controllers\\Permisos.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 14:59:21 --> Undefined property: App\Controllers\Permisos::$input
+in APPPATH\Controllers\Permisos.php on line 34.
+ 1 APPPATH\Controllers\Permisos.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Permisos::$input', 'APPPATH\\Controllers\\Permisos.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:00:39 --> Undefined property: App\Controllers\Permisos::$input
+in APPPATH\Controllers\Permisos.php on line 34.
+ 1 APPPATH\Controllers\Permisos.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Permisos::$input', 'APPPATH\\Controllers\\Permisos.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:02:55 --> Undefined property: App\Controllers\Permisos::$input
+in APPPATH\Controllers\Permisos.php on line 34.
+ 1 APPPATH\Controllers\Permisos.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Permisos::$input', 'APPPATH\\Controllers\\Permisos.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:06:18 --> Undefined property: App\Controllers\Permisos::$input
+in APPPATH\Controllers\Permisos.php on line 34.
+ 1 APPPATH\Controllers\Permisos.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Permisos::$input', 'APPPATH\\Controllers\\Permisos.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:06:48 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::is_ajax_request()
+in APPPATH\Controllers\Permisos.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:08:39 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Permisos.php on line 37.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Permisos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Permisos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Permisos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Permisos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:14:55 --> syntax error, unexpected token "public", expecting "," or ";"
+in APPPATH\Controllers\Permisos.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Permisos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Permisos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Permisos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Permisos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:15:05 --> Undefined variable $session
+in APPPATH\Controllers\Permisos.php on line 24.
+ 1 APPPATH\Controllers\Permisos.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Controllers\\Permisos.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:22:06 --> syntax error, unexpected token "%"
+in APPPATH\Models\CustomModel.php on line 67.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\CustomModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\CustomModel')
+ 3 APPPATH\Controllers\Permisos.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\CustomModel')
+ 4 SYSTEMPATH\CodeIgniter.php(858): App\Controllers\Permisos->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-15 15:22:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 1
+CRITICAL - 2022-08-15 15:22:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ?')
+ 4 APPPATH\Models\CustomModel.php(68): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ?', [...])
+ 5 APPPATH\Controllers\Permisos.php(38): App\Models\CustomModel->obtenerUsuarios('2', 'fra')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:24:00 --> Unsupported operand types: string + string
+in APPPATH\Models\CustomModel.php on line 67.
+ 1 APPPATH\Controllers\Permisos.php(38): App\Models\CustomModel->obtenerUsuarios('2', 'fra')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:24:03 --> Unsupported operand types: string + string
+in APPPATH\Models\CustomModel.php on line 67.
+ 1 APPPATH\Controllers\Permisos.php(38): App\Models\CustomModel->obtenerUsuarios('2', 'fra')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:24:04 --> Unsupported operand types: string + string
+in APPPATH\Models\CustomModel.php on line 67.
+ 1 APPPATH\Controllers\Permisos.php(38): App\Models\CustomModel->obtenerUsuarios('2', 'fra')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:24:04 --> Unsupported operand types: string + string
+in APPPATH\Models\CustomModel.php on line 67.
+ 1 APPPATH\Controllers\Permisos.php(38): App\Models\CustomModel->obtenerUsuarios('2', 'fra')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:27:43 --> Unsupported operand types: string + string
+in APPPATH\Models\CustomModel.php on line 67.
+ 1 APPPATH\Controllers\Permisos.php(38): App\Models\CustomModel->obtenerUsuarios('2', 'fra')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-15 15:28:01 --> Unsupported operand types: string + string
+in APPPATH\Models\CustomModel.php on line 67.
+ 1 APPPATH\Controllers\Permisos.php(38): App\Models\CustomModel->obtenerUsuarios('2', 'fra')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

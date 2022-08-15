@@ -2,11 +2,8 @@
 
 use CodeIgniter\Model;
 
-class LinkModel extends Model
+class PermisosModel extends Model
 {
-    protected $table      = 'permisosusuario';
-    protected $primaryKey = 'idPermisoUsuario';
-
-    protected $allowedFields = ['idUsuario', 'idPermiso'];
-    
+    protected $table      = 'permisos';
+    protected $primaryKey = 'idPermiso';
 }

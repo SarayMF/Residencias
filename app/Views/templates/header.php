@@ -97,11 +97,9 @@
                   <a class="nav-link active" href="#"><span class="fas fa-home"></span></a>
               </li>
 
-              <!--echo base_url($permiso->nombre)-->
-
               <?php foreach($permisos as $permiso):?>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><?php echo $permiso->nombre ?></a>
+                  <a class="nav-link" href="<?php echo base_url($permiso->nombre)?>"><?php echo $permiso->nombre ?></a>
                 </li>
               <?php endforeach?>
               
