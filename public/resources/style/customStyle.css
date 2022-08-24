@@ -1,6 +1,7 @@
 .main-container{
     width: 100%;
-    height: 700px;
+    height: auto;
+    padding: 150px 0 150px 0;
 }
 
 .center{
@@ -89,6 +90,9 @@
     display: flex;
 }
 
+.permisos{
+    width: 50%;
+}
 
 @media only screen and (max-width: 1400px) {
     .form-container{

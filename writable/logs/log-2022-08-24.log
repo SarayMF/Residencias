@@ -1,0 +1,415 @@
+ERROR - 2022-08-24 11:44:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 11:44:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%s%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%s%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%s%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('s', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-24 11:44:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 11:44:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('ROOTPATH\\public', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-24 11:44:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 11:44:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%S%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%S%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%S%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('S', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-24 11:44:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 11:44:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%S%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%S%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%S%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('S', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-24 11:44:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 11:44:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Sa%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Sa%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Sa%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('Sa', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-24 11:44:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 11:44:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Sal%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Sal%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Sal%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('Sal', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-24 11:44:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 11:44:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salv%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salv%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salv%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('Salv', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-24 11:44:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 11:44:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salva%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salva%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salva%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('Salva', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-24 11:44:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 11:44:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salvad%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salvad%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salvad%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('Salvad', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-24 11:44:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 11:44:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salvado%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salvado%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salvado%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('Salvado', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-24 11:44:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 11:44:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salvador%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salvador%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Salvador%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('Salvador', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-24 11:45:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 11:45:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%d%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%d%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%d%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('d', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 11:48:52 --> Undefined variable $cantidad
+in APPPATH\Controllers\Permisos.php on line 40.
+ 1 APPPATH\Controllers\Permisos.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cantidad', 'APPPATH\\Controllers\\Permisos.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 11:49:42 --> Undefined variable $cantidad
+in APPPATH\Controllers\Permisos.php on line 40.
+ 1 APPPATH\Controllers\Permisos.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cantidad', 'APPPATH\\Controllers\\Permisos.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 11:49:50 --> Undefined variable $cantidad
+in APPPATH\Controllers\Permisos.php on line 40.
+ 1 APPPATH\Controllers\Permisos.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cantidad', 'APPPATH\\Controllers\\Permisos.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 11:52:38 --> Undefined variable $cantidad
+in APPPATH\Controllers\Permisos.php on line 40.
+ 1 APPPATH\Controllers\Permisos.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cantidad', 'APPPATH\\Controllers\\Permisos.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 12:21:57 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Permisos.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-24 12:22:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-24 12:22:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('ROOTPATH\\public', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 12:55:53 --> Unmatched '}'
+in APPPATH\Controllers\Registrar.php on line 140.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 13:24:16 --> Undefined property: App\Controllers\Registrar::$usuarioModel
+in APPPATH\Controllers\Registrar.php on line 65.
+ 1 APPPATH\Controllers\Registrar.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Registrar::$usuarioModel', 'APPPATH\\Controllers\\Registrar.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 13:25:17 --> Undefined property: App\Controllers\Registrar::$usuarioModel
+in APPPATH\Controllers\Registrar.php on line 64.
+ 1 APPPATH\Controllers\Registrar.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Registrar::$usuarioModel', 'APPPATH\\Controllers\\Registrar.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 13:26:13 --> syntax error, unexpected token "public", expecting "," or ";"
+in APPPATH\Controllers\Registrar.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 13:26:38 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1598.
+ 1 SYSTEMPATH\BaseModel.php(704): CodeIgniter\BaseModel->transformDataToArray('curp=MAFA971218MGTDRL03&nombre=Aleida%20Saray&apellidoP=Madrigal&apellidoM=Fernandez&puesto=2&area=3&correo=smadrigal4935%40gmail.com', 'insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert('curp=MAFA971218MGTDRL03&nombre=Aleida%20Saray&apellidoP=Madrigal&apellidoM=Fernandez&puesto=2&area=3&correo=smadrigal4935%40gmail.com', false)
+ 3 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert('curp=MAFA971218MGTDRL03&nombre=Aleida%20Saray&apellidoP=Madrigal&apellidoM=Fernandez&puesto=2&area=3&correo=smadrigal4935%40gmail.com', false)
+ 4 APPPATH\Controllers\Registrar.php(66): CodeIgniter\BaseModel->save('curp=MAFA971218MGTDRL03&nombre=Aleida%20Saray&apellidoP=Madrigal&apellidoM=Fernandez&puesto=2&area=3&correo=smadrigal4935%40gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 13:26:52 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1598.
+ 1 SYSTEMPATH\BaseModel.php(704): CodeIgniter\BaseModel->transformDataToArray('curp=MAFA971218MGTDRL03&nombre=Aleida%20Saray&apellidoP=Madrigal&apellidoM=Fernandez&puesto=2&area=3&correo=smadrigal4935%40gmail.com', 'insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert('curp=MAFA971218MGTDRL03&nombre=Aleida%20Saray&apellidoP=Madrigal&apellidoM=Fernandez&puesto=2&area=3&correo=smadrigal4935%40gmail.com', false)
+ 3 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert('curp=MAFA971218MGTDRL03&nombre=Aleida%20Saray&apellidoP=Madrigal&apellidoM=Fernandez&puesto=2&area=3&correo=smadrigal4935%40gmail.com', false)
+ 4 APPPATH\Controllers\Registrar.php(66): CodeIgniter\BaseModel->save('curp=MAFA971218MGTDRL03&nombre=Aleida%20Saray&apellidoP=Madrigal&apellidoM=Fernandez&puesto=2&area=3&correo=smadrigal4935%40gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 13:31:47 --> unserialize(): Error at offset 0 of 139 bytes
+in APPPATH\Controllers\Registrar.php on line 66.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'unserialize(): Error at offset 0 of 139 bytes', 'APPPATH\\Controllers\\Registrar.php', 66)
+ 2 APPPATH\Controllers\Registrar.php(66): unserialize('curp=MAFA971218MGTDRL03&nombre=Francisco%20Salvador&apellidoP=Madrigal&apellidoM=Fernandez&puesto=2&area=2&correo=smadrigal4935%40gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 13:35:17 --> syntax error, unexpected token ";"
+in APPPATH\Controllers\Registrar.php on line 66.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 13:44:45 --> syntax error, unexpected token ";"
+in APPPATH\Controllers\Registrar.php on line 70.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 13:45:23 --> Attempt to read property "idUsuario" on null
+in APPPATH\Models\CustomModel.php on line 31.
+ 1 APPPATH\Models\CustomModel.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idUsuario" on null', 'APPPATH\\Models\\CustomModel.php', 31)
+ 2 APPPATH\Controllers\Registrar.php(102): App\Models\CustomModel->obtenerIdUsuario(null)
+ 3 APPPATH\Controllers\Registrar.php(70): App\Controllers\Registrar->generarLinkTemporal(null)
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 13:57:52 --> unserialize(): Error at offset 0 of 132 bytes
+in APPPATH\Controllers\Registrar.php on line 67.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'unserialize(): Error at offset 0 of 132 bytes', 'APPPATH\\Controllers\\Registrar.php', 67)
+ 2 APPPATH\Controllers\Registrar.php(67): unserialize('curp=MAFA971218HDFNNS05&nombre=Aleida%20Saray&apellidoP=Madrigal&apellidoM=Fernandez&puesto=2&area=2&correo=16240691%40leon.tecnm.mx')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:01:16 --> preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead
+in APPPATH\Controllers\Registrar.php on line 67.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_replace(): The /e modifier is no longer supported, use preg_replace_callback instead', 'APPPATH\\Controllers\\Registrar.php', 67)
+ 2 APPPATH\Controllers\Registrar.php(67): preg_replace('!s:(\\d+):"(.*?)";!e', '\'s:\'.strlen(\'$2\').\':"$2";\'', 'curp=MAFA971218HDFNNS05&nombre=Aleida%20Saray&apellidoP=Madrigal&apellidoM=Fernandez&puesto=1&area=2&correo=16240691%40leon.tecnm.mx')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:03:20 --> preg_replace_callback(): Argument #2 ($callback) must be a valid callback, function "'s:'.strlen('$2').':"$2";'" not found or invalid function name
+in APPPATH\Controllers\Registrar.php on line 67.
+ 1 APPPATH\Controllers\Registrar.php(67): preg_replace_callback('!s:(\\d+):"(.*?)";!e', '\'s:\'.strlen(\'$2\').\':"$2";\'', 'curp=MAFA971218MGTDRL03&nombre=Aleida%20Saray&apellidoP=sdfs&apellidoM=Fernandez&puesto=1&area=2&correo=d%40gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:04:51 --> unserialize(): Error at offset 0 of 133 bytes
+in APPPATH\Controllers\Registrar.php on line 75.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'unserialize(): Error at offset 0 of 133 bytes', 'APPPATH\\Controllers\\Registrar.php', 75)
+ 2 APPPATH\Controllers\Registrar.php(75): unserialize('curp=MAFA971218MGTDRL03&nombre=Aleida%20Saray&apellidoP=Madrigal&apellidoM=Fernandez&puesto=1&area=2&correo=smadrigal4935%40gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:16:42 --> Unclosed '{' on line 75 does not match ')'
+in APPPATH\Controllers\Registrar.php on line 78.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:18:05 --> Undefined property: App\Controllers\Registrar::$permisoModel
+in APPPATH\Controllers\Registrar.php on line 84.
+ 1 APPPATH\Controllers\Registrar.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Registrar::$permisoModel', 'APPPATH\\Controllers\\Registrar.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:21:40 --> syntax error, unexpected token "public", expecting "," or ";"
+in APPPATH\Controllers\Registrar.php on line 16.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:22:18 --> mail(): Passing null to parameter #1 ($to) of type string is deprecated
+in APPPATH\Controllers\Registrar.php on line 144.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'mail(): Passing null to parameter #1 ($to) of type string is deprecated', 'APPPATH\\Controllers\\Registrar.php', 144)
+ 2 APPPATH\Controllers\Registrar.php(144): mail(null, 'completar registro', '<html>
+        <head>
+        <title>Completar registro</title>
+        </head>
+        <body>
+        <p>Hemos recibido una petición para registrarte en el portal de activos juventudesGTO.</p>
+        <p>Si hiciste esta petición, haz clic en el siguiente enlace, si no hiciste esta petición puedes ignorar este correo.</p>
+        <p>Recuerda que el link dejara de funcionar en 12hrs</p>
+        <p>
+        <strong>Enlace para completar tu registro</strong><br>
+        <a href="http://localhost/ResidenciasSaray/public/completarRegistro/23/a951c870c4e1df2ca798a7f3173ad37c04a071a2"> Da clic aqui </a>
+        </p>
+        </body>
+        </html>', 'MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: smadrigal4935@gmail.com
+')
+ 3 APPPATH\Controllers\Registrar.php(89): App\Controllers\Registrar->enviarEmail(null, 'http://localhost/ResidenciasSaray/public/completarRegistro/23/a951c870c4e1df2ca798a7f3173ad37c04a071a2')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:43:04 --> syntax error, unexpected token ";", expecting "]"
+in APPPATH\Controllers\Registrar.php on line 94.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:43:19 --> syntax error, unexpected token "echo"
+in APPPATH\Controllers\Registrar.php on line 97.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:43:32 --> syntax error, unexpected single-quoted string "icon", expecting "]"
+in APPPATH\Controllers\Registrar.php on line 101.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Registrar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Registrar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Registrar')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Registrar', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:45:11 --> Undefined constant "App\Controllers\data"
+in APPPATH\Controllers\Registrar.php on line 104.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:46:25 --> Undefined constant "App\Controllers\data"
+in APPPATH\Controllers\Registrar.php on line 104.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:47:30 --> Undefined constant "App\Controllers\data"
+in APPPATH\Controllers\Registrar.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:49:07 --> Undefined constant "App\Controllers\data"
+in APPPATH\Controllers\Registrar.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 14:50:21 --> Undefined constant "App\Controllers\data"
+in APPPATH\Controllers\Registrar.php on line 97.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

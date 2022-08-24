@@ -63,10 +63,19 @@ class CustomModel{
         return $result = $query->getResult();
     }
 
-    public function obtenerUsuarios($nombre){
+    public function obtenerUsuarios($nombre,$inicio,$cantidad){
         $cadena = "%".$nombre."%";
-        $sql = 'SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ?';
+        $sql = 'SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?';
+        $query = $this->db->query($sql,[$cadena,$inicio,$cantidad]);
+        
+        return $result = $query->getResult();
+    }
+
+    public function obtenerUsuario($nombre){
+        $cadena = "%".$nombre."%";
+        $sql = 'SELECT idUsuario, curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ?';
         $query = $this->db->query($sql,[$cadena]);
+        
         return $result = $query->getResult();
     }
 }

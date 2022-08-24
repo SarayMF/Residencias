@@ -1,0 +1,109 @@
+ERROR - 2022-08-17 13:18:15 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+CRITICAL - 2022-08-17 13:18:15 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+in SYSTEMPATH\Database\BaseConnection.php on line 416.
+ 1 SYSTEMPATH\Database\BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario`
+WHERE `correo` = :correo:', [...], false)
+ 3 SYSTEMPATH\Model.php(184): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Home.php(52): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->attemptLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-17 13:31:32 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+CRITICAL - 2022-08-17 13:31:32 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+in SYSTEMPATH\Database\BaseConnection.php on line 416.
+ 1 SYSTEMPATH\Database\BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario`
+WHERE `correo` = :correo:', [...], false)
+ 3 SYSTEMPATH\Model.php(184): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Home.php(52): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->attemptLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-17 14:06:38 --> Call to undefined function App\Controllers\show_404()
+in APPPATH\Controllers\Permisos.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-17 15:58:45 --> syntax error, unexpected variable "$cantidad"
+in APPPATH\Controllers\Permisos.php on line 38.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Permisos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Permisos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Permisos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Permisos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-17 15:58:56 --> Unsupported operand types: string + string
+in APPPATH\Models\CustomModel.php on line 70.
+ 1 APPPATH\Controllers\Permisos.php(40): App\Models\CustomModel->obtenerUsuarios('ROOTPATH\\public', 0, 5)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-17 16:03:48 --> syntax error, unexpected token "echo"
+in APPPATH\Controllers\Permisos.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Permisos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Permisos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Permisos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Permisos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-17 16:05:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-17 16:05:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%S%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%S%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%S%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('S', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-17 16:05:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-17 16:05:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%S%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%S%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%S%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('S', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-17 16:05:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-17 16:05:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Sa%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Sa%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Sa%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('Sa', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-17 16:05:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+CRITICAL - 2022-08-17 16:05:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5,5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Sa%\' LIMIT -5,5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Sa%\' LIMIT -5,5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE \'%Sa%\' LIMIT -5,5')
+ 4 APPPATH\Models\CustomModel.php(69): CodeIgniter\Database\BaseConnection->query('SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Permisos.php(41): App\Models\CustomModel->obtenerUsuarios('Sa', -5, 5)
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

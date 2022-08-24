@@ -28,18 +28,25 @@ class Permisos extends BaseController{
             echo view('permisos', $datos);
             echo view('templates/footer');
             echo view('templates/footer_js');
+        }else{
+            return redirect()->to(base_url('/'));
         }
     }
 
     public function mostrar(){
         if($this->request->isAJAX()){
             $buscar = $this->request->getPost('buscar');
-
-            $datos = $this->cModel->obtenerUsuarios($buscar);
+            $pagina = $this->request->getPost('numpagina');
+            $cantidad = 5;
+            $inicio = ($pagina - 1) * 5;
+            $datos = array(
+                "usuarios" => $this->cModel->obtenerUsuarios($buscar, $inicio, $cantidad),
+                "cantidadUsuarios" => count($this->cModel->obtenerUsuario($buscar)),
+            );
             echo json_encode($datos);
         
         }else{
-            show_404();
+            
         }
     }
 }
