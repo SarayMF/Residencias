@@ -90,15 +90,14 @@ class Registrar extends BaseController{
                     
                     $data = array(
                         "title" => "¡Registrado correctamente!",
-                        "icon" => "success",
+                        "type" => "success",
                         "mensaje" => "Te hemos enviado un correo para completar tu registro",
                     );
                     
                     echo json_encode($data);
                 }else{
                     $data = array(
-                        "title" => "¡Error en el registro!",
-                        "icon" => "error",
+                        "type" => "error",
                         "mensaje" => $this->usuarioModel->errors()
                     );
                     echo json_encode($data);
