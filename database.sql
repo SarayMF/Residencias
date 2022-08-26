@@ -87,9 +87,9 @@ CREATE TABLE ActivoAplicaciones(
  CONSTRAINT FK_Aplicacion FOREIGN KEY (idAplicacion) REFERENCES Aplicaciones(idAplicacion)
 );
 
-INSERT INTO permisos(nombre) VALUES (Otorgar permisos);
-INSERT INTO permisos(nombre) VALUES (Registro de mis activos);
-INSERT INTO permisos(nombre) VALUES (Reporte de activos);
-INSERT INTO permisos(nombre) VALUES (Reporte de bajas);
-INSERT INTO permisos(nombre) VALUES (Entrada de activos);
-INSERT INTO permisos(nombre) VALUES (Salida de activos);
+INSERT INTO permisos(nombre) VALUES ('Otorgar permisos');
+INSERT INTO permisos(nombre) VALUES ('Registro de mis activos');
+INSERT INTO permisos(nombre) VALUES ('Reporte de activos');
+INSERT INTO permisos(nombre) VALUES ('Reporte de bajas');
+INSERT INTO permisos(nombre) VALUES ('Entrada de activos');
+INSERT INTO permisos(nombre) VALUES ('Salida de activos');
