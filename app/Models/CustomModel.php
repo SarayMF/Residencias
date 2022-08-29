@@ -58,7 +58,8 @@ class CustomModel{
         $sql = 'SELECT permisos.nombre
                 FROM permisosusuario 
                 LEFT JOIN permisos ON permisosusuario.idPermiso = permisos.idPermiso
-                WHERE permisosusuario.idUsuario = ?';
+                WHERE permisosusuario.idUsuario = ?
+                Order by permisos.idPermiso';
         $query = $this->db->query($sql, [$idUsuario]);
         return $result = $query->getResult();
     }
