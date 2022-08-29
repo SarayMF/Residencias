@@ -22,7 +22,7 @@ function inicio(){
                     swal({
                         title: response.title,
                         text: response.mensaje,
-                        icon: response.icon,
+                        icon: response.type,
                     }).then((value) => {
                         var array = window.location.pathname.split( '/' );
                         array.pop();    

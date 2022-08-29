@@ -13,3 +13,10 @@ in SYSTEMPATH\CodeIgniter.php on line 231.
  1 SYSTEMPATH\CodeIgniter.php(231): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
  2 SYSTEMPATH\CodeIgniter.php(189): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
  3 FCPATH\index.php(43): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-08-26 15:16:42 --> json_encode() expects at least 1 argument, 0 given
+in APPPATH\Controllers\Registrar.php on line 44.
+ 1 APPPATH\Controllers\Registrar.php(44): json_encode()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->guardarContraseña()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

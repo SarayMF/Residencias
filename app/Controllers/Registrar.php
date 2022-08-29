@@ -39,27 +39,29 @@ class Registrar extends BaseController{
     }
 
     public function guardarContraseña(){
-        if($this->request->getMethod() == 'post'){
-            $rules = [
-                "password1" => 'required|min_length[8]',
-                "password2" => 'required|matches[password1]',
+        if($this->request->isAJAX()){
+            $datos = [
+                'contraseña' => $this->request->getPost('contraseña'),
+                'idUsuario' => $this->request->getPost('idUsuario'),
+                'token' => $this->request->getPost('token')
             ];
-            if($this->validate($rules)){
 
-                $pass = $this->request->getPost('password1');
-                $usuario = $this->request->getPost('idUsuario');
-                $token = $this->request->getPost('token');
-                
-                if($this->cModel->guardarContraseña(password_hash($pass, PASSWORD_DEFAULT), $usuario)){
-                    if($this->cModel->borrarToken($token)){
-                        echo '<script type="text/javascript">
-                        alert("Registro completo, ya puedes ingresar");
-                        window.location.href = "'.base_url().'";
-                        </script>';
-                    }
-                }
-            }
-        }
+            $permisosDefault = [
+                'idUsuario' => $datos['idUsuario'],
+                'idPermiso' => 2
+            ];
+
+            $this->cModel->guardarContraseña(password_hash($datos['contraseña'], PASSWORD_DEFAULT),$datos['idUsuario']);
+            $this->cModel->borrarToken($datos['token']);
+            $this->permisoModel->save($permisosDefault);
+            $data = array(
+                "title" => "¡Registro completado!",
+                "type" => "success",
+                "mensaje" => "Ahora puedes ingresar con tu correo y contraseña",
+            );
+            
+            echo json_encode($data);      
+        }else return redirect()->to(base_url('/'));
     }
 
     public function registro(){
@@ -79,12 +81,6 @@ class Registrar extends BaseController{
                     $link = $this->generarLinkTemporal($datos['curp']); //manda a llamar al metodo que genera un link
                     $correo = $datos['correo'];
                     $idusuario=$this->cModel->obtenerIdUsuario($datos['curp']);
-
-                    $datos = [
-                        'idUsuario' => $idusuario,
-                        'idPermiso' => 2
-                    ];
-                    $this->permisoModel->save($datos);
 
                     $this->enviarEmail($correo,$link); //se envia el link al correo registrado
                     

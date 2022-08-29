@@ -11,7 +11,7 @@ CREATE TABLE Usuario(
  puesto VARCHAR(40) NOT NULL,
  area VARCHAR(40) NOT NULL,
  correo VARCHAR(100) NOT NULL UNIQUE,
- password VARCHAR(40),
+ password VARCHAR(255),
  CONSTRAINT PK_Usuario PRIMARY KEY (idUsuario)
 );
 
