@@ -27,7 +27,7 @@ function mostrarDatos(valor, pagina){
         success:function(respuesta){
             html = "";
             $.each(respuesta.usuarios, function(key, item){
-                html += "<tr><th scope='row'>"+item.curp+"</th><td>"+item.nombre+"</td><td>"+item.apellidoP+"</td><td>"+item.apellidoM+"</td><td><center><a class='btn btn-primary' href='editarpermisos/"+item.idUsuario+"' role='button'>Editar</a></center></td></tr>";
+                html += "<tr><th scope='row'>"+item.curp+"</th><td>"+item.nombre+"</td><td>"+item.apellidoP+"</td><td>"+item.apellidoM+"</td><td><center><a class='btn btn-primary' href='"+base_url+"/"+item.idUsuario+"' role='button'>Editar</a></center></td></tr>";
             });
             $("#listaUsuarios").html(html);
 

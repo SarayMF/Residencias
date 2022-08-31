@@ -66,7 +66,7 @@ class CustomModel{
 
     public function obtenerUsuarios($nombre,$inicio,$cantidad){
         $cadena = "%".$nombre."%";
-        $sql = 'SELECT curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?';
+        $sql = 'SELECT idUsuario, curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?';
         $query = $this->db->query($sql,[$cadena,$inicio,$cantidad]);
         
         return $result = $query->getResult();

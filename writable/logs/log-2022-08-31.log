@@ -1,0 +1,131 @@
+CRITICAL - 2022-08-31 11:44:03 --> The namespace delimiter is a backslash (\), not a slash (/). Route handler: \App\Controllers\Permisos:permisosUsuario/$1
+in SYSTEMPATH\Router\Router.php on line 466.
+ 1 SYSTEMPATH\Router\Router.php(466): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\Permisos:permisosUsuario/$1')
+ 2 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('Otorgar permisos/2')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('Otorgar permisos/2')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-31 11:48:01 --> syntax error, unexpected token ";", expecting "]"
+in APPPATH\Controllers\Permisos.php on line 57.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Permisos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Permisos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Permisos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Permisos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-31 11:48:10 --> Unknown column 'idUsuario' in 'where clause'
+CRITICAL - 2022-08-31 11:48:10 --> Unknown column 'idUsuario' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `permisos`
+WHERE `idUsuario` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `permisos`
+WHERE `idUsuario` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `permisos`
+WHERE `idUsuario` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `permisos`
+WHERE `idUsuario` = :idUsuario:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Permisos.php(58): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->permisosUsuario('2')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-31 11:50:22 --> Object of class App\Controllers\Permisos could not be converted to string
+in APPPATH\Controllers\Permisos.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(858): App\Controllers\Permisos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-31 11:52:06 --> Attempt to read property "nombre" on array
+in APPPATH\Views\editPermisos.php on line 7.
+ 1 APPPATH\Views\editPermisos.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\editPermisos.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\editPermisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('editPermisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(63): view('editPermisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->permisosUsuario('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-31 11:52:17 --> Undefined array key "nombre"
+in APPPATH\Views\editPermisos.php on line 7.
+ 1 APPPATH\Views\editPermisos.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\editPermisos.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\editPermisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('editPermisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(63): view('editPermisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->permisosUsuario('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-31 11:53:57 --> syntax error, unexpected single-quoted string "nombre", expecting identifier or variable or "{" or "$"
+in APPPATH\Views\editPermisos.php on line 7.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('editPermisos', [], true)
+ 3 APPPATH\Controllers\Permisos.php(63): view('editPermisos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->permisosUsuario('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-31 11:54:06 --> Attempt to read property "nombre" on array
+in APPPATH\Views\editPermisos.php on line 7.
+ 1 APPPATH\Views\editPermisos.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\editPermisos.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\editPermisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('editPermisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(63): view('editPermisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->permisosUsuario('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-31 11:54:24 --> Undefined array key "nombre"
+in APPPATH\Views\editPermisos.php on line 7.
+ 1 APPPATH\Views\editPermisos.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\editPermisos.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\editPermisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('editPermisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(63): view('editPermisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->permisosUsuario('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-31 11:54:49 --> Undefined array key "nombre"
+in APPPATH\Views\editPermisos.php on line 8.
+ 1 APPPATH\Views\editPermisos.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\editPermisos.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\editPermisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('editPermisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(63): view('editPermisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->permisosUsuario('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-31 11:55:28 --> Undefined array key "nombre"
+in APPPATH\Views\editPermisos.php on line 8.
+ 1 APPPATH\Views\editPermisos.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\editPermisos.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\editPermisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('editPermisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(63): view('editPermisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->permisosUsuario('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-31 11:56:53 --> Undefined array key "nombre"
+in APPPATH\Views\editPermisos.php on line 8.
+ 1 APPPATH\Views\editPermisos.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\editPermisos.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\editPermisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('editPermisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(63): view('editPermisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->permisosUsuario('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
