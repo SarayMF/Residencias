@@ -7,13 +7,15 @@ use App\Models\PermisosModel;
 use App\Models\PermisosUsuarioModel;
 
 class Permisos extends BaseController{
+    private $permisoUModel;
     private $permisoModel;
     private $usuarioModel;
     private $cModel;
     private $session;
     
     public function __construct(){
-        $this->permisoModel = new PermisosUsuarioModel();
+        $this->permisoUModel = new PermisosUsuarioModel();
+        $this->permisoModel = new PermisosModel();
         $this->cModel = new CustomModel();  
         $this->usuarioModel = new UsuarioModel();
         $this->session = session();
@@ -56,7 +58,8 @@ class Permisos extends BaseController{
             $datos = [
                 'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
                 'datosUsuario' => $this->usuarioModel->find($idUsuario),
-                'datospermiso' => $this->permisoModel->where('idUsuario',$idUsuario)->findAll(),
+                'datosPermisoUsuario' => $this->permisoUModel->where('idUsuario',$idUsuario)->findAll(),
+                'listaPermisos' => $this->permisoModel->findAll(),
             ];
             
             echo view('templates/header',$datos);
