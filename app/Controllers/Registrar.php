@@ -40,19 +40,17 @@ class Registrar extends BaseController{
 
     public function guardarContraseña(){
         if($this->request->isAJAX()){
-            $datos = [
-                'contraseña' => $this->request->getPost('contraseña'),
-                'idUsuario' => $this->request->getPost('idUsuario'),
-                'token' => $this->request->getPost('token')
-            ];
-
+            $contraseña = $this->request->getPost('contraseña');
+            $idUsuario = $this->request->getPost('idUsuario');
+            $token = $this->request->getPost('token');
+        
             $permisosDefault = [
                 'idUsuario' => $datos['idUsuario'],
                 'idPermiso' => 2
             ];
 
-            $this->cModel->guardarContraseña(password_hash($datos['contraseña'], PASSWORD_DEFAULT),$datos['idUsuario']);
-            $this->cModel->borrarToken($datos['token']);
+            $this->usuarioModel->whereIn('idUsuario', $idUsuario)->set(['password' => password_hash($contraseña, PASSWORD_DEFAULT)])->update();
+            $this->linkModel->where('token', $token)->delete();
             $this->permisoModel->save($permisosDefault);
             $data = array(
                 "title" => "¡Registro completado!",
@@ -80,7 +78,6 @@ class Registrar extends BaseController{
                 if($this->usuarioModel->save($datos)){
                     $link = $this->generarLinkTemporal($datos['curp']); //manda a llamar al metodo que genera un link
                     $correo = $datos['correo'];
-                    $idusuario=$this->cModel->obtenerIdUsuario($datos['curp']);
 
                     $this->enviarEmail($correo,$link); //se envia el link al correo registrado
                     
@@ -112,7 +109,7 @@ class Registrar extends BaseController{
     public function generarLinkTemporal($curp){
         $cadena = $curp.rand(1,9999999).date('Y-m-d');
         $token = sha1($cadena);
-        $idusuario=$this->cModel->obtenerIdUsuario($curp);
+        $idusuario=$this->usuarioModel->where('curp', $curp)->find($idUsuario);
 
         $datos = [
             'idUsuario' => $idusuario,

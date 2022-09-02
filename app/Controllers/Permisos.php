@@ -25,10 +25,9 @@ class Permisos extends BaseController{
         if($this->session->has('idUsuario')){
             $datos = [
                 'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
-                'datospermiso' => $this->permisoModel->findAll(),
             ];
             echo view('templates/header',$datos);
-            echo view('permisos', $datos);
+            echo view('permisos');
             echo view('templates/footer');
             echo view('templates/footer_js');
         }else{
@@ -43,7 +42,7 @@ class Permisos extends BaseController{
             $cantidad = 5;
             $inicio = ($pagina - 1) * 5;
             $datos = array(
-                "usuarios" => $this->cModel->obtenerUsuarios($buscar, $inicio, $cantidad),
+                "usuarios" => $this->cModel->obtenerUsuarios($buscar, $inicio, $cantidad, $this->session->idUsuario),
                 "cantidadUsuarios" => count($this->cModel->obtenerUsuario($buscar)),
             );
             echo json_encode($datos);

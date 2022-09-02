@@ -52,17 +52,23 @@ class Home extends BaseController
         $datosUsuario = $this->usuarioModel->where('correo', $email)->find();
 
         if(count($datosUsuario) > 0){
-            if(password_verify($contraseña, $datosUsuario[0]['password'])){
-                $data = [
-                    "idUsuario" => $datosUsuario[0]['idUsuario'],                
-                ];
-    
-                $session = session();
-                $session->set($data);
-                return redirect()->to(base_url('/'));
+            if(isset($datosUsuario[0]['password'])){
+                if(password_verify($contraseña, $datosUsuario[0]['password'])){
+                    $data = [
+                        "idUsuario" => $datosUsuario[0]['idUsuario'],                
+                    ];
+        
+                    $session = session();
+                    $session->set($data);
+                    return redirect()->to(base_url('/'));
+                }else{
+                    return redirect()->to(base_url('/'))->with('msg', [
+                        'body' => 'Credenciales invalidas',
+                    ]);
+                }
             }else{
                 return redirect()->to(base_url('/'))->with('msg', [
-                    'body' => 'Credenciales invalidas',
+                    'body' => 'Aun no has completado tu registro',
                 ]);
             }
         }else{

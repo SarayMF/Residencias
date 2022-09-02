@@ -25,12 +25,6 @@ class CustomModel{
         }
     }
 
-    public function obtenerIdUsuario($curp){
-        $query = $this->db->query('SELECT idUsuario FROM usuario WHERE curp = ?', [$curp]);
-        $result = $query->getRow();
-        return $result->idUsuario;
-    }
-
     public function verificarToken($token, $id){
         $query = $this->db->query('SELECT * FROM linkpassword WHERE token = ? AND idUsuario = ?', [$token, $id] );
         $result = $query->getResult();
@@ -39,19 +33,6 @@ class CustomModel{
         }else{
             return false;
         }
-    }
-
-    public function guardarContraseña($pass, $id){
-        $query = $this->db->query('UPDATE usuario SET password = ? WHERE idUsuario = ?', [$pass, $id]);
-        if($query==true){
-            return true;
-        }else return false;
-    }
-
-    public function borrarToken($token){
-        $query = $this->db->query('DELETE FROM linkpassword WHERE token= ?', [$token]);
-        if($query == true) return true;
-        else return false;
     }
 
     public function obtenerPermisos($idUsuario){
@@ -64,10 +45,10 @@ class CustomModel{
         return $result = $query->getResult();
     }
 
-    public function obtenerUsuarios($nombre,$inicio,$cantidad){
+    public function obtenerUsuarios($nombre,$inicio,$cantidad,$usuarioLogueado){
         $cadena = "%".$nombre."%";
-        $sql = 'SELECT idUsuario, curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? LIMIT ?,?';
-        $query = $this->db->query($sql,[$cadena,$inicio,$cantidad]);
+        $sql = 'SELECT idUsuario, curp, nombre, apellidoP, apellidoM FROM usuario WHERE nombre LIKE ? AND idUsuario != ? LIMIT ?,?';
+        $query = $this->db->query($sql,[$cadena,$usuarioLogueado,$inicio,$cantidad]);
         
         return $result = $query->getResult();
     }
