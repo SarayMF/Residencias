@@ -1,0 +1,52 @@
+CRITICAL - 2022-09-03 15:26:08 --> Trying to access array offset on value of type null
+in APPPATH\Views\editPermisos.php on line 7.
+ 1 APPPATH\Views\editPermisos.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\editPermisos.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\editPermisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('editPermisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(65): view('editPermisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->permisosUsuario('guardarPermisos')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-03 15:28:29 --> Undefined property: App\Controllers\Permisos::$reques
+in APPPATH\Controllers\Permisos.php on line 72.
+ 1 APPPATH\Controllers\Permisos.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Permisos::$reques', 'APPPATH\\Controllers\\Permisos.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->guardarPermisos()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-03 15:28:48 --> Undefined property: App\Controllers\Permisos::$reques
+in APPPATH\Controllers\Permisos.php on line 72.
+ 1 APPPATH\Controllers\Permisos.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Permisos::$reques', 'APPPATH\\Controllers\\Permisos.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->guardarPermisos()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-03 15:28:51 --> Trying to access array offset on value of type null
+in APPPATH\Views\editPermisos.php on line 7.
+ 1 APPPATH\Views\editPermisos.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\editPermisos.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\editPermisos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('editPermisos', [], true)
+ 5 APPPATH\Controllers\Permisos.php(65): view('editPermisos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->permisosUsuario('guardarPermisos')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-03 15:36:58 --> Undefined variable $permisoUModel
+in APPPATH\Controllers\Permisos.php on line 96.
+ 1 APPPATH\Controllers\Permisos.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $permisoUModel', 'APPPATH\\Controllers\\Permisos.php', 96)
+ 2 APPPATH\Controllers\Permisos.php(75): App\Controllers\Permisos->borrar('2')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->guardar()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-03 15:37:27 --> Undefined variable $permisoUModel
+in APPPATH\Controllers\Permisos.php on line 96.
+ 1 APPPATH\Controllers\Permisos.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $permisoUModel', 'APPPATH\\Controllers\\Permisos.php', 96)
+ 2 APPPATH\Controllers\Permisos.php(75): App\Controllers\Permisos->borrar('2')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->guardar()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

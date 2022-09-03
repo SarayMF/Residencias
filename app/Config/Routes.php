@@ -44,6 +44,7 @@ $routes->post('/registrarContraseña', 'Registrar::guardarContraseña');
 $routes->get('/Otorgar permisos', 'Permisos::index');
 $routes->post('/Otorgar permisos/mostrar', 'Permisos::mostrar');
 $routes->get('/Otorgar permisos/(:any)', 'Permisos::permisosUsuario/$1');
+$routes->post('/Otorgar permisos/guardarPermisos', 'Permisos::guardar');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

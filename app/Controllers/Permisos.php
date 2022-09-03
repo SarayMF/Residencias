@@ -67,4 +67,33 @@ class Permisos extends BaseController{
             echo view('templates/footer_js');
         }else return redirect()->to(base_url('/'));
     }
+
+    public function guardar(){
+        if($this->request->isAJAX()){
+            $idUsuario = $this->request->getPost('idUsuario');
+            $permisos = json_decode($this->request->getPost('permisos'),true);
+            $this->borrar($idUsuario);
+
+            foreach($permisos as $p){
+                $datos = [
+                    'idUsuario' => $idUsuario,
+                    'idPermiso' => $p,
+                ];
+                $this->permisoUModel->save($datos);
+            }
+
+            $data = array(
+                "title" => "Permisos actualizados",
+                "type" => "success",
+                "mensaje" => "Los permisos del usuario han sido actualizados correctamente",
+            );
+            
+            echo json_encode($data);
+        }else return redirect()->to(base_url('/'));
+    }
+
+    public function borrar($idUsuario){
+        $this->permisoUModel->where('idUsuario', $idUsuario)->delete();
+    }
+
 }
