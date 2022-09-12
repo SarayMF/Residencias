@@ -41,7 +41,8 @@ CREATE TABLE permisosUsuario(
 
 CREATE TABLE Asignacion(
  idAsignacion INT NOT NULL AUTO_INCREMENT,
- fechaAsignacion DATE NOT NULL,
+ fechaAsignacion TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ cantidad INT,
  usuarioAsigna INT NOT NULL,
  usuarioAsignado INT NOT NULL,
  observaciones VARCHAR(500),
@@ -69,6 +70,8 @@ CREATE TABLE Activo(
 
 CREATE TABLE Accesorio(
  idAccesorio INT NOT NULL AUTO_INCREMENT,
+ nombre VARCHAR(50) NOT NULL,
+ cantidad INT NOT NULL,
  CONSTRAINT PK_Accesorio PRIMARY KEY (idAccesorio)
 );
 

@@ -45,6 +45,8 @@ $routes->get('/Otorgar permisos', 'Permisos::index');
 $routes->post('/Otorgar permisos/mostrar', 'Permisos::mostrar');
 $routes->get('/Otorgar permisos/(:any)', 'Permisos::permisosUsuario/$1');
 $routes->post('/Otorgar permisos/guardarPermisos', 'Permisos::guardar');
+$routes->get('/Entrada de activos', 'Activos::index');
+$routes->post('/Entrada de activos/mostrar', 'Activos::read')
 /*
  * --------------------------------------------------------------------
  * Additional Routing

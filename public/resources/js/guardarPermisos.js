@@ -2,6 +2,7 @@ $(document).ready(inicio);
 
 function inicio(){
     $("#formulario").submit(function(ev){
+        document.getElementById('loader').classList.add('loader');
         ev.preventDefault();
         permisos = [];
         $("input[type=checkbox]:checked").each(function(){
@@ -19,6 +20,7 @@ function inicio(){
             data: data,
             dataType:"json",
             success: function(response){
+                document.getElementById('loader').classList.remove('loader');
                 swal({
                     title: response.title,
                     text: response.mensaje,

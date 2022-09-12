@@ -2,6 +2,7 @@ $(document).ready(inicio);
 
 function inicio(){
     $("#formulario").submit(function(ev){
+        document.getElementById('loader').classList.add('loader');
         ev.preventDefault();
         var data = {
             'curp':$('#curp').val(),
@@ -18,6 +19,7 @@ function inicio(){
             data: data,
             dataType:"json",
             success: function(response){
+                document.getElementById('loader').classList.remove('loader');
                 if(response.type == "success"){
                     swal({
                         title: response.title,

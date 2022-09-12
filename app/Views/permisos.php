@@ -26,14 +26,14 @@
                         </tr>
                     </thead>
                     <tbody id="listaUsuarios">
-
+                        
                     </tbody>
                 </table>
-
+                <center>
+                    <div id="loader" class=""></div>
+                </center>
                 <nav id="paginacion" aria-label="Page navigation example">
                     <ul class="pagination justify-content-end pagination-sm">
-                        
-
                         
                     </ul>
                 </nav>

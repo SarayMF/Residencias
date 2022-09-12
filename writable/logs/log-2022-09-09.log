@@ -1,0 +1,7 @@
+CRITICAL - 2022-09-09 23:17:55 --> Undefined property: App\Controllers\Activos::$session
+in APPPATH\Controllers\Activos.php on line 23.
+ 1 APPPATH\Controllers\Activos.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Activos::$session', 'APPPATH\\Controllers\\Activos.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

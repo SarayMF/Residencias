@@ -77,7 +77,7 @@
             </div>
 
             <div class="center">
-                <button type="submit" class="btn btn-primary center save-data">Registrarme</button>
+                <button type="submit" class="btn btn-primary center save-data">Registrarme<div id="loader" class=""></div></button>
             </div>
         </form>
     </div>

@@ -48,7 +48,7 @@ class Permisos extends BaseController{
             echo json_encode($datos);
         
         }else{
-            
+            return redirect()->to(base_url('/Otorgar permisos'));
         }
     }
 

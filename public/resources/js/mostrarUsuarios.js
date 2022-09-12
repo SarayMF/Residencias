@@ -17,6 +17,7 @@ function inicio(){
 }
 
 function mostrarDatos(valor, pagina){
+    document.getElementById('loader').classList.add('loader');
     var base_url = window.location.origin + window.location.pathname;
 
     $.ajax({
@@ -25,6 +26,7 @@ function mostrarDatos(valor, pagina){
         data:{buscar:valor, numpagina:pagina},
         dataType:"json",
         success:function(respuesta){
+            document.getElementById('loader').classList.remove('loader');
             html = "";
             $.each(respuesta.usuarios, function(key, item){
                 html += "<tr><th scope='row'>"+item.curp+"</th><td>"+item.nombre+"</td><td>"+item.apellidoP+"</td><td>"+item.apellidoM+"</td><td><center><a class='btn btn-primary' href='"+base_url+"/"+item.idUsuario+"' role='button'>Editar</a></center></td></tr>";
