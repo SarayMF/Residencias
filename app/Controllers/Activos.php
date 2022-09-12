@@ -40,9 +40,21 @@ class Activos extends BaseController{
     }
 
     public function read(){
-
+        if($this->request->isAJAX()){
+            $buscar = $this->request->getPost('buscar');
+            $pagina = $this->request->getPost('numpagina');
+            $cantidad = 5;
+            $inicio = ($pagina - 1) * 5;
+            $datos = array(
+                "usuarios" => $this->cModel->obtenerUsuarios($buscar, $inicio, $cantidad, $this->session->idUsuario),
+                "cantidadUsuarios" => count($this->cModel->obtenerUsuario($buscar)),
+            );
+            echo json_encode($datos);
+        
+        }else{
+            return redirect()->to(base_url('/Otorgar permisos'));
+        }
     }
-
     public function update(){
 
     }
