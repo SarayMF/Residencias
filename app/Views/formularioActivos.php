@@ -66,6 +66,9 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <pre><?php var_dump($aplicaciones)?></pre>
+            </div>
         </form>
     
     </div>

@@ -66,3 +66,9 @@ in APPPATH\Controllers\Activos.php on line 65.
  5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
  6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-14 15:04:19 --> Class "App\Controllers\CustomModel" not found
+in APPPATH\Controllers\Activos.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(858): App\Controllers\Activos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

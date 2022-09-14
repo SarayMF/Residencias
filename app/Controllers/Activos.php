@@ -1,21 +1,21 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\UsuarioModel;
 use App\Models\CustomModel;
 use App\Models\ActivosModel;
+use App\Models\AplicacionesModel;
 use App\Models\PermisosUsuarioModel;
 
 class Activos extends BaseController{
     private $cModel;
-    private $usuarioModel;
+    private $aplicacionesModel;
     private $activosModel;
     private $permisoModel;
     private $session;
 
     public function __construct(){
         $this->cModel = new CustomModel();  
-        $this->usuarioModel = new UsuarioModel();
+        $this->aplicacionesModel = new AplicacionesModel();
         $this->activosModel = new ActivosModel();
         $this->permisoModel = new PermisosUsuarioModel();
         $this->session = session();
@@ -63,6 +63,7 @@ class Activos extends BaseController{
             $datos = [
                 'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
                 'activo' => $this->activosModel->find($id),
+                'aplicaciones' => $this->aplicacionesModel->findAll(),
                 'titulo' => "Editar activo"
             ];
             echo view('templates/header',$datos);
