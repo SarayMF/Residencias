@@ -1,0 +1,100 @@
+CRITICAL - 2022-09-12 11:00:53 --> syntax error, unexpected token "if"
+in APPPATH\Config\Routes.php on line 63.
+ 1 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-12 11:01:13 --> Cannot redeclare App\Models\CustomModel::obtenerUsuarios()
+in APPPATH\Models\CustomModel.php on line 64.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-12 11:05:59 --> Undefined variable $idUsuario
+in APPPATH\Controllers\Registrar.php on line 112.
+ 1 APPPATH\Controllers\Registrar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idUsuario', 'APPPATH\\Controllers\\Registrar.php', 112)
+ 2 APPPATH\Controllers\Registrar.php(79): App\Controllers\Registrar->generarLinkTemporal('MAFA971218MTSRRR03')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-12 11:26:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+CRITICAL - 2022-09-12 11:26:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?')
+ 4 APPPATH\Models\CustomModel.php(67): CodeIgniter\Database\BaseConnection->query('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Activos.php(48): App\Models\CustomModel->obtenerActivos('ROOTPATH\\public', 0, 5, '101')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->read()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-12 11:27:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+CRITICAL - 2022-09-12 11:27:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?')
+ 4 APPPATH\Models\CustomModel.php(67): CodeIgniter\Database\BaseConnection->query('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Activos.php(48): App\Models\CustomModel->obtenerActivos('ROOTPATH\\public', 0, 5, '101')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->read()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-12 11:27:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+CRITICAL - 2022-09-12 11:27:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?')
+ 4 APPPATH\Models\CustomModel.php(67): CodeIgniter\Database\BaseConnection->query('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Activos.php(48): App\Models\CustomModel->obtenerActivos('ROOTPATH\\public', 0, 5, '101')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->read()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-12 11:42:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+CRITICAL - 2022-09-12 11:42:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?')
+ 4 APPPATH\Models\CustomModel.php(67): CodeIgniter\Database\BaseConnection->query('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Activos.php(48): App\Models\CustomModel->obtenerActivos('ROOTPATH\\public', 0, 5, '101')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->read()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-12 11:42:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+CRITICAL - 2022-09-12 11:42:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?')
+ 4 APPPATH\Models\CustomModel.php(67): CodeIgniter\Database\BaseConnection->query('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Activos.php(48): App\Models\CustomModel->obtenerActivos('ROOTPATH\\public', 0, 5, '101')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->read()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-12 11:44:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+CRITICAL - 2022-09-12 11:44:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?')
+ 4 APPPATH\Models\CustomModel.php(67): CodeIgniter\Database\BaseConnection->query('SELECT * FROM activos WHERE noActivo LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Activos.php(48): App\Models\CustomModel->obtenerActivos('ROOTPATH\\public', 0, 5, '101')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->read()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-12 11:46:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+CRITICAL - 2022-09-12 11:46:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? LIMIT ?,?' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM activo WHERE noActivo LIKE ? LIMIT ?,?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM activo WHERE noActivo LIKE ? LIMIT ?,?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM activo WHERE noActivo LIKE ? LIMIT ?,?')
+ 4 APPPATH\Models\CustomModel.php(67): CodeIgniter\Database\BaseConnection->query('SELECT * FROM activo WHERE noActivo LIKE ? LIMIT ?,?', [...])
+ 5 APPPATH\Controllers\Activos.php(48): App\Models\CustomModel->obtenerActivos('ROOTPATH\\public', 0, 5, '101')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->read()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

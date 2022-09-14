@@ -3,20 +3,19 @@
 namespace App\Controllers;
 use App\Models\UsuarioModel;
 use App\Models\CustomModel;
-use App\Models\LinkModel;
+use App\Models\ActivosModel;
 use App\Models\PermisosUsuarioModel;
 
 class Activos extends BaseController{
     private $cModel;
     private $usuarioModel;
-    private $linkModel;
+    private $activosModel;
     private $permisoModel;
     private $session;
 
     public function __construct(){
         $this->cModel = new CustomModel();  
         $this->usuarioModel = new UsuarioModel();
-        $this->linkModel = new LinkModel();
         $this->permisoModel = new PermisosUsuarioModel();
         $this->session = session();
     }
@@ -46,8 +45,8 @@ class Activos extends BaseController{
             $cantidad = 5;
             $inicio = ($pagina - 1) * 5;
             $datos = array(
-                "usuarios" => $this->cModel->obtenerUsuarios($buscar, $inicio, $cantidad, $this->session->idUsuario),
-                "cantidadUsuarios" => count($this->cModel->obtenerUsuario($buscar)),
+                "activos" => $this->cModel->obtenerActivos($buscar, $inicio, $cantidad, $this->session->idUsuario),
+                "cantidadActivos" => count($this->cModel->obtenerActivo($buscar)),
             );
             echo json_encode($datos);
         

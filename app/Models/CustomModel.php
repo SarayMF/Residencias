@@ -60,4 +60,20 @@ class CustomModel{
         
         return $result = $query->getResult();
     }
+
+    public function obtenerActivos($nombre,$inicio,$cantidad){
+        $cadena = "%".$nombre."%";
+        $sql = 'SELECT * FROM activo WHERE noActivo LIKE ? LIMIT ?,?';
+        $query = $this->db->query($sql,[$cadena,$inicio,$cantidad]);
+        
+        return $result = $query->getResult();
+    }
+
+    public function obtenerActivo($nombre){
+        $cadena = "%".$nombre."%";
+        $sql = 'SELECT * FROM activo WHERE noActivo LIKE ?';
+        $query = $this->db->query($sql,[$cadena]);
+        
+        return $result = $query->getResult();
+    }
 }
