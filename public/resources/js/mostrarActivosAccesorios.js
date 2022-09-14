@@ -1,22 +1,22 @@
 $(document).ready(inicio);
 
 function inicio(){
-    mostrarDatos("",1);
+    mostrarActivos("",1);
 
     $("#buscar").keyup(function(){
         buscar = $("#buscar").val();
-        mostrarDatos(buscar,1);
+        mostrarActivos(buscar,1);
     });
 
     $("body").on("click",".pagination li a", function(e){
         e.preventDefault();
         valorhref = $(this).attr('href');
         valorbuscar = $("#buscar").val();
-        mostrarDatos(valorbuscar,valorhref);
+        mostrarActivos(valorbuscar,valorhref);
     })
 }
 
-function mostrarDatos(valor, pagina){
+function mostrarActivos(valor, pagina){
     document.getElementById('loader').classList.add('loader');
     var base_url = window.location.origin + window.location.pathname;
 
@@ -29,13 +29,13 @@ function mostrarDatos(valor, pagina){
             document.getElementById('loader').classList.remove('loader');
             html = "";
             $.each(respuesta.activos, function(key, item){
-                html += "<tr><th scope='row'>"+item.noActivo+"</th><td>"+item.noSerie+"</td><td>"+item.marca+"</td><td>"+item.modelo+"</td><td>"+item.fechaAlta+"</td><td><center><a class='btn btn-primary' href='"+base_url+"/editar"+item.idActivo+"' role='button'>Editar</a></center></td><td><center><a class='btn btn-info' href='"+base_url+"/asignar/"+item.idActivo+"' role='button'>Asignar</a></center></td></tr>";
+                html += "<tr><th scope='row'>"+item.noActivo+"</th><td>"+item.noSerie+"</td><td>"+item.marca+"</td><td>"+item.modelo+"</td><td>"+item.fechaAlta+"</td><td><center><a class='btn btn-primary' href='"+base_url+"/editar/"+item.idActivo+"' role='button'>Editar</a></center></td><td><center><a class='btn btn-info' href='"+base_url+"/asignar/"+item.idActivo+"' role='button'>Asignar</a></center></td></tr>";
             });
             $("#listaActivos").html(html);
 
 
             linkseleccionado = Number(pagina);
-            var articulosPag = Math.ceil(respuesta.cantidadActivos/5);
+            var articulosPag = Math.ceil(respuesta.cantidadActivos/10);
             paginador = "";
 
             if(linkseleccionado>1){
@@ -47,8 +47,7 @@ function mostrarDatos(valor, pagina){
             }
 
             cant = 3;
-            pagInicio = (linkseleccionado > cant) ? (linkseleccionado - cant) :articulosPag;
-
+            pagInicio = (linkseleccionado > cant) ? (linkseleccionado - cant) : 1;
             if(articulosPag > cant){
                 pagRestantes = articulosPag - linkseleccionado;
                 pagFin = (pagRestantes > cant) ? (linkseleccionado + cant) :articulosPag;

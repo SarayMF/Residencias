@@ -45,10 +45,21 @@ function mostrarDatos(valor, pagina){
                 paginador+="<li class='page-item disabled'><a class='page-link' href='1'>&laquo;</a></li>";
                 paginador+="<li class='page-item disabled'><a class='page-link' href='"+(linkseleccionado-1)+"' '>&lsaquo;</a></li>";
             }
-            for(var i = 1; i <= articulosPag; i++){
+            
+            cant = 3;
+            pagInicio = (linkseleccionado > cant) ? (linkseleccionado - cant) : 1;
+            if(articulosPag > cant){
+                pagRestantes = articulosPag - linkseleccionado;
+                pagFin = (pagRestantes > cant) ? (linkseleccionado + cant) :articulosPag;
+            }else{
+                pagFin = articulosPag;
+            }
+
+            for(var i = pagInicio; i <= pagFin; i++){
                 if(i == linkseleccionado) paginador+="<li class='page-item active'><a class='page-link' href='javascript:void(0)'>"+i+"</a></li>";
                 else paginador+="<li class='page-item'><a class='page-link' href='"+i+"'>"+i+"</a></li>";
             }
+            
             if(linkseleccionado<articulosPag){
                 paginador+="<li class='page-item'><a class='page-link' href='"+(linkseleccionado+1)+"'>&rsaquo;</a></li>";
                 paginador+="<li class='page-item'><a class='page-link' href='"+articulosPag+"'>&raquo;</a></li>";

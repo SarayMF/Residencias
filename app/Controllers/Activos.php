@@ -16,6 +16,7 @@ class Activos extends BaseController{
     public function __construct(){
         $this->cModel = new CustomModel();  
         $this->usuarioModel = new UsuarioModel();
+        $this->activosModel = new ActivosModel();
         $this->permisoModel = new PermisosUsuarioModel();
         $this->session = session();
     }
@@ -26,7 +27,7 @@ class Activos extends BaseController{
                 'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
             ];
             echo view('templates/header',$datos);
-            echo view('registroActivos');
+            echo view('mostrarActivos');
             echo view('templates/footer');
             echo view('templates/footer_js');
         }else{
@@ -42,8 +43,8 @@ class Activos extends BaseController{
         if($this->request->isAJAX()){
             $buscar = $this->request->getPost('buscar');
             $pagina = $this->request->getPost('numpagina');
-            $cantidad = 5;
-            $inicio = ($pagina - 1) * 5;
+            $cantidad = 10;
+            $inicio = ($pagina - 1) * 10;
             $datos = array(
                 "activos" => $this->cModel->obtenerActivos($buscar, $inicio, $cantidad, $this->session->idUsuario),
                 "cantidadActivos" => count($this->cModel->obtenerActivo($buscar)),
@@ -54,8 +55,21 @@ class Activos extends BaseController{
             return redirect()->to(base_url('/Otorgar permisos'));
         }
     }
-    public function update(){
 
+    public function update($id){
+        if($this->request->isAJAX()){
+
+        }else{
+            $datos = [
+                'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                'activo' => $this->activosModel->find($id),
+                'titulo' => "Editar activo"
+            ];
+            echo view('templates/header',$datos);
+            echo view('formularioActivos',$datos);
+            echo view('templates/footer');
+            echo view('templates/footer_js');
+        }
     }
     
     public function delete(){

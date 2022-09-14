@@ -4,7 +4,7 @@ use CodeIgniter\Model;
 
 class ActivosModel extends Model
 {
-    protected $table      = 'activos';
+    protected $table      = 'activo';
     protected $primaryKey = 'idActivo';
 
     protected $allowedFields = ['noActivo', 'noSerie', 'marca', 'modelo', 'memoriaRAM', 'discoDuro', 'procesador', 'idAsignacion','estado','usuarioBaja'];
@@ -13,7 +13,7 @@ class ActivosModel extends Model
     
     protected $useTimestamps = true;
     protected $createdField  = 'fechaAlta';
-    protected $deletedField  = 'fechaBaja'
+    protected $deletedField  = 'fechaBaja';
 
     protected $updatedField  = false;
 
