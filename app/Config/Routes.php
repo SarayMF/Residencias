@@ -45,9 +45,12 @@ $routes->get('/Otorgar permisos', 'Permisos::index');
 $routes->post('/Otorgar permisos/mostrar', 'Permisos::mostrar');
 $routes->get('/Otorgar permisos/(:any)', 'Permisos::permisosUsuario/$1');
 $routes->post('/Otorgar permisos/guardarPermisos', 'Permisos::guardar');
-$routes->get('/Entrada de activos', 'Activos::index');
+$routes->get('/Entrada de activos', 'Activos::entradaDeActivos');
 $routes->post('/Entrada de activos/mostrar', 'Activos::read');
 $routes->get('/Entrada de activos/editar/(:any)', 'Activos::update/$1');
+$routes->get('/Salida de activos', 'Activos::salidaDeActivos');
+$routes->post('/Salida de activos/mostrar', 'Activos::read');
+$routes->post('/Salida de activos/eliminar', 'Activos::delete');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -28,7 +28,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fa fa-copyright"></i></span>
                         </div>
-                        <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['marca']?>" id="marca" placeholder="hp, dell, lenovo, etc." aria-label="marca" aria-describedby="basic-addon1" required>
+                        <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['marca']?>" id="marca" placeholder="Marca" aria-label="marca" aria-describedby="basic-addon1" required>
                     </div>
                 </div>
                 <div class="col-6 col-lg-6">
@@ -67,7 +67,30 @@
                 </div>
             </div>
             <div class="row">
-                <pre><?php var_dump($aplicaciones)?></pre>
+                <div class="col-12 col-lg-2"><h6>Aplicaciones:</h6></div>
+                <div class="col-12"></div>
+                
+                <div class="row" id="aplicaciones">
+                    <?php if(isset($aplicaciones)): ?>
+                        <?php foreach($aplicaciones as $aplicacion):?>
+                        <div class="col-6 col-md-3">
+                            <div class="input-group mb-3">
+                                <input type="hidden" class="form-control" id="Aplicacion<?php echo $aplicacion['idAplicacion']?>">
+                                <input type="text" class="form-control" value="<?php echo $aplicacion['nombre']?>" readonly>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <button type="button" class="close" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </span>
+                                </div>
+                                
+                                </input>
+                            </div>
+                        </div>
+                        <?php endforeach?>
+                    <?php endif?>
+                </div>
             </div>
         </form>
     

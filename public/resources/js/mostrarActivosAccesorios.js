@@ -27,9 +27,13 @@ function mostrarActivos(valor, pagina){
         dataType:"json",
         success:function(respuesta){
             document.getElementById('loader').classList.remove('loader');
+            type = $("#type").val();
+            console.log(respuesta.type);
             html = "";
             $.each(respuesta.activos, function(key, item){
-                html += "<tr><th scope='row'>"+item.noActivo+"</th><td>"+item.noSerie+"</td><td>"+item.marca+"</td><td>"+item.modelo+"</td><td>"+item.fechaAlta+"</td><td><center><a class='btn btn-primary' href='"+base_url+"/editar/"+item.idActivo+"' role='button'>Editar</a></center></td><td><center><a class='btn btn-info' href='"+base_url+"/asignar/"+item.idActivo+"' role='button'>Asignar</a></center></td></tr>";
+                html += "<tr><th scope='row'>"+item.noActivo+"</th><td>"+item.noSerie+"</td><td>"+item.marca+"</td><td>"+item.modelo+"</td><td>"+item.fechaAlta+"</td>";
+                if(type == "Entrada") html += "<td><center><a class='btn btn-primary' href='"+base_url+"/editar/"+item.idActivo+"' role='button'>Editar</a></center></td><td><center><a class='btn btn-info' href='"+base_url+"/asignar/"+item.idActivo+"' role='button'>Asignar</a></center></td></tr>";
+                else if(type == "Salida") html += "<td><center><button class='btn btn-danger' onClick='eliminarActivo("+item.idActivo+")'>Eliminar</button></center></td></tr>";
             });
             $("#listaActivos").html(html);
 
@@ -69,4 +73,38 @@ function mostrarActivos(valor, pagina){
             $("#paginacion ul").html(paginador);
         }
     });
+}
+
+function eliminarActivo(idActivo){
+    var base_url = window.location.origin + window.location.pathname;
+    swal({
+        title: "¿Estas seguro de eliminar este registro?",
+        text: "Una vez eliminado, no seras capaz de recuperarlo",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+            $.ajax({
+                url: base_url+"/eliminar",
+                type:"POST",
+                data: {activo:idActivo},
+                dataType:"json",
+                success:function(respuesta){
+                    swal({
+                        title: respuesta.title,
+                        text: respuesta.mensaje,
+                        icon: respuesta.type,
+                    }).then((value) => {
+                        mostrarActivos("", 1);
+                    });
+                },
+            });
+          
+        } else {
+          swal("Accion cancelada");
+        }
+      });
+   
 }

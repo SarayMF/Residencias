@@ -43,7 +43,7 @@ class Permisos extends BaseController{
             $inicio = ($pagina - 1) * 5;
             $datos = array(
                 "usuarios" => $this->cModel->obtenerUsuarios($buscar, $inicio, $cantidad, $this->session->idUsuario),
-                "cantidadUsuarios" => count($this->cModel->obtenerUsuario($buscar)),
+                "cantidadUsuarios" => count($this->cModel->obtenerUsuario($buscar, $this->session->idUsuario)),
             );
             echo json_encode($datos);
         

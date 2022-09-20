@@ -12,6 +12,7 @@ class Activos extends BaseController{
     private $activosModel;
     private $permisoModel;
     private $session;
+    private $type;
 
     public function __construct(){
         $this->cModel = new CustomModel();  
@@ -21,19 +22,37 @@ class Activos extends BaseController{
         $this->session = session();
     }
 
-    public function index(){
+    public function entradaDeActivos(){
         if($this->session->has('idUsuario')){
+            $this->type = "Entrada";
             $datos = [
                 'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                'titulo' => $this->type,
             ];
             echo view('templates/header',$datos);
-            echo view('mostrarActivos');
+            echo view('mostrarActivos',$datos);
             echo view('templates/footer');
             echo view('templates/footer_js');
         }else{
             return redirect()->to(base_url('/'));
         }
-    } 
+    }
+
+    public function salidaDeActivos(){
+        if($this->session->has('idUsuario')){
+            $this->type = "Salida";
+            $datos = [
+                'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                'titulo' => $this->type,
+            ];
+            echo view('templates/header',$datos);
+            echo view('mostrarActivos',$datos);
+            echo view('templates/footer');
+            echo view('templates/footer_js');
+        }else{
+            return redirect()->to(base_url('/'));
+        }
+    }
 
     public function create(){
 
@@ -52,7 +71,7 @@ class Activos extends BaseController{
             echo json_encode($datos);
         
         }else{
-            return redirect()->to(base_url('/Otorgar permisos'));
+            return redirect()->to(base_url('/Entrada de activos'));
         }
     }
 
@@ -74,6 +93,25 @@ class Activos extends BaseController{
     }
     
     public function delete(){
+        if($this->request->isAJAX()){
+            $idActivo = $this->request->getPost('activo');
 
+            if($this->activosModel->where('idActivo',$idActivo)->delete()){
+                $this->activosModel->where('idActivo', $idActivo)->set(['usuarioBaja' => $this->session->get('idUsuario'), 'estado' => 0])->update();
+                $data = array(
+                    "title" => "¡Registro eliminado!",
+                    "type" => "success",
+                    "mensaje" => "Registro eliminado correctamente",
+                );
+                echo json_encode($data);
+            }else{
+                $data = array(
+                    "title" => "Error",
+                    "type" => "error",
+                    "mensaje" => "Ocurrio un error en la eliminacion del registro",
+                );
+                echo json_encode($data);
+            }
+        }
     }
 }
