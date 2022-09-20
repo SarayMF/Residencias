@@ -3,6 +3,7 @@ $(document).ready(inicio);
 function inicio(){
     $("#formulario-cont").submit(function(ev){
         ev.preventDefault();
+        document.getElementById('loader').classList.add('loader');
         contraseña1 = $('#password1').val();
         contraseña2 = $('#password2').val();
         if(contraseña1 == contraseña2){
@@ -18,6 +19,7 @@ function inicio(){
                 data: data,
                 dataType:"json",
                 success: function(response){
+                    document.getElementById('loader').classList.remove('loader');
                     swal({
                         title: response.title,
                         text: response.mensaje,

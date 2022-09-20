@@ -45,11 +45,11 @@ class Registrar extends BaseController{
             $token = $this->request->getPost('token');
         
             $permisosDefault = [
-                'idUsuario' => $datos['idUsuario'],
+                'idUsuario' => $idUsuario,
                 'idPermiso' => 2
             ];
 
-            $this->usuarioModel->whereIn('idUsuario', $idUsuario)->set(['password' => password_hash($contraseña, PASSWORD_DEFAULT)])->update();
+            $this->usuarioModel->where('idUsuario', $idUsuario)->set(['password' => password_hash($contraseña, PASSWORD_DEFAULT)])->update();
             $this->linkModel->where('token', $token)->delete();
             $this->permisoModel->save($permisosDefault);
             $data = array(
@@ -109,16 +109,16 @@ class Registrar extends BaseController{
     public function generarLinkTemporal($curp){
         $cadena = $curp.rand(1,9999999).date('Y-m-d');
         $token = sha1($cadena);
-        $idusuario=$this->usuarioModel->where('curp', $curp)->find($idUsuario);
-
+        $idusuario=$this->usuarioModel->where('curp', $curp)->findColumn('idUsuario');
+        
         $datos = [
-            'idUsuario' => $idusuario,
+            'idUsuario' => $idusuario[0],
             'token' => $token,
         ];
         
         $this->linkModel->save($datos);
 
-        $enlace = base_url().'/completarRegistro/'.$idusuario.'/'.$token;
+        $enlace = base_url().'/completarRegistro/'.$idusuario[0].'/'.$token;
         return $enlace;
     }
 

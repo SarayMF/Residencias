@@ -29,7 +29,7 @@
                 </div>
                 
                 <div class="center">
-                    <button type="submit" class="btn btn-primary center">Completar registro</button>
+                    <button type="submit" class="btn btn-primary center">Completar registro<div id="loader" class=""></div></button>
                 </div>
 
             </form>

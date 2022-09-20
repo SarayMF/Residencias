@@ -1,0 +1,119 @@
+CRITICAL - 2022-09-20 10:15:16 --> Undefined variable $idUsuario
+in APPPATH\Controllers\Registrar.php on line 112.
+ 1 APPPATH\Controllers\Registrar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idUsuario', 'APPPATH\\Controllers\\Registrar.php', 112)
+ 2 APPPATH\Controllers\Registrar.php(79): App\Controllers\Registrar->generarLinkTemporal('MAFA971218HDFNNS05')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 10:17:21 --> Undefined variable $idUsuario
+in APPPATH\Controllers\Registrar.php on line 112.
+ 1 APPPATH\Controllers\Registrar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idUsuario', 'APPPATH\\Controllers\\Registrar.php', 112)
+ 2 APPPATH\Controllers\Registrar.php(79): App\Controllers\Registrar->generarLinkTemporal('MAFA971218HDFNNS05')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 10:26:54 --> CodeIgniter\Validation\Rules::is_unique(): Argument #1 ($str) must be of type ?string, array given, called in C:\xampp\htdocs\ResidenciasSaray\system\Validation\Validation.php on line 306
+in SYSTEMPATH\Validation\Rules.php on line 126.
+ 1 SYSTEMPATH\Validation\Validation.php(306): CodeIgniter\Validation\Rules->is_unique([...], 'linkpassword.idUsuario', [...], null)
+ 2 SYSTEMPATH\Validation\Validation.php(173): CodeIgniter\Validation\Validation->processRules('idUsuario', 'idUsuario', [...], [...], [...])
+ 3 SYSTEMPATH\BaseModel.php(1349): CodeIgniter\Validation\Validation->run([...], null, null)
+ 4 SYSTEMPATH\BaseModel.php(707): CodeIgniter\BaseModel->validate([...])
+ 5 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Registrar.php(119): CodeIgniter\BaseModel->save([...])
+ 8 APPPATH\Controllers\Registrar.php(79): App\Controllers\Registrar->generarLinkTemporal('MAFA971218HDFNNS05')
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 10:27:39 --> CodeIgniter\Validation\Rules::is_unique(): Argument #1 ($str) must be of type ?string, array given, called in C:\xampp\htdocs\ResidenciasSaray\system\Validation\Validation.php on line 306
+in SYSTEMPATH\Validation\Rules.php on line 126.
+ 1 SYSTEMPATH\Validation\Validation.php(306): CodeIgniter\Validation\Rules->is_unique([...], 'linkpassword.idUsuario', [...], null)
+ 2 SYSTEMPATH\Validation\Validation.php(173): CodeIgniter\Validation\Validation->processRules('idUsuario', 'idUsuario', [...], [...], [...])
+ 3 SYSTEMPATH\BaseModel.php(1349): CodeIgniter\Validation\Validation->run([...], null, null)
+ 4 SYSTEMPATH\BaseModel.php(707): CodeIgniter\BaseModel->validate([...])
+ 5 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Registrar.php(119): CodeIgniter\BaseModel->save([...])
+ 8 APPPATH\Controllers\Registrar.php(79): App\Controllers\Registrar->generarLinkTemporal('MAFA971218HDFNNS05')
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 10:30:51 --> Undefined array key "idUsuario"
+in APPPATH\Controllers\Registrar.php on line 115.
+ 1 APPPATH\Controllers\Registrar.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idUsuario"', 'APPPATH\\Controllers\\Registrar.php', 115)
+ 2 APPPATH\Controllers\Registrar.php(79): App\Controllers\Registrar->generarLinkTemporal('MAFA971218HDFNNS05')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 10:32:29 --> Undefined variable $idUsuario
+in APPPATH\Controllers\Registrar.php on line 113.
+ 1 APPPATH\Controllers\Registrar.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idUsuario', 'APPPATH\\Controllers\\Registrar.php', 113)
+ 2 APPPATH\Controllers\Registrar.php(79): App\Controllers\Registrar->generarLinkTemporal('MAFA971218HDFNNS05')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 10:33:36 --> Undefined variable $idUsuario
+in APPPATH\Controllers\Registrar.php on line 113.
+ 1 APPPATH\Controllers\Registrar.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idUsuario', 'APPPATH\\Controllers\\Registrar.php', 113)
+ 2 APPPATH\Controllers\Registrar.php(79): App\Controllers\Registrar->generarLinkTemporal('MAFA971218HDFNNS05')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 10:34:08 --> CodeIgniter\Validation\Rules::is_unique(): Argument #1 ($str) must be of type ?string, array given, called in C:\xampp\htdocs\ResidenciasSaray\system\Validation\Validation.php on line 306
+in SYSTEMPATH\Validation\Rules.php on line 126.
+ 1 SYSTEMPATH\Validation\Validation.php(306): CodeIgniter\Validation\Rules->is_unique([...], 'linkpassword.idUsuario', [...], null)
+ 2 SYSTEMPATH\Validation\Validation.php(173): CodeIgniter\Validation\Validation->processRules('idUsuario', 'idUsuario', [...], [...], [...])
+ 3 SYSTEMPATH\BaseModel.php(1349): CodeIgniter\Validation\Validation->run([...], null, null)
+ 4 SYSTEMPATH\BaseModel.php(707): CodeIgniter\BaseModel->validate([...])
+ 5 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Registrar.php(119): CodeIgniter\BaseModel->save([...])
+ 8 APPPATH\Controllers\Registrar.php(79): App\Controllers\Registrar->generarLinkTemporal('MAFA971218HDFNNS05')
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 10:34:50 --> CodeIgniter\Validation\Rules::is_unique(): Argument #1 ($str) must be of type ?string, array given, called in C:\xampp\htdocs\ResidenciasSaray\system\Validation\Validation.php on line 306
+in SYSTEMPATH\Validation\Rules.php on line 126.
+ 1 SYSTEMPATH\Validation\Validation.php(306): CodeIgniter\Validation\Rules->is_unique([...], 'linkpassword.idUsuario', [...], null)
+ 2 SYSTEMPATH\Validation\Validation.php(173): CodeIgniter\Validation\Validation->processRules('idUsuario', 'idUsuario', [...], [...], [...])
+ 3 SYSTEMPATH\BaseModel.php(1349): CodeIgniter\Validation\Validation->run([...], null, null)
+ 4 SYSTEMPATH\BaseModel.php(707): CodeIgniter\BaseModel->validate([...])
+ 5 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 6 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 7 APPPATH\Controllers\Registrar.php(119): CodeIgniter\BaseModel->save([...])
+ 8 APPPATH\Controllers\Registrar.php(79): App\Controllers\Registrar->generarLinkTemporal('MAFA971218HDFNNS05')
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 10:36:00 --> Undefined variable $datos
+in APPPATH\Controllers\Registrar.php on line 48.
+ 1 APPPATH\Controllers\Registrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'APPPATH\\Controllers\\Registrar.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->guardarContraseña()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 10:36:15 --> Undefined variable $datos
+in APPPATH\Controllers\Registrar.php on line 48.
+ 1 APPPATH\Controllers\Registrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'APPPATH\\Controllers\\Registrar.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->guardarContraseña()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-20 10:37:12 --> whereIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 907.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(789): CodeIgniter\Database\BaseBuilder->_whereIn('idUsuario', '38', false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->whereIn('idUsuario', '38')
+ 3 APPPATH\Controllers\Registrar.php(52): CodeIgniter\Model->__call('whereIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->guardarContraseña()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
