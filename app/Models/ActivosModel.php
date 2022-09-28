@@ -19,7 +19,7 @@ class ActivosModel extends Model
 
     protected $validationRules = [
         'noActivo' => 'trim|required|is_unique[activos.noActivo]',
-        'noSerie' => 'trim|required|valid_email|is_unique[activos.noSerie]'
+        'noSerie' => 'trim|required|is_unique[activos.noSerie]'
     ];
     protected $validationMessages = [
         'noActivo' => [

@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\CustomModel;
 use App\Models\ActivosModel;
-use App\Models\AplicacionesModel;
+use App\Models\AplicacionActivoModel;
 use App\Models\PermisosUsuarioModel;
 
 class Activos extends BaseController{
@@ -16,7 +16,7 @@ class Activos extends BaseController{
 
     public function __construct(){
         $this->cModel = new CustomModel();  
-        $this->aplicacionesModel = new AplicacionesModel();
+        $this->aplicacionesModel = new AplicacionActivoModel();
         $this->activosModel = new ActivosModel();
         $this->permisoModel = new PermisosUsuarioModel();
         $this->session = session();
@@ -55,7 +55,20 @@ class Activos extends BaseController{
     }
 
     public function create(){
+        if($this->session->has('idUsuario')){
+            if($this->request->isAJAX()){
 
+            }else{
+                $datos = [
+                    'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                    'titulo' => "Registar activo nuevo"
+                ];
+                echo view('templates/header',$datos);
+                echo view('formularioActivos',$datos);
+                echo view('templates/footer');
+                echo view('templates/footer_js');
+            }
+        }
     }
 
     public function read(){
@@ -76,19 +89,24 @@ class Activos extends BaseController{
     }
 
     public function update($id){
-        if($this->request->isAJAX()){
+        if($this->session->has('idUsuario')){
+            if($this->request->isAJAX()){
 
-        }else{
-            $datos = [
-                'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
-                'activo' => $this->activosModel->find($id),
-                'aplicaciones' => $this->aplicacionesModel->findAll(),
-                'titulo' => "Editar activo"
-            ];
-            echo view('templates/header',$datos);
-            echo view('formularioActivos',$datos);
-            echo view('templates/footer');
-            echo view('templates/footer_js');
+            }else{
+                $datos = [
+                    'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                    'activo' => $this->activosModel->find($id),
+                    'aplicaciones' => $this->aplicacionesModel->where('idActivo', $id)
+                                ->select('aplicaciones.idAplicacion, aplicaciones.nombre')
+                                ->join('aplicaciones', 'aplicaciones.idAplicacion = activoaplicaciones.idAplicacion')
+                                ->findAll(),
+                    'titulo' => "Editar activo"
+                ];
+                echo view('templates/header',$datos);
+                echo view('formularioActivos',$datos);
+                echo view('templates/footer');
+                echo view('templates/footer_js');
+            }
         }
     }
     

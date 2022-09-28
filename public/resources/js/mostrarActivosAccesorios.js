@@ -78,11 +78,11 @@ function mostrarActivos(valor, pagina){
 function eliminarActivo(idActivo){
     var base_url = window.location.origin + window.location.pathname;
     swal({
-        title: "¿Estas seguro de eliminar este registro?",
+        title: "¿Estas seguro de dar de baja este registro?",
         text: "Una vez eliminado, no seras capaz de recuperarlo",
         icon: "warning",
-        buttons: true,
         dangerMode: true,
+        buttons: true,
       })
       .then((willDelete) => {
         if (willDelete) {

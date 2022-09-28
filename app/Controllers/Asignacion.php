@@ -24,4 +24,28 @@ class Asignacion extends BaseController{
     public function index(){
 
     }
+
+    public function create($id){
+        if($this->session->has('idUsuario')){
+            $datos = [
+                'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+            ];
+            echo view('templates/header',$datos);
+            echo view('asignarActivo',$datos);
+            echo view('templates/footer');
+            echo view('templates/footer_js');
+        }else{
+            return redirect()->to(base_url('/'));
+        }
+    }
+
+    public function buscarUsuario(){
+        if($this->session->has('idUsuario')){
+            if($this->request->isAJAX()){
+                
+            }
+        }else{
+            return redirect()->to(base_url('/'));
+        }
+    }
 }

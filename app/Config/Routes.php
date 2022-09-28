@@ -51,6 +51,8 @@ $routes->get('/Entrada de activos/editar/(:any)', 'Activos::update/$1');
 $routes->get('/Salida de activos', 'Activos::salidaDeActivos');
 $routes->post('/Salida de activos/mostrar', 'Activos::read');
 $routes->post('/Salida de activos/eliminar', 'Activos::delete');
+$routes->get('/Entrada de activos/agregar', 'Activos::create');
+$routes->get('/Entrada de activos/asignar/(:any)', 'Asignacion::create/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

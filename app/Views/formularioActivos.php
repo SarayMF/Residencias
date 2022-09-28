@@ -73,7 +73,7 @@
                 <div class="row" id="aplicaciones">
                     <?php if(isset($aplicaciones)): ?>
                         <?php foreach($aplicaciones as $aplicacion):?>
-                        <div class="col-6 col-md-3">
+                        <div class="col-6 col-md-4">
                             <div class="input-group mb-3">
                                 <input type="hidden" class="form-control" id="Aplicacion<?php echo $aplicacion['idAplicacion']?>">
                                 <input type="text" class="form-control" value="<?php echo $aplicacion['nombre']?>" readonly>
@@ -91,6 +91,11 @@
                         <?php endforeach?>
                     <?php endif?>
                 </div>
+            </div>
+
+            <div class="float-right">
+                <button class="btn btn-primary" type="submit">Guardar</button>
+                <a class="btn btn-danger" href="<?php echo base_url('/Entrada de activos')?>" role="button">Cancelar</a>
             </div>
         </form>
     

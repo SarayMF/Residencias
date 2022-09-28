@@ -1,0 +1,103 @@
+CRITICAL - 2022-09-28 14:21:32 --> Undefined variable $id
+in APPPATH\Controllers\Activos.php on line 63.
+ 1 APPPATH\Controllers\Activos.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Controllers\\Activos.php', 63)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->create()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 14:31:44 --> Cannot access offset of type string on string
+in APPPATH\Views\formularioActivos.php on line 78.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('formularioActivos', [], true)
+ 4 APPPATH\Controllers\Activos.php(100): view('formularioActivos', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('2')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 14:32:44 --> Cannot access offset of type string on string
+in APPPATH\Views\formularioActivos.php on line 78.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('formularioActivos', [], true)
+ 4 APPPATH\Controllers\Activos.php(100): view('formularioActivos', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('3')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 15:18:56 --> syntax error, unexpected variable "$datos"
+in APPPATH\Controllers\Activos.php on line 94.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Activos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Activos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Activos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Activos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-28 15:19:06 --> Unknown column 'aplicaciones.idAplicaciones' in 'on clause'
+CRITICAL - 2022-09-28 15:19:06 --> Unknown column 'aplicaciones.idAplicaciones' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicaciones` = `activoaplicaciones`.`idAplicaciones`
+WHERE `idActivo` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicaciones` = `activoaplicaciones`.`idAplicaciones`
+WHERE `idActivo` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicaciones` = `activoaplicaciones`.`idAplicaciones`
+WHERE `idActivo` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicaciones` = `activoaplicaciones`.`idAplicaciones`
+WHERE `idActivo` = :idActivo:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Activos.php(98): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('3')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-28 15:24:18 --> Column 'idAplicacion' in field list is ambiguous
+CRITICAL - 2022-09-28 15:24:18 --> Column 'idAplicacion' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `idAplicacion`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicaciones`.`idAplicacion`
+WHERE `idActivo` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idAplicacion`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicaciones`.`idAplicacion`
+WHERE `idActivo` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idAplicacion`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicaciones`.`idAplicacion`
+WHERE `idActivo` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `idAplicacion`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicaciones`.`idAplicacion`
+WHERE `idActivo` = :idActivo:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Activos.php(99): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('3')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 15:40:52 --> syntax error, unexpected token "if"
+in APPPATH\Config\Routes.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 16:02:16 --> Call to undefined function set_value()
+in APPPATH\Views\asignarActivo.php on line 30.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 4 APPPATH\Controllers\Asignacion.php(36): view('asignarActivo', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->create('$1')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
