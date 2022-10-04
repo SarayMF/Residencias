@@ -1,0 +1,190 @@
+CRITICAL - 2022-10-04 11:23:59 --> Unclosed '{' on line 47 does not match ')'
+in APPPATH\Controllers\Asignacion.php on line 51.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Asignacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Asignacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Asignacion')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Asignacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 11:24:25 --> Undefined constant "App\Controllers\length"
+in APPPATH\Controllers\Asignacion.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->buscarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 11:27:04 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Controllers\Asignacion.php on line 52.
+ 1 APPPATH\Controllers\Asignacion.php(52): count(null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->buscarUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 12:45:27 --> syntax error, unexpected token "echo"
+in APPPATH\Controllers\Asignacion.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Asignacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Asignacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Asignacion')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Asignacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 12:46:10 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Controllers\Asignacion.php on line 62.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Asignacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Asignacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Asignacion')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Asignacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 12:52:02 --> Undefined variable $noSerie
+in APPPATH\Controllers\Asignacion.php on line 54.
+ 1 APPPATH\Controllers\Asignacion.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $noSerie', 'APPPATH\\Controllers\\Asignacion.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->create()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 12:53:03 --> Call to a member function first() on array
+in APPPATH\Controllers\Asignacion.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->create()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 12:53:37 --> Call to a member function findColumn() on array
+in APPPATH\Controllers\Asignacion.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->create()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-10-04 13:00:32 --> Table 'testbd.idasignacion' doesn't exist
+CRITICAL - 2022-10-04 13:00:32 --> Table 'testbd.idasignacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `idAsignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'21\', \'3\', \'Este equipo esta en buen estado\', \'2022-10-04 13:00:32\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `idAsignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'21\', \'3\', \'Este equipo esta en buen estado\', \'2022-10-04 13:00:32\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `idAsignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'21\', \'3\', \'Este equipo esta en buen estado\', \'2022-10-04 13:00:32\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `idAsignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (:usuarioAsigna:, :usuarioAsignado:, :idActivo:, :observaciones:, :fechaAsignacion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Asignacion.php(55): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->create()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 13:03:15 --> Undefined variable $activosModel
+in APPPATH\Controllers\Asignacion.php on line 57.
+ 1 APPPATH\Controllers\Asignacion.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activosModel', 'APPPATH\\Controllers\\Asignacion.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->create()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 13:05:20 --> whereIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 907.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(789): CodeIgniter\Database\BaseBuilder->_whereIn('id', '3', false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->whereIn('id', '3')
+ 3 APPPATH\Controllers\Asignacion.php(57): CodeIgniter\Model->__call('whereIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->create()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-10-04 13:05:59 --> Unknown column 'id' in 'where clause'
+CRITICAL - 2022-10-04 13:05:59 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `activo` SET `idAsignacion` = \'3\'
+WHERE `id` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `activo` SET `idAsignacion` = \'3\'
+WHERE `id` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `activo` SET `idAsignacion` = \'3\'
+WHERE `id` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2046): CodeIgniter\Database\BaseConnection->query('UPDATE `activo` SET `idAsignacion` = :idAsignacion:
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(337): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\Asignacion.php(57): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->create()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 13:16:57 --> Undefined variable $id
+in APPPATH\Controllers\Asignacion.php on line 46.
+ 1 APPPATH\Controllers\Asignacion.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Controllers\\Asignacion.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 13:17:10 --> Undefined variable $activo
+in APPPATH\Views\asignarActivo.php on line 9.
+ 1 APPPATH\Views\asignarActivo.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'APPPATH\\Views\\asignarActivo.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\asignarActivo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(48): view('asignarActivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 13:18:00 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Views\asignarActivo.php on line 9.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 3 APPPATH\Controllers\Asignacion.php(48): view('asignarActivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 13:18:02 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Views\asignarActivo.php on line 9.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 3 APPPATH\Controllers\Asignacion.php(48): view('asignarActivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 13:18:26 --> Undefined variable $activo
+in APPPATH\Views\asignarActivo.php on line 9.
+ 1 APPPATH\Views\asignarActivo.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'APPPATH\\Views\\asignarActivo.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\asignarActivo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(48): view('asignarActivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 13:20:01 --> Undefined variable $activo
+in APPPATH\Views\asignarActivo.php on line 9.
+ 1 APPPATH\Views\asignarActivo.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'APPPATH\\Views\\asignarActivo.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\asignarActivo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(48): view('asignarActivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 13:23:49 --> Undefined variable $titulo
+in APPPATH\Views\mostrarAsignaciones.php on line 24.
+ 1 APPPATH\Views\mostrarAsignaciones.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\mostrarAsignaciones.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\mostrarAsignaciones.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('mostrarAsignaciones', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(48): view('mostrarAsignaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 13:24:09 --> Undefined variable $titulo
+in APPPATH\Views\mostrarAsignaciones.php on line 37.
+ 1 APPPATH\Views\mostrarAsignaciones.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\mostrarAsignaciones.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\mostrarAsignaciones.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('mostrarAsignaciones', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(48): view('mostrarAsignaciones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

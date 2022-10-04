@@ -48,7 +48,7 @@ class CustomModel{
 
     public function obtenerActivos($nombre,$inicio,$cantidad){
         $cadena = "%".$nombre."%";
-        $sql = 'SELECT * FROM activo WHERE noActivo LIKE ? AND estado = 1 LIMIT ?,?';
+        $sql = 'SELECT * FROM activo WHERE noActivo LIKE ? AND estado = 1 AND idAsignacion IS NULL LIMIT ?,?';
         $query = $this->db->query($sql,[$cadena,$inicio,$cantidad]);
         
         return $result = $query->getResult();
@@ -56,7 +56,7 @@ class CustomModel{
 
     public function obtenerActivo($nombre){
         $cadena = "%".$nombre."%";
-        $sql = 'SELECT * FROM activo WHERE noActivo LIKE ? AND estado = 1';
+        $sql = 'SELECT * FROM activo WHERE noActivo LIKE ? AND estado = 1 AND idAsignacion IS NULL';
         $query = $this->db->query($sql,[$cadena]);
         
         return $result = $query->getResult();
