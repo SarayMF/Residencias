@@ -53,7 +53,7 @@ class Asignacion extends BaseController{
         }
     }
 
-    public function create(){
+    public function createActivo(){
         if($this->request->isAJAX()){
             $noActivo = $this->request->getPost('noActivo');
 

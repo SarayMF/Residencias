@@ -26,7 +26,7 @@
                     </div>
                     <div style="width:5px"></div>
                     <?php if($titulo == "Entrada"):?>
-                        <a class="btn btn-primary" href="<?php echo base_url("/Entrada de activos/agregar")?>">Agregar</a>
+                        <a class="btn btn-primary" href="<?php echo base_url("/Entrada de activos/agregar activo")?>">Agregar</a>
                     <?php endif?>
                 </div>
 
@@ -57,7 +57,7 @@
                     <div id="loader" class=""></div>
                 </center>
                 <nav id="paginacion" aria-label="Page navigation example">
-                    <ul class="pagination justify-content-end pagination-sm">
+                    <ul class="pagination justify-content-end pagination-sm activos-pag">
                         
                     </ul>
                 </nav>
@@ -74,7 +74,7 @@
 
                     <div style="width:5px"></div>
                     <?php if($titulo == "Entrada"):?>
-                        <a class="btn btn-primary" href="<?php echo base_url("/Entrada de activos/agregar")?>">Agregar</a>
+                        <a class="btn btn-primary" href="<?php echo base_url("/Entrada de activos/agregar accesorio")?>">Agregar</a>
                     <?php endif?>
                 </div>
 
@@ -103,7 +103,7 @@
                     <div id="loaderA" class=""></div>
                 </center>
                 <nav id="paginacionA" aria-label="Page navigation example">
-                    <ul class="pagination justify-content-end pagination-sm">
+                    <ul class="pagination justify-content-end pagination-sm accesorios-pag">
                         
                     </ul>
                 </nav>

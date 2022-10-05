@@ -1,0 +1,76 @@
+CRITICAL - 2022-10-05 10:30:32 --> Class "App\Models\AccesoriosModel" not found
+in APPPATH\Controllers\Accesorios.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(858): App\Controllers\Accesorios->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-05 10:32:14 --> Undefined variable $accesoriosModel
+in APPPATH\Controllers\Accesorios.php on line 10.
+ 1 APPPATH\Controllers\Accesorios.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $accesoriosModel', 'APPPATH\\Controllers\\Accesorios.php', 10)
+ 2 SYSTEMPATH\CodeIgniter.php(858): App\Controllers\Accesorios->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-05 11:08:48 --> syntax error, unexpected token "if"
+in APPPATH\Config\Routes.php on line 75.
+ 1 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-05 11:09:17 --> Call to a member function findColumn() on array
+in APPPATH\Controllers\Accesorios.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Accesorios->delete()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accesorios))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-05 11:21:52 --> Unsupported operand types: array - int
+in APPPATH\Controllers\Accesorios.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Accesorios->delete()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accesorios))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-05 11:22:01 --> Unsupported operand types: array - int
+in APPPATH\Controllers\Accesorios.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Accesorios->delete()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accesorios))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-05 11:23:01 --> Undefined array key 0
+in APPPATH\Controllers\Accesorios.php on line 43.
+ 1 APPPATH\Controllers\Accesorios.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Accesorios.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Accesorios->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accesorios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-05 11:23:49 --> Unsupported operand types: array - int
+in APPPATH\Controllers\Accesorios.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Accesorios->delete()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accesorios))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-05 11:24:15 --> Undefined array key 1
+in APPPATH\Controllers\Accesorios.php on line 43.
+ 1 APPPATH\Controllers\Accesorios.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Controllers\\Accesorios.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Accesorios->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accesorios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-05 11:25:59 --> Undefined array key 0
+in APPPATH\Controllers\Accesorios.php on line 58.
+ 1 APPPATH\Controllers\Accesorios.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Accesorios.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Accesorios->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accesorios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-05 11:26:24 --> Attempt to read property "cantidad" on array
+in APPPATH\Controllers\Accesorios.php on line 58.
+ 1 APPPATH\Controllers\Accesorios.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidad" on array', 'APPPATH\\Controllers\\Accesorios.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Accesorios->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accesorios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-05 11:26:40 --> Unsupported operand types: array - int
+in APPPATH\Controllers\Accesorios.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Accesorios->delete()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accesorios))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

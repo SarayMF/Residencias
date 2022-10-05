@@ -46,16 +46,19 @@ $routes->post('/Otorgar permisos/mostrar', 'Permisos::mostrar');
 $routes->get('/Otorgar permisos/(:any)', 'Permisos::permisosUsuario/$1');
 $routes->post('/Otorgar permisos/guardarPermisos', 'Permisos::guardar');
 $routes->get('/Entrada de activos', 'Activos::entradaDeActivos');
-$routes->post('/Entrada de activos/mostrar', 'Activos::read');
+$routes->post('/Entrada de activos/mostrar activos', 'Activos::read');
 $routes->get('/Entrada de activos/editar/(:any)', 'Activos::update/$1');
 $routes->get('/Salida de activos', 'Activos::salidaDeActivos');
-$routes->post('/Salida de activos/mostrar', 'Activos::read');
-$routes->post('/Salida de activos/eliminar', 'Activos::delete');
-$routes->get('/Entrada de activos/agregar', 'Activos::create');
+$routes->post('/Salida de activos/mostrar activos', 'Activos::read');
+$routes->post('/Salida de activos/eliminar activo', 'Activos::delete');
+$routes->get('/Entrada de activos/agregar activo', 'Activos::create');
 $routes->get('/Entrada de activos/asignar/(:any)', 'Asignacion::asignacionActivo/$1');
 $routes->post('/Entrada de activos/asignar/buscarUsuario', 'Asignacion::buscarUsuario');
-$routes->post('/Entrada de activos/asignar/guardarAsignacion', 'Asignacion::create');
+$routes->post('/Entrada de activos/asignar/guardarAsignacion', 'Asignacion::createActivo');
 $routes->get('/Registro de mis activos', 'Asignacion::asignacionUsuario');
+$routes->post('/Entrada de activos/mostrar accesorios', 'Accesorios::read');
+$routes->post('/Salida de activos/mostrar accesorios', 'Accesorios::read');
+$routes->post('Salida de activos/eliminar accesorio', 'Accesorios::delete');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
