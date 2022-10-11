@@ -24,6 +24,20 @@ class Asignacion extends BaseController{
         $this->session = session();
     }
 
+    public function index(){
+        if($this->session->has('idUsuario')){
+            $datos = [
+                'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+            ];
+            echo view('templates/header',$datos);
+            echo view('mostrarAsignaciones',$datos);
+            echo view('templates/footer');
+            echo view('templates/footer_js');
+        }else{
+            return redirect()->to(base_url('/'));
+        }
+    }
+
     public function asignacionActivo($id){
         if($this->session->has('idUsuario')){
             $datos = [
@@ -43,13 +57,39 @@ class Asignacion extends BaseController{
         if($this->session->has('idUsuario')){
             $datos = [
                 'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                'usuario' => $this->usuarioModel->find($this->session->idUsuario)
             ];
             echo view('templates/header',$datos);
-            echo view('mostrarAsignaciones',$datos);
+            echo view('asignarActivo',$datos);
             echo view('templates/footer');
             echo view('templates/footer_js');
         }else{
             return redirect()->to(base_url('/'));
+        }
+    }
+
+    public function readActivo(){
+        if($this->request->isAJAX()){
+            $buscar = $this->request->getPost('buscar');
+            $pagina = $this->request->getPost('numpagina');
+            $cantidad = 5;
+            $inicio = ($pagina - 1) * 5;
+            $datos = array(
+                "asignacion" => $this->asignacionModel->select('asignacion.idAsignacion, activo.noActivo, activo.marca, activo.modelo, asignacion.fechaAsignacion, asignacion.observaciones')
+                                     ->join('activo', 'asignacion.idAsignacion = activo.idAsignacion')
+                                     ->join('usuario', 'asignacion.usuarioAsignado = usuario.idUsuario')
+                                     ->like('activo.noActivo', $buscar)
+                                     ->where('asignacion.usuarioAsignado', $this->session->idUsuario)
+                                     ->limit($inicio, $cantidad)
+                                     ->find(),
+                "cantidadAsignacion" => count($this->asignacionModel->select('asignacion.idAsignacion, activo.noActivo, activo.marca, activo.modelo, asignacion.fechaAsignacion, asignacion.observaciones')
+                                                   ->join('activo', 'asignacion.idAsignacion = activo.idAsignacion')
+                                                   ->join('usuario', 'asignacion.usuarioAsignado = usuario.idUsuario')
+                                                   ->where('asignacion.usuarioAsignado', $this->session->idUsuario)
+                                                   ->limit($inicio, $cantidad)
+                                                   ->find())
+            );
+            echo json_encode($datos);
         }
     }
 

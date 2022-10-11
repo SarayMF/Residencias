@@ -1,0 +1,232 @@
+CRITICAL - 2022-10-11 12:32:20 --> syntax error, unexpected variable "$this"
+in APPPATH\Controllers\Asignacion.php on line 57.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Asignacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Asignacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Asignacion')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Asignacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 12:32:32 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH\Controllers\Asignacion.php on line 67.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Asignacion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Asignacion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Asignacion')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Asignacion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 12:41:15 --> Undefined property: App\Controllers\Asignacion::$asignacionActivo
+in APPPATH\Controllers\Asignacion.php on line 63.
+ 1 APPPATH\Controllers\Asignacion.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asignacion::$asignacionActivo', 'APPPATH\\Controllers\\Asignacion.php', 63)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->readActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 12:49:36 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Asignacion.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->readActivo()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 12:49:55 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Asignacion.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->readActivo()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 12:52:47 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Permisos.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 12:53:05 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Permisos.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 12:54:32 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Asignacion.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->readActivo()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 12:55:55 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Asignacion.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->readActivo()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 12:56:24 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Permisos.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 12:58:45 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Permisos.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 12:59:39 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Permisos.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->mostrar()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 13:00:42 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Activos.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->read()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 13:18:14 --> Undefined variable $id
+in APPPATH\Controllers\Asignacion.php on line 60.
+ 1 APPPATH\Controllers\Asignacion.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Controllers\\Asignacion.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 13:19:05 --> Undefined variable $activo
+in APPPATH\Views\asignarActivo.php on line 34.
+ 1 APPPATH\Views\asignarActivo.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'APPPATH\\Views\\asignarActivo.php', 34)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\asignarActivo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(63): view('asignarActivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 13:21:16 --> syntax error, unexpected token "echo"
+in APPPATH\Views\asignarActivo.php on line 60.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 3 APPPATH\Controllers\Asignacion.php(63): view('asignarActivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 13:21:43 --> Call to undefined function isste()
+in APPPATH\Views\asignarActivo.php on line 60.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 4 APPPATH\Controllers\Asignacion.php(63): view('asignarActivo', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 13:21:59 --> Undefined array key "apellidoA"
+in APPPATH\Views\asignarActivo.php on line 62.
+ 1 APPPATH\Views\asignarActivo.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "apellidoA"', 'APPPATH\\Views\\asignarActivo.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\asignarActivo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(63): view('asignarActivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 13:25:41 --> syntax error, unexpected token "endif", expecting end of file
+in APPPATH\Views\asignarActivo.php on line 45.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 3 APPPATH\Controllers\Asignacion.php(63): view('asignarActivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 14:15:44 --> syntax error, unexpected token "if"
+in APPPATH\Config\Routes.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 14:16:02 --> Undefined variable $router
+in APPPATH\Config\Routes.php on line 64.
+ 1 APPPATH\Config\Routes.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $router', 'APPPATH\\Config\\Routes.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(758): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 14:39:40 --> Undefined variable $datos
+in APPPATH\Controllers\Activos.php on line 152.
+ 1 APPPATH\Controllers\Activos.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'APPPATH\\Controllers\\Activos.php', 152)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->buscarActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 14:39:51 --> Undefined variable $datos
+in APPPATH\Controllers\Activos.php on line 152.
+ 1 APPPATH\Controllers\Activos.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'APPPATH\\Controllers\\Activos.php', 152)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->buscarActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 14:56:25 --> syntax error, unexpected token "else", expecting "," or ";"
+in APPPATH\Views\asignarActivo.php on line 106.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 3 APPPATH\Controllers\Asignacion.php(63): view('asignarActivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 14:57:19 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Views\asignarActivo.php on line 106.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 3 APPPATH\Controllers\Asignacion.php(63): view('asignarActivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionUsuario()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 15:03:53 --> syntax error, unexpected token "if", expecting ":"
+in APPPATH\Views\asignarActivo.php on line 120.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 3 APPPATH\Controllers\Asignacion.php(48): view('asignarActivo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionActivo('8')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-11 15:34:01 --> syntax error, unexpected token "if"
+in APPPATH\Config\Routes.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-10-11 15:34:13 --> Cannot add or update a child row: a foreign key constraint fails (`testbd`.`asignacion`, CONSTRAINT `FK_UsuarioAsignado` FOREIGN KEY (`usuarioAsignado`) REFERENCES `usuario` (`idUsuario`))
+CRITICAL - 2022-10-11 15:34:13 --> Cannot add or update a child row: a foreign key constraint fails (`testbd`.`asignacion`, CONSTRAINT `FK_UsuarioAsignado` FOREIGN KEY (`usuarioAsignado`) REFERENCES `usuario` (`idUsuario`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'\', \'8\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \', \'2022-10-11 15:34:13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'\', \'8\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \', \'2022-10-11 15:34:13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'\', \'8\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \', \'2022-10-11 15:34:13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (:usuarioAsigna:, :usuarioAsignado:, :idActivo:, :observaciones:, :fechaAsignacion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Asignacion.php(109): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-10-11 15:36:02 --> Cannot add or update a child row: a foreign key constraint fails (`testbd`.`asignacion`, CONSTRAINT `FK_UsuarioAsignado` FOREIGN KEY (`usuarioAsignado`) REFERENCES `usuario` (`idUsuario`))
+CRITICAL - 2022-10-11 15:36:02 --> Cannot add or update a child row: a foreign key constraint fails (`testbd`.`asignacion`, CONSTRAINT `FK_UsuarioAsignado` FOREIGN KEY (`usuarioAsignado`) REFERENCES `usuario` (`idUsuario`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'\', \'8\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \', \'2022-10-11 15:36:02\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'\', \'8\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \', \'2022-10-11 15:36:02\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'\', \'8\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \', \'2022-10-11 15:36:02\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (:usuarioAsigna:, :usuarioAsignado:, :idActivo:, :observaciones:, :fechaAsignacion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Asignacion.php(109): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

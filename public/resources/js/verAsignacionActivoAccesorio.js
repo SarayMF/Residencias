@@ -1,41 +1,54 @@
 $(document).ready(inicio);
 
 function inicio(){
-    mostrarDatos("",1);
+    mostrarActivos("",1);
+    //mostrarAccesorios("",1);
 
     $("#buscar").keyup(function(){
         buscar = $("#buscar").val();
-        mostrarDatos(buscar,1);
+        mostrarActivos(buscar,1);
     });
+    /*$("#buscarA").keyup(function(){
+        buscar = $("#buscarA").val();
+        mostrarAccesorios(buscar,1);
+    });*/
 
-    $("body").on("click",".pagination li a", function(e){
+    $("body").on("click",".activos-pag li a", function(e){
         e.preventDefault();
         valorhref = $(this).attr('href');
         valorbuscar = $("#buscar").val();
-        mostrarDatos(valorbuscar,valorhref);
-    })
+        mostrarActivos(valorbuscar,valorhref);
+    });
+
+    /*$("body").on("click",".accesorios-pag li a", function(e){
+        e.preventDefault();
+        valorhref = $(this).attr('href');
+        valorbuscar = $("#buscarA").val();
+        mostrarAccesorios(valorbuscar,valorhref);
+    });*/
 }
 
-function mostrarDatos(valor, pagina){
+function mostrarActivos(valor, pagina){
     document.getElementById('loader').classList.add('loader');
-    var base_url = window.location.origin + window.location.pathname;
 
     $.ajax({
-        url: base_url+"/mostrar",
+        url: "mostrar asignacion activo",
         type:"POST",
         data:{buscar:valor, numpagina:pagina},
         dataType:"json",
         success:function(respuesta){
             document.getElementById('loader').classList.remove('loader');
+            type = $("#type").val();
             html = "";
-            $.each(respuesta.usuarios, function(key, item){
-                html += "<tr><th scope='row'>"+item.curp+"</th><td>"+item.nombre+"</td><td>"+item.apellidoP+"</td><td>"+item.apellidoM+"</td><td><center><a class='btn btn-primary' href='"+base_url+"/"+item.idUsuario+"' role='button'>Editar</a></center></td></tr>";
+            $.each(respuesta.asignacion, function(key, item){
+                html += "<tr><th scope='row'>"+item.noActivo+"</th><td>"+item.marca+"</td><td>"+item.modelo+"</td><td>"+item.fechaAsignacion+"</td><td>"+item.observaciones+"</td>";
+                html += "<td><center><button class='btn btn-danger' onClick='eliminarActivo("+item.idAsignacion+")'>Eliminar</button></center></td></tr>";
             });
-            $("#listaUsuarios").html(html);
+            $("#listaActivos").html(html);
 
 
             linkseleccionado = Number(pagina);
-            var articulosPag = Math.ceil(respuesta.cantidadUsuarios/5);
+            var articulosPag = Math.ceil(respuesta.cantidadAsignacion/5);
             paginador = "";
 
             if(linkseleccionado>1){
@@ -45,7 +58,7 @@ function mostrarDatos(valor, pagina){
                 paginador+="<li class='page-item disabled'><a class='page-link' href='1'>&laquo;</a></li>";
                 paginador+="<li class='page-item disabled'><a class='page-link' href='"+(linkseleccionado-1)+"' '>&lsaquo;</a></li>";
             }
-            
+
             cant = 3;
             pagInicio = (linkseleccionado > cant) ? (linkseleccionado - cant) : 1;
             if(articulosPag > cant){
@@ -59,7 +72,6 @@ function mostrarDatos(valor, pagina){
                 if(i == linkseleccionado) paginador+="<li class='page-item active'><a class='page-link' href='"+linkseleccionado+"'>"+i+"</a></li>";
                 else paginador+="<li class='page-item'><a class='page-link' href='"+i+"'>"+i+"</a></li>";
             }
-            
             if(linkseleccionado<articulosPag){
                 paginador+="<li class='page-item'><a class='page-link' href='"+(linkseleccionado+1)+"'>&rsaquo;</a></li>";
                 paginador+="<li class='page-item'><a class='page-link' href='"+articulosPag+"'>&raquo;</a></li>";
@@ -71,4 +83,3 @@ function mostrarDatos(valor, pagina){
         }
     });
 }
-

@@ -71,7 +71,7 @@ function mostrarActivos(valor, pagina){
             }
 
             for(var i = pagInicio; i <= pagFin; i++){
-                if(i == linkseleccionado) paginador+="<li class='page-item active'><a class='page-link' href='javascript:void(0)'>"+i+"</a></li>";
+                if(i == linkseleccionado) paginador+="<li class='page-item active'><a class='page-link' href='"+linkseleccionado+"'>"+i+"</a></li>";
                 else paginador+="<li class='page-item'><a class='page-link' href='"+i+"'>"+i+"</a></li>";
             }
             if(linkseleccionado<articulosPag){
@@ -162,7 +162,7 @@ function mostrarAccesorios(valor, pagina){
             }
 
             for(var i = pagInicio; i <= pagFin; i++){
-                if(i == linkseleccionado) paginador+="<li class='page-item active'><a class='page-link' href='javascript:void(0)'>"+i+"</a></li>";
+                if(i == linkseleccionado) paginador+="<li class='page-item active'><a class='page-link' href='"+linkseleccionado+"'>"+i+"</a></li>";
                 else paginador+="<li class='page-item'><a class='page-link' href='"+i+"'>"+i+"</a></li>";
             }
             if(linkseleccionado<articulosPag){

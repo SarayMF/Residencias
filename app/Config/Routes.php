@@ -55,10 +55,14 @@ $routes->get('/Entrada de activos/agregar activo', 'Activos::create');
 $routes->get('/Entrada de activos/asignar/(:any)', 'Asignacion::asignacionActivo/$1');
 $routes->post('/Entrada de activos/asignar/buscarUsuario', 'Asignacion::buscarUsuario');
 $routes->post('/Entrada de activos/asignar/guardarAsignacion', 'Asignacion::createActivo');
-$routes->get('/Registro de mis activos', 'Asignacion::asignacionUsuario');
+$routes->get('/Registro de mis activos', 'Asignacion::index');
 $routes->post('/Entrada de activos/mostrar accesorios', 'Accesorios::read');
 $routes->post('/Salida de activos/mostrar accesorios', 'Accesorios::read');
-$routes->post('Salida de activos/eliminar accesorio', 'Accesorios::delete');
+$routes->post('/Salida de activos/eliminar accesorio', 'Accesorios::delete');
+$routes->post('/mostrar asignacion activo', 'Asignacion::readActivo');
+$routes->get('/Registro de mis activos/agregarActivo', 'Asignacion::asignacionUsuario');
+$routes->post('/Registro de mis activos/buscarActivo', 'Activos::buscarActivo');
+$routes->post('/Registro de mis activos/guardarAsignacion', 'Asignacion::createActivo');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

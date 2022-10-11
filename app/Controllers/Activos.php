@@ -132,4 +132,31 @@ class Activos extends BaseController{
             }
         }
     }
+
+    public function buscarActivo(){
+        if($this->request->isAJAX()){
+            $activo = $this->activosModel->where('noActivo', $this->request->getPost('noActivo'))->first();
+
+            if(isset($activo)){
+                if(is_null($activo['idAsignacion'])){
+                    $data = array(
+                        "type" => "success",
+                        "activo" => $activo,
+                    );
+                }else{ 
+                    $data = array(
+                        "type" => "warning",
+                        "activo" => $activo,
+                    );
+                }
+            }else{
+                $data = array(
+                    "type" => "error",
+                    "dato" => $this->request->getPost('noActivo')
+                );
+            }
+
+            echo json_encode($data);
+        }
+    }
 }
