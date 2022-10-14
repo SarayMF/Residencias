@@ -64,6 +64,8 @@ $routes->get('/Registro de mis activos/agregarActivo', 'Asignacion::asignacionUs
 $routes->post('/Registro de mis activos/buscarActivo', 'Activos::buscarActivo');
 $routes->post('/Registro de mis activos/guardarAsignacion', 'Asignacion::createActivo');
 $routes->post('/Entrada de activos/guardarActivo', 'Activos::create');
+$routes->get('/Entrada de activos/agregar accesorio', 'Accesorios::create');
+$routes->match(['get', 'post'],'/Entrada de activos/editar accesorio/(:any)', 'Accesorios::update/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -61,7 +61,7 @@ CREATE TABLE Activo(
  procesador VARCHAR(30),
  fechaAlta TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
  idAsignacion INT,
- estado BIT NOT NULL,
+ estado BIT NOT NULL DEFAULT 1,
  usuarioBaja INT,
  fechabaja DATE,
  CONSTRAINT PK_Activo PRIMARY KEY (idActivo),

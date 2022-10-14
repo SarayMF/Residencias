@@ -2,16 +2,36 @@
 
 namespace App\Controllers;
 use App\Models\AccesoriosModel;
+use App\Models\PermisosUsuarioModel;
 
 class Accesorios extends BaseController{
     private $accesoriosModel;
+    private $permisoUModel;
+    private $session;
 
     public function __construct(){
         $this->accesoriosModel = new AccesoriosModel();
+        $this->permisoUModel = new PermisosUsuarioModel();
+        $this->session = session();
     }
 
     public function create(){
+        if($this->request->isAJAX()){
 
+        }else{
+            $datos = [
+                'permisos' => $this->permisoUModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
+                'titulo' => 'Agregar accesorio nuevo',
+            ];
+            echo view('templates/header',$datos);
+            echo view('formularioAccesorio', $datos);
+            echo view('templates/footer');
+            echo view('templates/footer_js');
+        }
     }
 
     public function read(){
@@ -32,7 +52,42 @@ class Accesorios extends BaseController{
     }
 
     public function update($id){
-
+        if($this->request->isAJAX()){
+            $datos = [
+                'nombre' => $this->request->getPost('nombre'),
+                'cantidad' => $this->request->getPost('cantidad'),
+            ];
+            if($this->accesoriosModel->update($id, $datos)){
+                $data = array(
+                    "title" => "¡Exito!",
+                    "type" => "success",
+                    "mensaje" => "El accesorio ha sido editado correctamente",
+                );
+                
+                echo json_encode($data);
+            }else{
+                $data = array(
+                    "title" => "¡Error!",
+                    "type" => "error",
+                    "mensaje" => "Ah ocurrido un error, intentalo de nuevo",
+                );
+                echo json_encode($data);
+            }
+        }else{
+            $datos = [
+                'permisos' => $this->permisoUModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
+                'accesorio' => $this->accesoriosModel->find($id),
+                'titulo' => 'Editar accesorio',
+            ];
+            echo view('templates/header',$datos);
+            echo view('formularioAccesorio', $datos);
+            echo view('templates/footer');
+            echo view('templates/footer_js');
+        }
     }
 
     public function delete(){
