@@ -22,7 +22,7 @@ class Registrar extends BaseController{
     }
 
     public function completar($id, $token){
-        if($this->cModel->verificarToken($token, $id)){
+        if(count($this->linkModel->where('token', $token)->where('idUsuario',$id)->find())>0){
             $mensaje = 'Hola';
             $datos = [
                 'token' => $token,

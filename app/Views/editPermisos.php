@@ -18,24 +18,10 @@
                     <h6>Lista de permisos:</h6>
                     <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $datosUsuario["idUsuario"]?>">
                     <?php foreach($listaPermisos as $p):?>
-                        <?php foreach ($datosPermisoUsuario as $pu):?>
-                            <?php if($p["idPermiso"] == $pu["idPermiso"]):?>
-                                <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input"  value="<?php echo $p["idPermiso"]?>" id="<?php echo $p["idPermiso"]?>" checked>
-                                <label class="custom-control-label" for="<?php echo $p["idPermiso"]?>"><?php echo $p["nombre"]?></label>
-                                </div>
-                                <?php $band = true;?>
-                                <?php break;?>
-                            <?php else:?>
-                                <?php $band = false;?>
-                            <?php endif?>
-                        <?php endforeach?>
-                        <?php if($band == false):?>
-                                <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" value="<?php echo $p["idPermiso"]?>" id="<?php echo $p["idPermiso"]?>">
-                                <label class="custom-control-label" for="<?php echo $p["idPermiso"]?>"><?php echo $p["nombre"]?></label>
-                                </div>
-                            <?php endif?>
+                        <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input"  value="<?php echo $p["idPermiso"]?>" id="<?php echo $p["idPermiso"]?>" <?=(in_array($p['idPermiso'], array_column($datosPermisoUsuario, 'idPermiso'))?"checked":"")?>>
+                        <label class="custom-control-label" for="<?php echo $p["idPermiso"]?>"><?php echo $p["nombre"]?></label>
+                        </div>
                     <?php endforeach?>
                     <div class="float-right">
                         <button type="submit" class="btn btn-primary">Guardar cambios<div id="loader" class=""></div></button>

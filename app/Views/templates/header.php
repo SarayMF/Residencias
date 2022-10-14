@@ -99,7 +99,7 @@
 
               <?php foreach($permisos as $permiso):?>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo base_url($permiso->nombre)?>"><?php echo $permiso->nombre ?></a>
+                  <a class="nav-link" href="<?php echo base_url($permiso['nombre'])?>"><?php echo $permiso['nombre'] ?></a>
                 </li>
               <?php endforeach?>
               

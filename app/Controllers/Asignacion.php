@@ -6,6 +6,7 @@ use App\Models\ActivosModel;
 use App\Models\AplicacionesModel;
 use App\Models\UsuarioModel;
 use App\Models\AsignacionModel;
+use App\Models\PermisosUsuarioModel;
 
 class Asignacion extends BaseController{
     private $cModel;
@@ -13,6 +14,7 @@ class Asignacion extends BaseController{
     private $aplicacionesModel;
     private $activosModel;
     private $asignacionModel;
+    private $permisoModel;
     private $session;
 
     public function __construct(){
@@ -21,13 +23,18 @@ class Asignacion extends BaseController{
         $this->aplicacionesModel = new AplicacionesModel();
         $this->activosModel = new ActivosModel();
         $this->asignacionModel = new AsignacionModel();
+        $this->permisoModel = new PermisosUsuarioModel();
         $this->session = session();
     }
 
     public function index(){
         if($this->session->has('idUsuario')){
             $datos = [
-                'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
             ];
             echo view('templates/header',$datos);
             echo view('mostrarAsignaciones',$datos);
@@ -41,7 +48,11 @@ class Asignacion extends BaseController{
     public function asignacionActivo($id){
         if($this->session->has('idUsuario')){
             $datos = [
-                'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
                 'activo' => $this->activosModel->find($id)
             ];
             echo view('templates/header',$datos);
@@ -56,7 +67,11 @@ class Asignacion extends BaseController{
     public function asignacionUsuario(){
         if($this->session->has('idUsuario')){
             $datos = [
-                'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
                 'usuario' => $this->usuarioModel->find($this->session->idUsuario)
             ];
             echo view('templates/header',$datos);

@@ -47,7 +47,7 @@ $routes->get('/Otorgar permisos/(:any)', 'Permisos::permisosUsuario/$1');
 $routes->post('/Otorgar permisos/guardarPermisos', 'Permisos::guardar');
 $routes->get('/Entrada de activos', 'Activos::entradaDeActivos');
 $routes->post('/Entrada de activos/mostrar activos', 'Activos::read');
-$routes->get('/Entrada de activos/editar/(:any)', 'Activos::update/$1');
+$routes->match(['get', 'post'],'/Entrada de activos/editar/(:any)', 'Activos::update/$1');
 $routes->get('/Salida de activos', 'Activos::salidaDeActivos');
 $routes->post('/Salida de activos/mostrar activos', 'Activos::read');
 $routes->post('/Salida de activos/eliminar activo', 'Activos::delete');
@@ -63,6 +63,7 @@ $routes->post('/mostrar asignacion activo', 'Asignacion::readActivo');
 $routes->get('/Registro de mis activos/agregarActivo', 'Asignacion::asignacionUsuario');
 $routes->post('/Registro de mis activos/buscarActivo', 'Activos::buscarActivo');
 $routes->post('/Registro de mis activos/guardarAsignacion', 'Asignacion::createActivo');
+$routes->post('/Entrada de activos/guardarActivo', 'Activos::create');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

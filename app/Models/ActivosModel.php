@@ -18,8 +18,8 @@ class ActivosModel extends Model
     protected $updatedField  = false;
 
     protected $validationRules = [
-        'noActivo' => 'trim|required|is_unique[activos.noActivo]',
-        'noSerie' => 'trim|required|is_unique[activos.noSerie]'
+        'noActivo' => 'trim|required|is_unique[activo.noActivo]',
+        'noSerie' => 'trim|required|is_unique[activo.noSerie]'
     ];
     protected $validationMessages = [
         'noActivo' => [

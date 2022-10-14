@@ -57,7 +57,10 @@ function guardarAsignacion(){
                     text: respuesta.mensaje,
                     icon: respuesta.type,
                 }).then((value) => {  
-                    window.location.replace("http://localhost/ResidenciasSaray/public/Entrada%20de%20activos");
+                    var array = window.location.pathname.split( '/' );
+                    array.pop();    
+                    array.pop();
+                    window.location.replace(window.location.origin + array.join("/"));
                 });
             }
         }

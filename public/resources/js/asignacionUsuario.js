@@ -82,8 +82,10 @@ function guardarAsignacion(){
                     title: respuesta.title,
                     text: respuesta.mensaje,
                     icon: respuesta.type,
-                }).then((value) => {  
-                    window.location.replace("http://localhost/ResidenciasSaray/public/Registro%20de%20mis%20activos");
+                }).then((value) => { 
+                    var array = window.location.pathname.split( '/' );
+                    array.pop();    
+                    window.location.replace(window.location.origin + array.join("/"));
                 });
             }
         }

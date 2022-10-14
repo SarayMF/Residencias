@@ -24,7 +24,11 @@ class Permisos extends BaseController{
     public function index(){
         if($this->session->has('idUsuario')){
             $datos = [
-                'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                'permisos' => $this->permisoUModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
             ];
             echo view('templates/header',$datos);
             echo view('permisos');
@@ -55,7 +59,11 @@ class Permisos extends BaseController{
     public function permisosUsuario($idUsuario){
         if($this->session->has('idUsuario')){
             $datos = [
-                'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                'permisos' => $this->permisoUModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
                 'datosUsuario' => $this->usuarioModel->find($idUsuario),
                 'datosPermisoUsuario' => $this->permisoUModel->where('idUsuario',$idUsuario)->findAll(),
                 'listaPermisos' => $this->permisoModel->findAll(),

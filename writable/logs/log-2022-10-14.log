@@ -1,0 +1,316 @@
+CRITICAL - 2022-10-14 12:45:56 --> syntax error, unexpected single-quoted string "", expecting "]"
+in APPPATH\Controllers\Activos.php on line 70.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Activos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Activos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Activos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Activos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 12:46:08 --> Cannot use App\Models\AplicacionActivoModel as AplicacionActivoModel because the name is already in use
+in APPPATH\Controllers\Activos.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-10-14 12:46:08 --> Cannot use App\Models\AplicacionActivoModel as AplicacionActivoModel because the name is already in use
+in APPPATH\Controllers\Activos.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-10-14 12:46:23 --> Attempt to read property "nombre" on null
+in APPPATH\Views\templates\header.php on line 102.
+ 1 APPPATH\Views\templates\header.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on null', 'APPPATH\\Views\\templates\\header.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Activos.php(37): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->entradaDeActivos()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 12:47:22 --> syntax error, unexpected token "echo"
+in APPPATH\Controllers\Activos.php on line 38.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Activos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Activos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Activos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Activos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 12:47:31 --> Attempt to read property "nombre" on null
+in APPPATH\Views\templates\header.php on line 102.
+ 1 APPPATH\Views\templates\header.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on null', 'APPPATH\\Views\\templates\\header.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Activos.php(38): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->entradaDeActivos()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 12:47:57 --> Attempt to read property "nombre" on array
+in APPPATH\Views\templates\header.php on line 102.
+ 1 APPPATH\Views\templates\header.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\templates\\header.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Activos.php(39): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->entradaDeActivos()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 12:52:07 --> Undefined variable $permisos
+in APPPATH\Views\templates\header.php on line 100.
+ 1 APPPATH\Views\templates\header.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $permisos', 'APPPATH\\Views\\templates\\header.php', 100)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Home.php(26): view('templates/header')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 12:52:55 --> Undefined property: App\Controllers\Home::$session
+in APPPATH\Controllers\Home.php on line 29.
+ 1 APPPATH\Controllers\Home.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$session', 'APPPATH\\Controllers\\Home.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 12:53:07 --> Call to undefined method App\Models\CustomModel::obtenerPermisos()
+in APPPATH\Controllers\Home.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 12:53:20 --> Undefined property: App\Controllers\Home::$session
+in APPPATH\Controllers\Home.php on line 29.
+ 1 APPPATH\Controllers\Home.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$session', 'APPPATH\\Controllers\\Home.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 12:53:47 --> Call to undefined method App\Models\CustomModel::obtenerPermisos()
+in APPPATH\Controllers\Permisos.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-10-14 12:54:08 --> Not unique table/alias: 'permisos'
+CRITICAL - 2022-10-14 12:54:08 --> Not unique table/alias: 'permisos'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `permisos`.`nombre`
+FROM `permisos`
+JOIN `permisos` ON `permisos`.`idPermiso` = `permisosusuario`.`idPermiso`
+WHERE `permisosusuario`.`idUsuario` = \'21\'
+ORDER BY `permisos`.`idPermiso` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `permisos`.`nombre`
+FROM `permisos`
+JOIN `permisos` ON `permisos`.`idPermiso` = `permisosusuario`.`idPermiso`
+WHERE `permisosusuario`.`idUsuario` = \'21\'
+ORDER BY `permisos`.`idPermiso` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `permisos`.`nombre`
+FROM `permisos`
+JOIN `permisos` ON `permisos`.`idPermiso` = `permisosusuario`.`idPermiso`
+WHERE `permisosusuario`.`idUsuario` = \'21\'
+ORDER BY `permisos`.`idPermiso` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `permisos`.`nombre`
+FROM `permisos`
+JOIN `permisos` ON `permisos`.`idPermiso` = `permisosusuario`.`idPermiso`
+WHERE `permisosusuario`.`idUsuario` = :permisosusuario.idUsuario:
+ORDER BY `permisos`.`idPermiso` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Permisos.php(31): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Permisos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 12:54:48 --> Undefined property: App\Controllers\Asignacion::$permisoModel
+in APPPATH\Controllers\Asignacion.php on line 30.
+ 1 APPPATH\Controllers\Asignacion.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Asignacion::$permisoModel', 'APPPATH\\Controllers\\Asignacion.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 13:02:24 --> syntax error, unexpected single-quoted string "aplicaciones", expecting "]"
+in APPPATH\Controllers\Activos.php on line 81.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Activos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Activos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Activos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Activos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 13:02:47 --> Class "App\Controllers\AplicacionesModel" not found
+in APPPATH\Controllers\Activos.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(858): App\Controllers\Activos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 13:03:10 --> syntax error, unexpected token "endif", expecting end of file
+in APPPATH\Views\formularioActivos.php on line 98.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('formularioActivos', [], true)
+ 3 APPPATH\Controllers\Activos.php(84): view('formularioActivos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->create()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 13:29:56 --> Undefined array key "nombre"
+in APPPATH\Views\formularioActivos.php on line 77.
+ 1 APPPATH\Views\formularioActivos.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\formularioActivos.php', 77)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\formularioActivos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('formularioActivos', [], true)
+ 5 APPPATH\Controllers\Activos.php(126): view('formularioActivos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('8')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 13:49:11 --> Unmatched ')'
+in APPPATH\Views\formularioActivos.php on line 76.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('formularioActivos', [], true)
+ 3 APPPATH\Controllers\Activos.php(124): view('formularioActivos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('8')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 13:50:13 --> Undefined variable $apps
+in APPPATH\Views\formularioActivos.php on line 76.
+ 1 APPPATH\Views\formularioActivos.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $apps', 'APPPATH\\Views\\formularioActivos.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\formularioActivos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('formularioActivos', [], true)
+ 5 APPPATH\Controllers\Activos.php(84): view('formularioActivos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 13:50:50 --> syntax error, unexpected token "if"
+in APPPATH\Views\formularioActivos.php on line 76.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('formularioActivos', [], true)
+ 3 APPPATH\Controllers\Activos.php(84): view('formularioActivos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->create()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 13:51:25 --> Undefined variable $apps
+in APPPATH\Views\formularioActivos.php on line 76.
+ 1 APPPATH\Views\formularioActivos.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $apps', 'APPPATH\\Views\\formularioActivos.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\formularioActivos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('formularioActivos', [], true)
+ 5 APPPATH\Controllers\Activos.php(84): view('formularioActivos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 14:27:16 --> syntax error, unexpected token "="
+in APPPATH\Controllers\Activos.php on line 72.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Activos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Activos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Activos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Activos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 14:27:53 --> trim(): Passing null to parameter #1 ($string) of type string is deprecated
+in SYSTEMPATH\Validation\Validation.php on line 293.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'trim(): Passing null to parameter #1 ($string) of type string is deprecated', 'SYSTEMPATH\\Validation\\Validation.php', 293)
+ 2 SYSTEMPATH\Validation\Validation.php(293): trim(null)
+ 3 SYSTEMPATH\Validation\Validation.php(173): CodeIgniter\Validation\Validation->processRules('noActivo', 'noActivo', null, [...], [...])
+ 4 SYSTEMPATH\BaseModel.php(1349): CodeIgniter\Validation\Validation->run([...], null, null)
+ 5 SYSTEMPATH\BaseModel.php(707): CodeIgniter\BaseModel->validate([...])
+ 6 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Activos.php(82): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->create()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-10-14 14:29:48 --> Table 'testbd.activos' doesn't exist
+CRITICAL - 2022-10-14 14:29:48 --> Table 'testbd.activos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `activos`
+WHERE `noActivo` = \'21312\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `activos`
+WHERE `noActivo` = \'21312\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `activos`
+WHERE `noActivo` = \'21312\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `activos`
+WHERE `noActivo` = :noActivo:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(306): CodeIgniter\Validation\Rules->is_unique('21312', 'noActivo', [...], null)
+ 7 SYSTEMPATH\Validation\Validation.php(173): CodeIgniter\Validation\Validation->processRules('noActivo', 'noActivo', '21312', [...], [...])
+ 8 SYSTEMPATH\BaseModel.php(1349): CodeIgniter\Validation\Validation->run([...], null, null)
+ 9 SYSTEMPATH\BaseModel.php(707): CodeIgniter\BaseModel->validate([...])
+10 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+11 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+12 APPPATH\Controllers\Activos.php(82): CodeIgniter\BaseModel->save([...])
+13 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->create()
+14 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+15 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 14:39:38 --> syntax error, unexpected token "else"
+in APPPATH\Controllers\Activos.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Activos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Activos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Activos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Activos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 14:39:50 --> syntax error, unexpected token "else"
+in APPPATH\Controllers\Activos.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Activos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Activos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Activos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Activos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 14:40:38 --> syntax error, unexpected token "else"
+in APPPATH\Controllers\Activos.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Activos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Activos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Activos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Activos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 14:46:30 --> Too few arguments to function App\Controllers\Activos::update(), 0 passed in C:\xampp\htdocs\ResidenciasSaray\system\CodeIgniter.php on line 896 and exactly 1 expected
+in APPPATH\Controllers\Activos.php on line 140.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 14:50:51 --> syntax error, unexpected token ","
+in APPPATH\Controllers\Activos.php on line 144.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Activos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Activos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Activos')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Activos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 14:55:16 --> Undefined array key "noActivo"
+in APPPATH\Controllers\Activos.php on line 153.
+ 1 APPPATH\Controllers\Activos.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "noActivo"', 'APPPATH\\Controllers\\Activos.php', 153)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('12')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-14 14:55:33 --> Undefined array key "noActivo"
+in APPPATH\Controllers\Activos.php on line 153.
+ 1 APPPATH\Controllers\Activos.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "noActivo"', 'APPPATH\\Controllers\\Activos.php', 153)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('12')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

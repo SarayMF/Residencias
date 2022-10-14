@@ -26,7 +26,11 @@ class Home extends BaseController
         $session = session();
         if($session->has('idUsuario')){
             $datos = [
-                'permisos' => $this->cModel->obtenerPermisos($session->idUsuario)
+                'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
             ];
             echo view('templates/header', $datos);
             echo view('templates/footer');

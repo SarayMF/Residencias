@@ -4,10 +4,12 @@ namespace App\Controllers;
 use App\Models\CustomModel;
 use App\Models\ActivosModel;
 use App\Models\AplicacionActivoModel;
+use App\Models\AplicacionesModel;
 use App\Models\PermisosUsuarioModel;
 
 class Activos extends BaseController{
     private $cModel;
+    private $aplicacionesActivoModel;
     private $aplicacionesModel;
     private $activosModel;
     private $permisoModel;
@@ -15,8 +17,10 @@ class Activos extends BaseController{
     private $type;
 
     public function __construct(){
+        helper(['form']);
         $this->cModel = new CustomModel();  
-        $this->aplicacionesModel = new AplicacionActivoModel();
+        $this->aplicacionesActivoModel = new AplicacionActivoModel();
+        $this->aplicacionesModel = new AplicacionesModel();
         $this->activosModel = new ActivosModel();
         $this->permisoModel = new PermisosUsuarioModel();
         $this->session = session();
@@ -26,7 +30,11 @@ class Activos extends BaseController{
         if($this->session->has('idUsuario')){
             $this->type = "Entrada";
             $datos = [
-                'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
                 'titulo' => $this->type,
             ];
             echo view('templates/header',$datos);
@@ -42,7 +50,11 @@ class Activos extends BaseController{
         if($this->session->has('idUsuario')){
             $this->type = "Salida";
             $datos = [
-                'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
                 'titulo' => $this->type,
             ];
             echo view('templates/header',$datos);
@@ -57,11 +69,49 @@ class Activos extends BaseController{
     public function create(){
         if($this->session->has('idUsuario')){
             if($this->request->isAJAX()){
+                $aplicaciones = json_decode($this->request->getPost('aplicaciones'),true);
+                $datos = [
+                    'noActivo' => $this->request->getPost('noActivo'),
+                    'noSerie' => $this->request->getPost('noSerie'),
+                    'marca' => $this->request->getPost('marca'),
+                    'modelo' => $this->request->getPost('modelo'),
+                    'memoriaRAM' => $this->request->getPost('memoriaRAM'),
+                    'discoDuro' => $this->request->getPost('discoDuro'),
+                    'procesador' => $this->request->getPost('procesador'),
+                ];
+                if($this->activosModel->save($datos)){
+                    $idActivo = $this->activosModel->where('noActivo', $datos['noActivo'])->findColumn('idActivo');
+                    foreach($aplicaciones as $a){
+                        $datos = [
+                            'idActivo' => $idActivo[0],
+                            'idAplicacion' => $a,
+                        ];
+                        $this->aplicacionesActivoModel->save($datos);
+                    }
 
+                    $data = array(
+                        "title" => "¡Exito!",
+                        "type" => "success",
+                        "mensaje" => "El activo ha sido registrado exitosamente",
+                    );
+                    
+                    echo json_encode($data);
+                }else{
+                    $data = array(
+                        "type" => "error",
+                        "mensaje" => $this->activosModel->errors()
+                    );
+                    echo json_encode($data);
+                }
             }else{
                 $datos = [
-                    'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
-                    'titulo' => "Registar activo nuevo"
+                    'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
+                    'titulo' => "Registar activo nuevo",
+                    'aplicaciones' => $this->aplicacionesModel->findAll()
                 ];
                 echo view('templates/header',$datos);
                 echo view('formularioActivos',$datos);
@@ -82,7 +132,6 @@ class Activos extends BaseController{
                 "cantidadActivos" => count($this->cModel->obtenerActivo($buscar)),
             );
             echo json_encode($datos);
-        
         }else{
             return redirect()->to(base_url('/Entrada de activos'));
         }
@@ -91,15 +140,49 @@ class Activos extends BaseController{
     public function update($id){
         if($this->session->has('idUsuario')){
             if($this->request->isAJAX()){
+                $aplicaciones = json_decode($this->request->getPost('aplicaciones'),true);
+                $idActivo = $this->request->getPost('idActivo');
+                $datos = [
+                    'marca' => $this->request->getPost('marca'),
+                    'modelo' => $this->request->getPost('modelo'),
+                    'memoriaRAM' => $this->request->getPost('memoriaRAM'),
+                    'discoDuro' => $this->request->getPost('discoDuro'),
+                    'procesador' => $this->request->getPost('procesador'),
+                ];
+                if($this->activosModel->update($idActivo, $datos)){
+                    $this->aplicacionesActivoModel->where('idActivo', $idActivo)->delete();
+                    foreach($aplicaciones as $a){
+                        $datos = [
+                            'idActivo' => $idActivo,
+                            'idAplicacion' => $a,
+                        ];
+                        $this->aplicacionesActivoModel->save($datos);
+                    }
 
+                    $data = array(
+                        "title" => "¡Exito!",
+                        "type" => "success",
+                        "mensaje" => "El activo ha sido registrado exitosamente",
+                    );
+                    
+                    echo json_encode($data);
+                }else{
+                    $data = array(
+                        "type" => "error",
+                        "mensaje" => $this->activosModel->errors()
+                    );
+                    echo json_encode($data);
+                }
             }else{
                 $datos = [
-                    'permisos' => $this->cModel->obtenerPermisos($this->session->idUsuario),
+                    'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
                     'activo' => $this->activosModel->find($id),
-                    'aplicaciones' => $this->aplicacionesModel->where('idActivo', $id)
-                                ->select('aplicaciones.idAplicacion, aplicaciones.nombre')
-                                ->join('aplicaciones', 'aplicaciones.idAplicacion = activoaplicaciones.idAplicacion')
-                                ->findAll(),
+                    'aplicaciones' => $this->aplicacionesModel->findAll(),
+                    'apps' => $this->aplicacionesActivoModel->select('idAplicacion')->where('idActivo',$id)->findAll(),
                     'titulo' => "Editar activo"
                 ];
                 echo view('templates/header',$datos);

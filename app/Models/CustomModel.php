@@ -9,26 +9,6 @@ class CustomModel{
     public function __construct(){
         $this->db = \Config\Database::connect();
     }
-    
-    public function verificarToken($token, $id){
-        $query = $this->db->query('SELECT * FROM linkpassword WHERE token = ? AND idUsuario = ?', [$token, $id] );
-        $result = $query->getResult();
-        if(count($result) > 0){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    public function obtenerPermisos($idUsuario){
-        $sql = 'SELECT permisos.nombre
-                FROM permisosusuario 
-                LEFT JOIN permisos ON permisosusuario.idPermiso = permisos.idPermiso
-                WHERE permisosusuario.idUsuario = ?
-                Order by permisos.idPermiso';
-        $query = $this->db->query($sql, [$idUsuario]);
-        return $result = $query->getResult();
-    }
 
     public function obtenerUsuarios($nombre,$inicio,$cantidad,$usuarioLogueado){
         $cadena = "%".$nombre."%";
@@ -48,7 +28,7 @@ class CustomModel{
 
     public function obtenerActivos($nombre,$inicio,$cantidad){
         $cadena = "%".$nombre."%";
-        $sql = 'SELECT * FROM activo WHERE noActivo LIKE ? AND estado = 1 AND idAsignacion IS NULL LIMIT ?,?';
+        $sql = 'SELECT * FROM activo WHERE noActivo LIKE ? AND estado = 1 LIMIT ?,?';
         $query = $this->db->query($sql,[$cadena,$inicio,$cantidad]);
         
         return $result = $query->getResult();
@@ -56,7 +36,7 @@ class CustomModel{
 
     public function obtenerActivo($nombre){
         $cadena = "%".$nombre."%";
-        $sql = 'SELECT * FROM activo WHERE noActivo LIKE ? AND estado = 1 AND idAsignacion IS NULL';
+        $sql = 'SELECT * FROM activo WHERE noActivo LIKE ? AND estado = 1';
         $query = $this->db->query($sql,[$cadena]);
         
         return $result = $query->getResult();

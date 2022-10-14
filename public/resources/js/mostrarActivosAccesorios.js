@@ -43,8 +43,11 @@ function mostrarActivos(valor, pagina){
             html = "";
             $.each(respuesta.activos, function(key, item){
                 html += "<tr><th scope='row'>"+item.noActivo+"</th><td>"+item.noSerie+"</td><td>"+item.marca+"</td><td>"+item.modelo+"</td><td>"+item.fechaAlta+"</td>";
-                if(type == "Entrada") html += "<td><center><a class='btn btn-primary' href='"+base_url+"/editar/"+item.idActivo+"' role='button'>Editar</a></center></td><td><center><a class='btn btn-info' href='"+base_url+"/asignar/"+item.idActivo+"' role='button'>Asignar</a></center></td></tr>";
-                else if(type == "Salida") html += "<td><center><button class='btn btn-danger' onClick='eliminarActivo("+item.idActivo+")'>Eliminar</button></center></td></tr>";
+                if(type == "Entrada"){ 
+                    html += "<td><center><a class='btn btn-primary' href='"+base_url+"/editar/"+item.idActivo+"' role='button'>Editar</a></center></td>";
+                    if(item.idAsignacion !== null) html+="<td><center><a class='btn btn-info disabled' href='"+base_url+"/asignar/"+item.idActivo+"' role='button'>Asignar</a></center></td></tr>";
+                    else  html+="<td><center><a class='btn btn-info' href='"+base_url+"/asignar/"+item.idActivo+"' role='button'>Asignar</a></center></td></tr>";
+                }else if(type == "Salida") html += "<td><center><button class='btn btn-danger' onClick='eliminarActivo("+item.idActivo+")'>Eliminar</button></center></td></tr>";
             });
             $("#listaActivos").html(html);
 
