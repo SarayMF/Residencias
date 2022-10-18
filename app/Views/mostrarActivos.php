@@ -2,9 +2,9 @@
     <div class="form-container entrada">
 
         <center>
-            <h4><?php echo $titulo?> de activos</h4>
+            <h4><?php echo $titulo?></h4>
         </center>
-        <input type="hidden" id="type" value="<?php echo $titulo?>">
+        <input type="hidden" id="type" value="<?php echo $tipo?>">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
             <a class="nav-link active" id="Activos-tab" data-toggle="tab" href="#Activos" role="tab" aria-controls="Activos" aria-selected="true">Activos</a>
@@ -16,8 +16,12 @@
         <br>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="Activos" role="tabpanel" aria-labelledby="Activos-tab">
+                <?php if($tipo == "Eliminar"):?>
+                    <div class="float-left">
+                        <a class="btn btn-success" href="<?php echo base_url('/Reporte de activos/generar reporte')?>">Descargar excel</a>
+                    </div>
+                <?php endif?>
                 <div class="float-right d-flex">
-                
                     <div class="input-group mb-3 d-contents">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
@@ -40,10 +44,11 @@
                             <th scope="col">Marca</th>
                             <th scope="col">Modelo</th>
                             <th scope="col">Fecha de alta</th>
-                            <?php if($titulo == "Entrada"):?>
+                            <?php if($tipo == "Entrada"):?>
                                 <th scope="col">Editar</th>
+                            <?php elseif($tipo == "Salida"):?>
                                 <th scope="col">Asignar</th>
-                            <?php elseif($titulo == "Salida"):?>
+                            <?php elseif($tipo == "Eliminar"):?>
                                 <th scoope="col">Eliminar</th>
                             <?php endif?>
                             </tr>
@@ -86,10 +91,11 @@
                             <th scope="col"># Accesorio</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Cantidad</th>
-                            <?php if($titulo == "Entrada"):?>
+                            <?php if($tipo == "Entrada"):?>
                                 <th scope="col">Editar</th>
+                            <?php elseif($tipo == "Salida"):?>
                                 <th scope="col">Asignar</th>
-                            <?php elseif($titulo == "Salida"):?>
+                            <?php elseif($tipo == "Eliminar"):?>
                                 <th scoope="col">Eliminar</th>
                             <?php endif?>
                             </tr>

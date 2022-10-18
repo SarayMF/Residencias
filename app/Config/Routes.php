@@ -50,15 +50,13 @@ $routes->post('/Entrada de activos/mostrar activos', 'Activos::read');
 $routes->match(['get', 'post'],'/Entrada de activos/editar/(:any)', 'Activos::update/$1');
 $routes->get('/Salida de activos', 'Activos::salidaDeActivos');
 $routes->post('/Salida de activos/mostrar activos', 'Activos::read');
-$routes->post('/Salida de activos/eliminar activo', 'Activos::delete');
 $routes->get('/Entrada de activos/agregar activo', 'Activos::create');
-$routes->get('/Entrada de activos/asignar/(:any)', 'Asignacion::asignacionActivo/$1');
-$routes->post('/Entrada de activos/asignar/buscarUsuario', 'Asignacion::buscarUsuario');
-$routes->post('/Entrada de activos/asignar/guardarAsignacion', 'Asignacion::createActivo');
+$routes->get('/Salida de activos/asignar/(:any)', 'Asignacion::asignacionActivo/$1');
+$routes->post('/Salida de activos/asignar/buscarUsuario', 'Asignacion::buscarUsuario');
+$routes->post('/Salida de activos/asignar/guardarAsignacion', 'Asignacion::createActivo');
 $routes->get('/Registro de mis activos', 'Asignacion::index');
 $routes->post('/Entrada de activos/mostrar accesorios', 'Accesorios::read');
 $routes->post('/Salida de activos/mostrar accesorios', 'Accesorios::read');
-$routes->post('/Salida de activos/eliminar accesorio', 'Accesorios::delete');
 $routes->post('/mostrar asignacion activo', 'Asignacion::readActivo');
 $routes->get('/Registro de mis activos/agregarActivo', 'Asignacion::asignacionUsuario');
 $routes->post('/Registro de mis activos/buscarActivo', 'Activos::buscarActivo');
@@ -66,6 +64,13 @@ $routes->post('/Registro de mis activos/guardarAsignacion', 'Asignacion::createA
 $routes->post('/Entrada de activos/guardarActivo', 'Activos::create');
 $routes->get('/Entrada de activos/agregar accesorio', 'Accesorios::create');
 $routes->match(['get', 'post'],'/Entrada de activos/editar accesorio/(:any)', 'Accesorios::update/$1');
+$routes->post('/Entrada de activos/guardarAccesorio', 'Accesorios::create');
+$routes->get('/Reporte de activos', 'Reportes::reporteActivos');
+$routes->post('/Reporte de activos/mostrar accesorios', 'Accesorios::read');
+$routes->post('/Reporte de activos/mostrar activos', 'Activos::read');
+$routes->post('/Reporte de activos/eliminar activo', 'Activos::delete');
+$routes->post('/Reporte de activos/eliminar accesorio', 'Accesorios::delete');
+$routes->get('/Reporte de activos/generar reporte', 'Reportes::generarReporteActivos');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

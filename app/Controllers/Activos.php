@@ -5,6 +5,7 @@ use App\Models\CustomModel;
 use App\Models\ActivosModel;
 use App\Models\AplicacionActivoModel;
 use App\Models\AplicacionesModel;
+use App\Models\AsignacionModel;
 use App\Models\PermisosUsuarioModel;
 
 class Activos extends BaseController{
@@ -12,6 +13,7 @@ class Activos extends BaseController{
     private $aplicacionesActivoModel;
     private $aplicacionesModel;
     private $activosModel;
+    private $asignacionModel;
     private $permisoModel;
     private $session;
     private $type;
@@ -22,6 +24,7 @@ class Activos extends BaseController{
         $this->aplicacionesActivoModel = new AplicacionActivoModel();
         $this->aplicacionesModel = new AplicacionesModel();
         $this->activosModel = new ActivosModel();
+        $this->asignacionModel = new AsignacionModel();
         $this->permisoModel = new PermisosUsuarioModel();
         $this->session = session();
     }
@@ -35,7 +38,8 @@ class Activos extends BaseController{
                                                  ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
-                'titulo' => $this->type,
+                'titulo' => "Entrada de activos",
+                'tipo' => "Entrada"
             ];
             echo view('templates/header',$datos);
             echo view('mostrarActivos',$datos);
@@ -55,7 +59,8 @@ class Activos extends BaseController{
                                                  ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
-                'titulo' => $this->type,
+                'titulo' => "Salida de activos",
+                'tipo' => "Salida"
             ];
             echo view('templates/header',$datos);
             echo view('mostrarActivos',$datos);
@@ -196,9 +201,14 @@ class Activos extends BaseController{
     public function delete(){
         if($this->request->isAJAX()){
             $idActivo = $this->request->getPost('activo');
+            $activo =  $this->activosModel->where('idActivo', $idActivo)->first();
 
             if($this->activosModel->where('idActivo',$idActivo)->delete()){
                 $this->activosModel->where('idActivo', $idActivo)->set(['usuarioBaja' => $this->session->get('idUsuario'), 'estado' => 0])->update();
+                if(isset($activo['idAsignacion'])){
+                    $this->activosModel->where('idActivo', $idActivo)->set(['idAsignacion' => null])->update();
+                    $this->asignacionModel->where('idActivo', $idActivo)->delete();
+                } 
                 $data = array(
                     "title" => "¡Registro eliminado!",
                     "type" => "success",

@@ -43,5 +43,5 @@
 <?php if(isset($accesorio)):?>
     <script  src="<?php echo base_url('resources/js/editarAccesorio.js');?>" ></script>
 <?php else:?>
-    <script  src="<?php echo base_url('resources/js/agregarAccesorio.js');?>" ></script>
+    <script  src="<?php echo base_url('resources/js/guardarAccesorio.js');?>" ></script>
 <?php endif?>

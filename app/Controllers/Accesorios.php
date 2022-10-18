@@ -17,7 +17,29 @@ class Accesorios extends BaseController{
 
     public function create(){
         if($this->request->isAJAX()){
+            $datos = [
+                'nombre' => $this->request->getPost('nombre'),
+                'cantidad' => $this->request->getPost('cantidad')
+            ];
+            $accesorios = $this->accesoriosModel->where('nombre',$datos['nombre'])->first();
 
+            if(is_null($accesorios)){
+                $this->accesoriosModel->save($datos);
+                $respuesta = array(
+                    "tipo" => "success",
+                    "mensaje" => "Accesorio registrado correctamente",
+                    "titulo" => "¡Exito!"
+                );
+            }else{
+                $this->accesoriosModel->update($accesorios['idAccesorio'],$datos);
+                $respuesta = array(
+                    "tipo" => "success",
+                    "mensaje" => "El accesorio ya existia, por lo que se actualizo el registro",
+                    "titulo" => "¡Exito!"
+                );
+            }
+
+            echo json_encode($respuesta);
         }else{
             $datos = [
                 'permisos' => $this->permisoUModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
