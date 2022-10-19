@@ -1,5 +1,5 @@
 <div class="main-container center">
-    <div class="form-container permisos">
+    <div class="form-container entrada">
     <center><h3>Mis activos</h3></center>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">

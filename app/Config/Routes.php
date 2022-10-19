@@ -71,6 +71,9 @@ $routes->post('/Reporte de activos/mostrar activos', 'Activos::read');
 $routes->post('/Reporte de activos/eliminar activo', 'Activos::delete');
 $routes->post('/Reporte de activos/eliminar accesorio', 'Accesorios::delete');
 $routes->get('/Reporte de activos/generar reporte', 'Reportes::generarReporteActivos');
+$routes->get('/Reporte de bajas', 'Reportes::reporteBajas');
+$routes->post('/mostrar bajas', 'Activos::readDeleted');
+$routes->get('/Reporte de bajas/generar reporte', 'Reportes::generarReporteBajas');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -63,7 +63,7 @@ class Accesorios extends BaseController{
             $cantidad = 5;
             $inicio = ($pagina - 1) * 5;
             $datos = array(
-                "accesorios" => $this->accesoriosModel->like('nombre', $buscar)->limit($inicio, $cantidad)->find(),
+                "accesorios" => $this->accesoriosModel->like('nombre', $buscar)->limit($cantidad, $inicio)->find(),
                 "cantidadAccesorios" => count($this->accesoriosModel->like('nombre', $buscar)->findAll()),
             );
             echo json_encode($datos);

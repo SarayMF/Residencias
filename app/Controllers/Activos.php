@@ -142,6 +142,27 @@ class Activos extends BaseController{
         }
     }
 
+    public function readDeleted(){
+        if($this->request->isAJAX()){
+            $buscar = $this->request->getPost('buscar');
+            $pagina = $this->request->getPost('numpagina');
+            $cantidad = 5;
+            $inicio = ($pagina - 1) * 5;
+            $datos = array(
+                "activos" => $this->activosModel->select('activo.noActivo, activo.noSerie, activo.marca, activo.modelo, activo.fechaBaja, usuario.nombre, usuario.apellidoP, usuario.apellidoM')
+                                                   ->join('usuario', 'activo.usuarioBaja = usuario.idUsuario')
+                                                   ->like('noActivo', $buscar)
+                                                   ->limit($cantidad, $inicio)
+                                                   ->onlyDeleted()
+                                                   ->find(),
+                "cantidadActivos" => count($this->activosModel->like('noActivo', $buscar)->onlyDeleted()->findAll()),
+            );
+            echo json_encode($datos);
+        }else{
+            return redirect()->to(base_url());
+        }
+    }
+
     public function update($id){
         if($this->session->has('idUsuario')){
             if($this->request->isAJAX()){

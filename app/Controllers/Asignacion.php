@@ -95,13 +95,12 @@ class Asignacion extends BaseController{
                                      ->join('usuario', 'asignacion.usuarioAsignado = usuario.idUsuario')
                                      ->like('activo.noActivo', $buscar)
                                      ->where('asignacion.usuarioAsignado', $this->session->idUsuario)
-                                     ->limit($inicio, $cantidad)
+                                     ->limit($cantidad, $inicio)
                                      ->find(),
                 "cantidadAsignacion" => count($this->asignacionModel->select('asignacion.idAsignacion, activo.noActivo, activo.marca, activo.modelo, asignacion.fechaAsignacion, asignacion.observaciones')
                                                    ->join('activo', 'asignacion.idAsignacion = activo.idAsignacion')
                                                    ->join('usuario', 'asignacion.usuarioAsignado = usuario.idUsuario')
                                                    ->where('asignacion.usuarioAsignado', $this->session->idUsuario)
-                                                   ->limit($inicio, $cantidad)
                                                    ->find())
             );
             echo json_encode($datos);

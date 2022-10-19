@@ -1,0 +1,177 @@
+CRITICAL - 2022-10-19 11:29:24 --> Class "App\Controllers\AplicacionesActivoModel" not found
+in APPPATH\Controllers\Reportes.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(858): App\Controllers\Reportes->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 11:29:49 --> Class "App\Controllers\AsignacionModel" not found
+in APPPATH\Controllers\Reportes.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(858): App\Controllers\Reportes->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-10-19 11:30:17 --> Unknown column 'aplicacion.nombre' in 'field list'
+CRITICAL - 2022-10-19 11:30:17 --> Unknown column 'aplicacion.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `aplicacion`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `activoaplicaciones`.`idAplicacion` = `aplicacion`.`idAplicacion`
+WHERE `idActivo` = \'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `aplicacion`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `activoaplicaciones`.`idAplicacion` = `aplicacion`.`idAplicacion`
+WHERE `idActivo` = \'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `aplicacion`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `activoaplicaciones`.`idAplicacion` = `aplicacion`.`idAplicacion`
+WHERE `idActivo` = \'6\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `aplicacion`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `activoaplicaciones`.`idAplicacion` = `aplicacion`.`idAplicacion`
+WHERE `idActivo` = :idActivo:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Reportes.php(71): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteActivos()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 11:30:53 --> Undefined variable $aplicaciones
+in APPPATH\Controllers\Reportes.php on line 72.
+ 1 APPPATH\Controllers\Reportes.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aplicaciones', 'APPPATH\\Controllers\\Reportes.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteActivos()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 11:31:08 --> Undefined variable $apps
+in APPPATH\Controllers\Reportes.php on line 84.
+ 1 APPPATH\Controllers\Reportes.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $apps', 'APPPATH\\Controllers\\Reportes.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteActivos()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 11:31:37 --> Undefined array key "nombre"
+in APPPATH\Controllers\Reportes.php on line 74.
+ 1 APPPATH\Controllers\Reportes.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Reportes.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteActivos()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 11:32:01 --> Undefined array key "nombre"
+in APPPATH\Controllers\Reportes.php on line 75.
+ 1 APPPATH\Controllers\Reportes.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Reportes.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteActivos()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 11:32:47 --> Undefined array key "nombre"
+in APPPATH\Controllers\Reportes.php on line 77.
+ 1 APPPATH\Controllers\Reportes.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Reportes.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteActivos()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 11:33:21 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Reportes.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteActivos()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 11:33:53 --> Undefined array key "nombre"
+in APPPATH\Controllers\Reportes.php on line 77.
+ 1 APPPATH\Controllers\Reportes.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Reportes.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteActivos()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 11:34:52 --> Undefined array key "nombre"
+in APPPATH\Controllers\Reportes.php on line 77.
+ 1 APPPATH\Controllers\Reportes.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Reportes.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteActivos()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 11:35:43 --> Undefined array key "nombre"
+in APPPATH\Controllers\Reportes.php on line 74.
+ 1 APPPATH\Controllers\Reportes.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Reportes.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteActivos()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-10-19 12:35:24 --> Unknown column 'activos.usuarioBaja' in 'on clause'
+CRITICAL - 2022-10-19 12:35:24 --> Unknown column 'activos.usuarioBaja' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `activo`.`noActivo`, `activo`.`noSerie`, `activo`.`marca`, `activo`.`modelo`, `activo`.`fechaBaja`, `usuario`.`nombre`, `usuario`.`apellidoP`, `usuario`.`ApellidoM`
+FROM `activo`
+JOIN `usuario` ON `activos`.`usuarioBaja` = `usuario`.`idUsuario`
+WHERE `nombre` LIKE \'%%\' ESCAPE \'!\'
+AND `activo`.`fechaBaja` IS NOT NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `activo`.`noActivo`, `activo`.`noSerie`, `activo`.`marca`, `activo`.`modelo`, `activo`.`fechaBaja`, `usuario`.`nombre`, `usuario`.`apellidoP`, `usuario`.`ApellidoM`
+FROM `activo`
+JOIN `usuario` ON `activos`.`usuarioBaja` = `usuario`.`idUsuario`
+WHERE `nombre` LIKE \'%%\' ESCAPE \'!\'
+AND `activo`.`fechaBaja` IS NOT NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `activo`.`noActivo`, `activo`.`noSerie`, `activo`.`marca`, `activo`.`modelo`, `activo`.`fechaBaja`, `usuario`.`nombre`, `usuario`.`apellidoP`, `usuario`.`ApellidoM`
+FROM `activo`
+JOIN `usuario` ON `activos`.`usuarioBaja` = `usuario`.`idUsuario`
+WHERE `nombre` LIKE \'%%\' ESCAPE \'!\'
+AND `activo`.`fechaBaja` IS NOT NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `activo`.`noActivo`, `activo`.`noSerie`, `activo`.`marca`, `activo`.`modelo`, `activo`.`fechaBaja`, `usuario`.`nombre`, `usuario`.`apellidoP`, `usuario`.`ApellidoM`
+FROM `activo`
+JOIN `usuario` ON `activos`.`usuarioBaja` = `usuario`.`idUsuario`
+WHERE `nombre` LIKE :nombre: ESCAPE \'!\'
+AND `activo`.`fechaBaja` IS NOT NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Activos.php(157): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->readDeleted()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-10-19 12:36:02 --> Unknown column 'nombre' in 'where clause'
+CRITICAL - 2022-10-19 12:36:02 --> Unknown column 'nombre' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `activo`
+WHERE `nombre` LIKE \'%%\' ESCAPE \'!\'
+AND `activo`.`fechaBaja` IS NOT NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `activo`
+WHERE `nombre` LIKE \'%%\' ESCAPE \'!\'
+AND `activo`.`fechaBaja` IS NOT NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `activo`
+WHERE `nombre` LIKE \'%%\' ESCAPE \'!\'
+AND `activo`.`fechaBaja` IS NOT NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `activo`
+WHERE `nombre` LIKE :nombre: ESCAPE \'!\'
+AND `activo`.`fechaBaja` IS NOT NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Activos.php(158): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->readDeleted()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 13:07:57 --> Undefined variable $activo
+in APPPATH\Controllers\Activos.php on line 155.
+ 1 APPPATH\Controllers\Activos.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activo', 'APPPATH\\Controllers\\Activos.php', 155)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->readDeleted()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 13:16:57 --> Undefined variable $buscar
+in APPPATH\Controllers\Reportes.php on line 114.
+ 1 APPPATH\Controllers\Reportes.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $buscar', 'APPPATH\\Controllers\\Reportes.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteBajas()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-19 13:17:38 --> Undefined array key "apellidoM"
+in APPPATH\Controllers\Reportes.php on line 133.
+ 1 APPPATH\Controllers\Reportes.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "apellidoM"', 'APPPATH\\Controllers\\Reportes.php', 133)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteBajas()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
