@@ -146,8 +146,8 @@ class Activos extends BaseController{
         if($this->request->isAJAX()){
             $buscar = $this->request->getPost('buscar');
             $pagina = $this->request->getPost('numpagina');
-            $cantidad = 5;
-            $inicio = ($pagina - 1) * 5;
+            $cantidad = 10;
+            $inicio = ($pagina - 1) * 10;
             $datos = array(
                 "activos" => $this->activosModel->select('activo.noActivo, activo.noSerie, activo.marca, activo.modelo, activo.fechaBaja, usuario.nombre, usuario.apellidoP, usuario.apellidoM')
                                                    ->join('usuario', 'activo.usuarioBaja = usuario.idUsuario')

@@ -74,6 +74,8 @@ $routes->get('/Reporte de activos/generar reporte', 'Reportes::generarReporteAct
 $routes->get('/Reporte de bajas', 'Reportes::reporteBajas');
 $routes->post('/mostrar bajas', 'Activos::readDeleted');
 $routes->get('/Reporte de bajas/generar reporte', 'Reportes::generarReporteBajas');
+$routes->get('Registro de mis activos/agregarActivo/registar activo', 'Activos::create');
+$routes->post('Registro de mis activos/agregarActivo/guardarActivo', 'Activos::create');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -141,7 +141,7 @@ function mostrarAccesorios(valor, pagina){
             $.each(respuesta.accesorios, function(key, item){
                 html += "<tr><th scope='row'>"+item.idAccesorio+"</th><td>"+item.nombre+"</td><td>"+item.cantidad+"</td>";
                 if(type == "Entrada") html += "<td><center><a class='btn btn-primary' href='"+base_url+"/editar accesorio/"+item.idAccesorio+"' role='button'>Editar</a></center></td></tr>";
-                else if(type == "Salida") html += "<td><center><button class='btn btn-info' onClick='eliminarAccesorio("+item.idAccesorio+")'>Asignar</button></center></td></tr>";
+                else if(type == "Salida") html += "<td><center><a class='btn btn-info' href='"+base_url+"/asignar accesorio/"+item.idAccesorio+"'>Asignar</a></center></td></tr>";
                 else if(type == "Eliminar"){ 
                     html += "<td><center><button class='btn btn-danger' onClick='eliminarAccesorio("+item.idAccesorio+")'>Eliminar</button></center></td></tr>";
                 }

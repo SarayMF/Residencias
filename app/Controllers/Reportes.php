@@ -101,7 +101,8 @@ class Reportes extends BaseController{
                         ->setCellValue('K'.$currentRow, $activo['fechaAsignacion']);
             $currentRow++;
         }
-
+        
+        $spreadsheet->getActiveSheet()->removeRow($currentRow, 2);
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         header('Content-Disposition: attachment;filename="reporte de activos.xlsx"');
         $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
@@ -135,6 +136,7 @@ class Reportes extends BaseController{
             $currentRow++;
         }
 
+        $spreadsheet->getActiveSheet()->removeRow($currentRow, 2);
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         header('Content-Disposition: attachment;filename="reporte de bajas.xlsx"');
         $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');

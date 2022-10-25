@@ -1,9 +1,10 @@
 <div class="main-container center">
-    <div class="form-container entrada">
+    <div class="body-container entrada">
 
         <center>
-            <h4><?php echo $titulo?></h4>
+            <h3 class="titulo"><?php echo $titulo?></h3>
         </center>
+        <br>
         <input type="hidden" id="type" value="<?php echo $tipo?>">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
@@ -29,7 +30,7 @@
                         <input type="search" class="form-control" id="buscar" placeholder="Buscar..." aria-label="Buscar" aria-describedby="basic-addon2">
                     </div>
                     <div style="width:5px"></div>
-                    <?php if($titulo == "Entrada"):?>
+                    <?php if($tipo == "Entrada"):?>
                         <a class="btn btn-primary" href="<?php echo base_url("/Entrada de activos/agregar activo")?>">Agregar</a>
                     <?php endif?>
                 </div>
@@ -78,7 +79,7 @@
                     </div>
 
                     <div style="width:5px"></div>
-                    <?php if($titulo == "Entrada"):?>
+                    <?php if($tipo == "Entrada"):?>
                         <a class="btn btn-primary" href="<?php echo base_url("/Entrada de activos/agregar accesorio")?>">Agregar</a>
                     <?php endif?>
                 </div>

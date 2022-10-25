@@ -35,7 +35,8 @@ function mostrarActivos(valor, pagina){
 
 
             linkseleccionado = Number(pagina);
-            var articulosPag = Math.ceil(respuesta.cantidadActivos/5);
+            var articulosPag = Math.ceil(respuesta.cantidadActivos/10);
+            
             paginador = "";
 
             if(linkseleccionado>1){

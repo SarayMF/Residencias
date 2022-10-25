@@ -9,6 +9,9 @@ function inicio(){
             aplicaciones.push($(this).val());
         });
         var data = {
+            'idActivo':$('#idActivo').val(),
+            'noActivo':$('#noActivo').val(),
+            'noSerie':$('#noSerie').val(),
             'marca':$('#marca').val(),
             'modelo':$('#modelo').val(),
             'memoriaRAM':$('#memoriaRAM').val(),

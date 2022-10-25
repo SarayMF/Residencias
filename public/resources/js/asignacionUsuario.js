@@ -48,7 +48,7 @@ function buscarActivo(noActivo){
                   })
                   .then((value) => {
                     if(value){
-
+                        window.location.replace(window.location.origin +  window.location.pathname + "/registar activo");
                     }
                   });
             }else if(respuesta.type == "warning"){

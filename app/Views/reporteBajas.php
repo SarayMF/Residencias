@@ -1,8 +1,8 @@
 <div class="main-container center">
-    <div class="form-container entrada">
+    <div class="body-container entrada">
 
         <center>
-            <h4>Reporte de bajas</h4>
+            <h4 class="titulo">Reporte de bajas</h4>
         </center>
         <br><br>
         <div class="float-left">

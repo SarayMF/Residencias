@@ -1,6 +1,6 @@
 <div class="main-container center">
-    <div class="form-container entrada">
-    <center><h3>Mis activos</h3></center>
+    <div class="body-container entrada">
+    <center><h3 class="titulo">Mis activos</h3></center>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
             <a class="nav-link active" id="Activos-tab" data-toggle="tab" href="#Activos" role="tab" aria-controls="Activos" aria-selected="true">Activos</a>
