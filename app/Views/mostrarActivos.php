@@ -70,6 +70,11 @@
             </div>
 
             <div class="tab-pane fade" id="Accesorios" role="tabpanel" aria-labelledby="Accesorios-tab">
+                <?php if($tipo == "Eliminar"):?>
+                    <div class="float-left">
+                        <a class="btn btn-success" href="<?php echo base_url('/Reporte de activos/generar reporte')?>">Descargar excel</a>
+                    </div>
+                <?php endif?>
                 <div class="float-right d-flex">
                     <div class="input-group mb-3 d-contents">
                         <div class="input-group-prepend">

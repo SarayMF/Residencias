@@ -76,6 +76,9 @@ $routes->post('/mostrar bajas', 'Activos::readDeleted');
 $routes->get('/Reporte de bajas/generar reporte', 'Reportes::generarReporteBajas');
 $routes->get('Registro de mis activos/agregarActivo/registar activo', 'Activos::create');
 $routes->post('Registro de mis activos/agregarActivo/guardarActivo', 'Activos::create');
+$routes->get('/Salida de activos/asignar accesorio/(:any)', 'Asignacion::asignacionAccesorio/$1');
+$routes->post('/Salida de activos/asignar accesorio/buscarUsuario', 'Asignacion::buscarUsuario');
+$routes->post('/Salida de activos/asignar accesorio/guardarAsignacion', 'Asignacion::createAccesorio');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
