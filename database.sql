@@ -47,7 +47,7 @@ CREATE TABLE Asignacion(
  idActivo INT,
  usuarioAsigna INT NOT NULL,
  usuarioAsignado INT NOT NULL,
- observaciones VARCHAR(500),
+ observaciones VARCHAR(65535),
  CONSTRAINT PK_Asignacion PRIMARY KEY (idAsignacion),
  CONSTRAINT FK_UsuarioAsignado FOREIGN KEY (usuarioAsignado) REFERENCES Usuario(idUsuario)
 );
@@ -62,6 +62,7 @@ CREATE TABLE Activo(
  discoDuro VARCHAR(10),
  procesador VARCHAR(30),
  fechaAlta TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ observaciones VARCHAR(65535),
  idAsignacion INT,
  estado BIT NOT NULL DEFAULT 1,
  usuarioBaja INT,
@@ -95,12 +96,12 @@ CREATE TABLE ActivoAplicaciones(
  CONSTRAINT FK_Aplicacion FOREIGN KEY (idAplicacion) REFERENCES Aplicaciones(idAplicacion)
 );
 
-INSERT INTO permisos(nombre) VALUES ('Otorgar permisos');
-INSERT INTO permisos(nombre) VALUES ('Registro de mis activos');
+INSERT INTO permisos(nombre) VALUES ('Permisos');
+INSERT INTO permisos(nombre) VALUES ('Mis activos');
 INSERT INTO permisos(nombre) VALUES ('Reporte de activos');
 INSERT INTO permisos(nombre) VALUES ('Reporte de bajas');
-INSERT INTO permisos(nombre) VALUES ('Entrada de activos');
-INSERT INTO permisos(nombre) VALUES ('Salida de activos');
+INSERT INTO permisos(nombre) VALUES ('Altas');
+INSERT INTO permisos(nombre) VALUES ('Asignar');
 
 INSERT INTO Aplicaciones(nombre) VALUES ('Office 365');
 INSERT INTO Aplicaciones(nombre) VALUES ('VPN');

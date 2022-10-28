@@ -31,7 +31,7 @@
                     </div>
                     <div style="width:5px"></div>
                     <?php if($tipo == "Entrada"):?>
-                        <a class="btn btn-primary" href="<?php echo base_url("/Entrada de activos/agregar activo")?>">Agregar</a>
+                        <a class="btn btn-primary" href="<?php echo base_url("/Altas/agregar activo")?>">Agregar</a>
                     <?php endif?>
                 </div>
 

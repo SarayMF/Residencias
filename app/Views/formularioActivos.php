@@ -13,7 +13,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"># Activo</span>
                         </div>
-                        <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['noActivo']?>" id="noActivo" placeholder="No. Activo" aria-label="No. activo" aria-describedby="basic-addon1" <?php if(isset($activo)) echo "disabled"?> required>
+                        <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['noActivo']?><?php if(isset($_GET['idActivo'])) echo $_GET['idActivo']?>" id="noActivo" placeholder="No. Activo" aria-label="No. activo" aria-describedby="basic-addon1" <?php if(isset($activo)) echo "disabled"?> required>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 col-lg-6">
+                <div class="col-12 col-lg-6">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fa fa-copyright"></i></span>
@@ -34,7 +34,7 @@
                         <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['marca']?>" id="marca" placeholder="Marca" aria-label="marca" aria-describedby="basic-addon1" required>
                     </div>
                 </div>
-                <div class="col-6 col-lg-6">
+                <div class="col-12 col-lg-6">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Modelo</span>
@@ -44,20 +44,26 @@
                 </div>
             </div>
             <div class="row">
-            <div class="col-6 col-lg-4">
+            <div class="col-12 col-lg-4">
                     <div class="input-group mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fas fa-memory"></i></span>
                         </div>
-                        <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['memoriaRAM']?>" id="memoriaRAM" placeholder="Memoria RAM" aria-label="RAM" aria-describedby="basic-addon1">
+                        <input type="number" class="form-control" value="<?php if(isset($activo)) echo $activo['memoriaRAM']?>" id="memoriaRAM" placeholder="Memoria RAM" aria-label="RAM" aria-describedby="basic-addon1">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">GB</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-lg-4">
+                <div class="col-12 col-lg-4">
                     <div class="input-group mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fas fa-hdd"></i></span>
                         </div>
-                        <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['discoDuro']?>" id="discoDuro" placeholder="Disco duro" aria-label="Disco duro" aria-describedby="basic-addon1">
+                        <input type="number" class="form-control" value="<?php if(isset($activo)) echo $activo['discoDuro']?>" id="discoDuro" placeholder="Disco duro" aria-label="Disco duro" aria-describedby="basic-addon1">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">GB</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
@@ -68,18 +74,35 @@
                         <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['procesador']?>" id="procesador" placeholder="Procesador" aria-label="Procesador" aria-describedby="basic-addon1">
                     </div>
                 </div>
+            </div>            
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Observaciones</span>
+                    </div>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                </div>
             </div>
+            <br>
             <div class="row">
                 <div class="col-12 col-lg-2"><h6>Aplicaciones:</h6></div>
                 <div class="col-12"></div>
                 
                 <div style="margin-left: 30px;" id="aplicaciones">
-                    <?php foreach($aplicaciones as $app):?>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input"  value="<?php echo $app["idAplicacion"]?>" id="<?php echo $app["idAplicacion"]?>" <?php if(isset($apps)):?><?=(in_array($app['idAplicacion'], array_column($apps, 'idAplicacion'))?"checked":"")?><?php endif?>>
-                            <label class="custom-control-label" for="<?php echo $app["idAplicacion"]?>"><?php echo $app["nombre"]?></label>
+                    <div class="input-group">
+                        <select class="custom-select" id="inputGroupSelect04">
+                            <option selected>Selecciona</option>
+                            <?php foreach($aplicaciones as $app):?>
+                                <option value="<?php echo $app['idAplicacion']?>"><?php echo $app['nombre']?></option>
+                            <?php endforeach?>
+                        </select>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Agregar</button>
                         </div>
-                    <?php endforeach?>
+                    </div>
+                   
                 
                 </div>
             </div>
@@ -94,7 +117,7 @@
 
             <div class="float-right">
                 <button class="btn btn-primary" type="submit">Guardar</button>
-                <a class="btn btn-danger" href="<?php echo base_url('/Entrada de activos')?>" role="button">Cancelar</a>
+                <a class="btn btn-danger" href="<?php echo current_url()?>" role="button">Cancelar</a>
             </div>
         </form>
     

@@ -6,11 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
   <link rel="stylesheet" href="<?php echo base_url('resources/slide/css/swiper.min.css');?>">
+  
   <link href="<?php echo base_url('resources/libs/fontawesome/css/fontawesome.css');?>" rel="stylesheet">
   <link href="<?php echo base_url('resources/libs/fontawesome/css/brands.css');?>" rel="stylesheet">
   <link href="<?php echo base_url('resources/libs/fontawesome/css/solid.css');?>" rel="stylesheet">
   <link rel="stylesheet" media="screen" href="<?php echo base_url('resources/style/style.css');?>">
   <link rel="stylesheet" media="screen" href="<?php echo base_url('resources/style/sfia.css');?>">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
   <link rel="stylesheet" media="screen" href="<?php echo base_url('resources/style/customStyle.css');?>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">

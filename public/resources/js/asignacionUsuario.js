@@ -48,7 +48,8 @@ function buscarActivo(noActivo){
                   })
                   .then((value) => {
                     if(value){
-                        window.location.replace(window.location.origin +  window.location.pathname + "/registar activo");
+                        $activo = $('#noActivo').val();
+                        window.location.replace(window.location.origin +  window.location.pathname + "/registar activo?idActivo="+ $activo);
                     }
                   });
             }else if(respuesta.type == "warning"){

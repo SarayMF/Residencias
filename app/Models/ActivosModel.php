@@ -7,7 +7,7 @@ class ActivosModel extends Model
     protected $table      = 'activo';
     protected $primaryKey = 'idActivo';
 
-    protected $allowedFields = ['noActivo', 'noSerie', 'marca', 'modelo', 'memoriaRAM', 'discoDuro', 'procesador', 'idAsignacion','estado','usuarioBaja'];
+    protected $allowedFields = ['noActivo', 'noSerie', 'marca', 'modelo', 'memoriaRAM', 'discoDuro', 'procesador', 'Observaciones', 'idAsignacion','estado','usuarioBaja'];
     
     protected $useSoftDeletes = true;
     

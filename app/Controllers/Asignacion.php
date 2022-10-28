@@ -129,6 +129,10 @@ class Asignacion extends BaseController{
         }
     }
 
+    public function readAccesorio(){
+        
+    }
+
     public function createActivo(){
         if($this->request->isAJAX()){
             $noActivo = $this->request->getPost('noActivo');
@@ -165,16 +169,33 @@ class Asignacion extends BaseController{
                 'cantidad' => $this->request->getPost('cantidad'),
                 'observaciones' => $this->request->getPost('observaciones')
             ];
-
-            if($this->asignacionModel->save($datos)){
-                $this->accesoriosModel->where('idActivo', $idActivo[0])->set(['idAsignacion' => $idAsignacion[0]])->update();
+            $accesorio = $this->accesoriosModel->find($datos['idAccesorio']);
+            
+            if($datos['cantidad'] > 0){
+                if($accesorio['cantidad'] >= $datos['cantidad']){
+                    $cant=$accesorio['cantidad'] - $datos['cantidad'];
+                    if($this->asignacionModel->save($datos)){
+                        $this->accesoriosModel->where('idAccesorio', $datos['idAccesorio'])->set(['cantidad' => $cant])->update();
+                        $data = array(
+                            "title" => "¡Asignacion realizada!",
+                            "type" => "success",
+                            "mensaje" => "Asignacion correctamente realizada",
+                        );
+                    }
+                }else{
+                    $data = array(
+                        "title" => "Atención",
+                        "type" => "warning",
+                        "mensaje" => "No hay suficiente cantidad en inventario",
+                    );
+                }
+            }else{
                 $data = array(
-                    "title" => "¡Asignacion realizada!",
-                    "type" => "success",
-                    "mensaje" => "Asignacion correctamente realizada",
+                    "title" => "Atención",
+                    "type" => "warning",
+                    "mensaje" => "La cantidad debe ser mayor a 0",
                 );
             }
-            
             echo json_encode($data);
         }
     }

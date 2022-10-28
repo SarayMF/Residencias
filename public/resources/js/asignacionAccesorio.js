@@ -63,6 +63,12 @@ function guardarAsignacion(){
                     array.pop();
                     window.location.replace(window.location.origin + array.join("/"));
                 });
+            }else{
+                swal({
+                    title: respuesta.title,
+                    text: respuesta.mensaje,
+                    icon: respuesta.type,
+                });
             }
         }
     });

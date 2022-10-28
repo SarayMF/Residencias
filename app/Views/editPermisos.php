@@ -1,6 +1,6 @@
 <div class="main-container center">
     <div class="form-container permisos">
-        <center><h3 class="titulo">Asignacion de permisos a usuarios</h3></center>
+        <center><h3 class="titulo">Editar permisos</h3></center>
         <br>
         <center>
             <span>

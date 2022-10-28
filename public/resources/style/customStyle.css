@@ -1,7 +1,7 @@
 .main-container{
     width: 100%;
     height: auto;
-    padding: 100px 0 100px 0;
+    padding: 40px 0 100px 0;
 }
 
 .center{
@@ -109,7 +109,7 @@
 }
 
 .entrada{
-    width: 70% !important;
+    width: 80% !important;
 }
 
 .lista-permisos{
