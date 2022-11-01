@@ -1,5 +1,5 @@
 <div class="main-container center">
-    <div class="form-container">
+    <div class="form-container login">
         <div class="top-container center">
             <img src="<?php echo base_url('resources/img/logo-gto.png')?>" alt="logo de juventudEsGto">
         </div>

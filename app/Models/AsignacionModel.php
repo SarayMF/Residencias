@@ -10,7 +10,10 @@ class AsignacionModel extends Model
     protected $allowedFields = ['usuarioAsigna','usuarioAsignado','observaciones','cantidad','idActivo','idAccesorio'];
 
     protected $useTimestamps = true;
+    protected $useSoftDeletes = true;
+
     protected $createdField  = 'fechaAsignacion';
+    protected $deletedField  = 'fechaBaja';
     protected $updatedField  = false;
 
 

@@ -4,20 +4,15 @@ function inicio(){
     $("#formularioActivo").submit(function(ev){
         document.getElementById('loader').classList.add('loader');
         ev.preventDefault();
-        aplicaciones = [];
-        $("input[type=checkbox]:checked").each(function(){
-            aplicaciones.push($(this).val());
-        });
         var data = {
-            'idActivo':$('#idActivo').val(),
-            'noActivo':$('#noActivo').val(),
-            'noSerie':$('#noSerie').val(),
-            'marca':$('#marca').val(),
-            'modelo':$('#modelo').val(),
+            'noActivo':$('#noActivo').val().toUpperCase(),
+            'noSerie':$('#noSerie').val().toUpperCase(),
+            'marca':$('#marca').val().toUpperCase(),
+            'modelo':$('#modelo').val().toUpperCase(),
             'memoriaRAM':$('#memoriaRAM').val(),
             'discoDuro':$('#discoDuro').val(),
-            'procesador':$('#procesador').val(),
-            'aplicaciones':JSON.stringify(aplicaciones),
+            'procesador':$('#procesador').val().toUpperCase(),
+            'observaciones':$('#observaciones').val().toUpperCase(),
         };
         $.ajax({
             url: 'guardarActivo',

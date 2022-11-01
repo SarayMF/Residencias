@@ -1,6 +1,6 @@
 <div class="main-container center">
     <div class="body-container entrada">
-    <center><h3 class="titulo">Mis activos</h3></center>
+    <center><h3 class="titulo">Mis activos <i class="fas fa-laptop"></i></i></h3></center>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
             <a class="nav-link active" id="Activos-tab" data-toggle="tab" href="#Activos" role="tab" aria-controls="Activos" aria-selected="true">Activos</a>
@@ -13,8 +13,10 @@
     
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="Activos" role="tabpanel" aria-labelledby="Activos-tab">
+                <div class="float-left">
+                    <a class="btn btn-success" href="<?php echo base_url('/Mis activos/generar reporte')?>"><i class="fa fa-download"></i> Descargar excel</a>
+                </div>
                 <div class="float-right d-flex">
-                
                     <div class="input-group mb-3 d-contents">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
@@ -23,7 +25,7 @@
                     </div>
 
                     <div style="width:5px"></div>
-                    <a class="btn btn-primary" href="<?php echo base_url("/Registro de mis activos/agregarActivo")?>">Agregar</a>
+                    <a class="btn btn-primary" href="<?php echo base_url("/Mis activos/agregarActivo")?>">Agregar</a>
                 </div>
 
                 <br><br>
@@ -66,7 +68,7 @@
                     </div>
 
                     <div style="width:5px"></div>
-                    <a class="btn btn-primary" href="<?php echo base_url("/Registro de mis activos/agregarAccesorio")?>">Agregar</a>
+                    <a class="btn btn-primary" href="<?php echo base_url("/Mis activos/agregarAccesorio")?>">Agregar</a>
                 </div>
 
                 <br><br>
@@ -74,7 +76,6 @@
                     <table class="table table-bordered">
                         <thead class="thead-light">
                             <tr>
-                            <th scope="col"># Accesorio</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Cantidad</th>
                             <th scope="col">Fecha de asignacion</th>

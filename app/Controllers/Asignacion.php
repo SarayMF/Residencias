@@ -86,6 +86,52 @@ class Asignacion extends BaseController{
         }
     }
 
+    public function reasignar($id){
+        if($this->session->has('idUsuario')){
+            if($this->request->isAJAX()){
+                $this->asignacionModel->where('idActivo', $id)->delete();
+
+                $datos = [
+                    'usuarioAsigna' => $this->session->idUsuario,
+                    'usuarioAsignado' => $this->request->getPost('usuarioAsignado'),
+                    'idActivo' => $id,
+                    'observaciones' => $this->request->getPost('observaciones')
+                ];
+    
+                if($this->asignacionModel->save($datos)){
+                    $idAsignacion = $this->asignacionModel->where('idActivo', $id)->findColumn('idAsignacion');
+                    $this->activosModel->where('idActivo', $id)->set(['idAsignacion' => $idAsignacion[0]])->update();
+                    $data = array(
+                        "title" => "¡Asignacion realizada!",
+                        "type" => "success",
+                        "mensaje" => "Asignacion correctamente realizada",
+                    );
+                }
+                echo json_encode($data);
+                
+            }else{
+                $asignacion = $this->asignacionModel->select('activo.idActivo, activo.noActivo, activo.marca, activo.modelo, usuario.curp, usuario.nombre, usuario.apellidoP, usuario.apellidoM, asignacion.observaciones')
+                                                    ->join('usuario', 'usuario.idUsuario = asignacion.usuarioAsignado')
+                                                    ->join('activo', 'activo.idActivo = asignacion.idActivo')
+                                                    ->first();
+                $datos = [
+                    'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                    ->select('permisos.nombre')
+                                                    ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                    ->orderBy('permisos.idPermiso', 'ASC')
+                                                    ->findAll(),
+                    'asignacion' => $asignacion,
+                ];
+                echo view('templates/header',$datos);
+                echo view('asignarActivo',$datos);
+                echo view('templates/footer');
+                echo view('templates/footer_js');
+            }
+        }else{
+            return redirect()->to(base_url('/'));
+        }
+    }
+
     public function asignacionAccesorio($id){
         if($this->session->has('idUsuario')){
             $datos = [
@@ -130,7 +176,27 @@ class Asignacion extends BaseController{
     }
 
     public function readAccesorio(){
-        
+        if($this->request->isAJAX()){
+            $buscar = $this->request->getPost('buscar');
+            $pagina = $this->request->getPost('numpagina');
+            $cantidad = 5;
+            $inicio = ($pagina - 1) * 5;
+            $datos = array(
+                "accesorios" => $this->asignacionModel->select('asignacion.idAsignacion, accesorio.nombre, asignacion.cantidad, asignacion.fechaAsignacion, asignacion.observaciones')
+                                     ->join('accesorio', 'asignacion.idAccesorio = accesorio.idAccesorio')
+                                     ->join('usuario', 'asignacion.usuarioAsignado = usuario.idUsuario')
+                                     ->like('accesorio.nombre', $buscar)
+                                     ->where('asignacion.usuarioAsignado', $this->session->idUsuario)
+                                     ->limit($cantidad, $inicio)
+                                     ->find(),
+                "cantidadAccesorios" => count($this->asignacionModel->select('asignacion.idAsignacion, activo.noActivo, activo.marca, activo.modelo, asignacion.fechaAsignacion, asignacion.observaciones')
+                                                   ->join('activo', 'asignacion.idAsignacion = activo.idAsignacion')
+                                                   ->join('usuario', 'asignacion.usuarioAsignado = usuario.idUsuario')
+                                                   ->where('asignacion.usuarioAsignado', $this->session->idUsuario)
+                                                   ->find())
+            );
+            echo json_encode($datos);
+        }
     }
 
     public function createActivo(){

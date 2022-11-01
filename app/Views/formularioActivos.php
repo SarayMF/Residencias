@@ -74,14 +74,14 @@
                         <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['procesador']?>" id="procesador" placeholder="Procesador" aria-label="Procesador" aria-describedby="basic-addon1">
                     </div>
                 </div>
-            </div>            
+            </div>          
             <div class="row">
                 <div class="col-12 col-lg-12">
                     <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text">Observaciones</span>
                     </div>
-                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                    <textarea class="form-control" id="observaciones"  aria-label="With textarea"><?php if(isset($activo)) echo $activo['observaciones']?></textarea>
                     </div>
                 </div>
             </div>
@@ -90,20 +90,25 @@
                 <div class="col-12 col-lg-2"><h6>Aplicaciones:</h6></div>
                 <div class="col-12"></div>
                 
-                <div style="margin-left: 30px;" id="aplicaciones">
-                    <div class="input-group">
-                        <select class="custom-select" id="inputGroupSelect04">
-                            <option selected>Selecciona</option>
-                            <?php foreach($aplicaciones as $app):?>
-                                <option value="<?php echo $app['idAplicacion']?>"><?php echo $app['nombre']?></option>
-                            <?php endforeach?>
-                        </select>
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button">Agregar</button>
-                        </div>
+                <div style="margin-left: 30px;">
+                    <div id="aplicaciones">
+                        
                     </div>
+
+                   <div class="row">
+                     <div class="input-group">
+                         <select class="custom-select" id="listaAplicaciones">
+                             <option selected disabled>Selecciona</option>
+                             <?php foreach($aplicaciones as $app):?>
+                                 <option value="<?php echo $app['idAplicacion']?>"><?php echo $app['nombre']?></option>
+                             <?php endforeach?>
+                         </select>
+                         <div class="input-group-append">
+                             <button class="btn btn-outline-secondary" id="agregar" type="button">Agregar</button>
+                         </div>
+                     </div>
+                   </div>
                    
-                
                 </div>
             </div>
 
@@ -132,3 +137,4 @@
     <?php else:?>
     <script  src="<?php echo base_url('resources/js/guardarActivo.js');?>" ></script>
 <?php endif?>
+<script  src="<?php echo base_url('resources/js/aplicaciones.js');?>" ></script>

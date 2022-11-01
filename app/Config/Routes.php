@@ -74,11 +74,15 @@ $routes->get('/Reporte de activos/generar reporte', 'Reportes::generarReporteAct
 $routes->get('/Reporte de bajas', 'Reportes::reporteBajas');
 $routes->post('/mostrar bajas', 'Activos::readDeleted');
 $routes->get('/Reporte de bajas/generar reporte', 'Reportes::generarReporteBajas');
-$routes->get('Registro de mis activos/agregarActivo/registar activo', 'Activos::create');
-$routes->post('Registro de mis activos/agregarActivo/guardarActivo', 'Activos::create');
-$routes->get('/Salida de activos/asignar accesorio/(:any)', 'Asignacion::asignacionAccesorio/$1');
-$routes->post('/Salida de activos/asignar accesorio/buscarUsuario', 'Asignacion::buscarUsuario');
-$routes->post('/Salida de activos/asignar accesorio/guardarAsignacion', 'Asignacion::createAccesorio');
+$routes->get('/Mis activos/agregarActivo/registar activo', 'Activos::create');
+$routes->post('/Mis activos/agregarActivo/guardarActivo', 'Activos::create');
+$routes->get('/Asignar/asignar accesorio/(:any)', 'Asignacion::asignacionAccesorio/$1');
+$routes->post('/Asignar/asignar accesorio/buscarUsuario', 'Asignacion::buscarUsuario');
+$routes->post('/Asignar/asignar accesorio/guardarAsignacion', 'Asignacion::createAccesorio');
+$routes->get('/Asignar/reasignar/(:any)', 'Asignacion::reasignar/$1');
+$routes->post('/Asignar/reasignar/buscarUsuario', 'Asignacion::buscarUsuario');
+$routes->post('/Asignar/reasignar/(:any)', 'Asignacion::reasignar/$1');
+$routes->post('/Mis activos/mostrar accesorios', 'Asignacion::readAccesorio');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

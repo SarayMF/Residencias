@@ -104,8 +104,8 @@
     display: flex;
 }
 
-.permisos{
-    width: 50%;
+.login{
+    margin-top: 60px;
 }
 
 .entrada{

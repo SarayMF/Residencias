@@ -5,7 +5,7 @@ function inicio(){
         document.getElementById('loader').classList.add('loader');
         ev.preventDefault();
         var data = {
-            'nombre':$('#nombre').val(),
+            'nombre':$('#nombre').val().toUpperCase(),
             'cantidad':$('#cantidad').val(),
         };
         $.ajax({

@@ -5,8 +5,8 @@ function inicio(){
         document.getElementById('loader').classList.add('loader');
         ev.preventDefault();
         var data = {
-            'nombre':$('#nombre').val(),
-            'cantidad':$('#cantidad').val(),
+            'nombre':$('#nombre').val().toUpperCase(),
+            'cantidad':$('#cantidad').val().toUpperCase(),
         };
         $.ajax({
             url: $('#idAccesorio').val(),

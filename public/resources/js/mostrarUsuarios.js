@@ -35,7 +35,8 @@ function mostrarDatos(valor, pagina){
 
 
             linkseleccionado = Number(pagina);
-            var articulosPag = Math.ceil(respuesta.cantidadUsuarios/5);
+            var articulosPag = Math.ceil(respuesta.cantidadUsuarios/10);
+            console.log(articulosPag);
             paginador = "";
 
             if(linkseleccionado>1){

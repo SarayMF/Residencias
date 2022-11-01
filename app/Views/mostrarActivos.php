@@ -2,7 +2,16 @@
     <div class="body-container entrada">
 
         <center>
-            <h3 class="titulo"><?php echo $titulo?></h3>
+            <h3 class="titulo">
+                <?php echo $titulo?>
+                <?php if($tipo == "Entrada"):?>
+                    <i class="fas fa-plus-square"></i>
+                <?php elseif($tipo == "Salida"):?>
+                    <i class="fas fa-chevron-down"></i>
+                <?php elseif($tipo == "Eliminar"):?>
+                    <i class="fas fa-file-excel"></i>
+                <?php endif?>
+            </h3>
         </center>
         <br>
         <input type="hidden" id="type" value="<?php echo $tipo?>">
@@ -19,7 +28,7 @@
             <div class="tab-pane fade show active" id="Activos" role="tabpanel" aria-labelledby="Activos-tab">
                 <?php if($tipo == "Eliminar"):?>
                     <div class="float-left">
-                        <a class="btn btn-success" href="<?php echo base_url('/Reporte de activos/generar reporte')?>">Descargar excel</a>
+                        <a class="btn btn-success" href="<?php echo base_url('/Reporte de activos/generar reporte')?>"><i class="fa fa-download"></i> Descargar excel</a>
                     </div>
                 <?php endif?>
                 <div class="float-right d-flex">
@@ -44,6 +53,7 @@
                             <th scope="col"># Serie</th>
                             <th scope="col">Marca</th>
                             <th scope="col">Modelo</th>
+                            <th scope="col">Observaciones</th>
                             <th scope="col">Fecha de alta</th>
                             <?php if($tipo == "Entrada"):?>
                                 <th scope="col">Editar</th>
@@ -72,7 +82,7 @@
             <div class="tab-pane fade" id="Accesorios" role="tabpanel" aria-labelledby="Accesorios-tab">
                 <?php if($tipo == "Eliminar"):?>
                     <div class="float-left">
-                        <a class="btn btn-success" href="<?php echo base_url('/Reporte de activos/generar reporte')?>">Descargar excel</a>
+                        <a class="btn btn-success" href="<?php echo base_url('/Reporte de activos/generar reporte')?>"><i class="fas fa-table"></i> Descargar excel</a>
                     </div>
                 <?php endif?>
                 <div class="float-right d-flex">
@@ -85,7 +95,7 @@
 
                     <div style="width:5px"></div>
                     <?php if($tipo == "Entrada"):?>
-                        <a class="btn btn-primary" href="<?php echo base_url("/Entrada de activos/agregar accesorio")?>">Agregar</a>
+                        <a class="btn btn-primary" href="<?php echo base_url("/Altas/agregar accesorio")?>">Agregar</a>
                     <?php endif?>
                 </div>
 

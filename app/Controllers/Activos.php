@@ -74,7 +74,6 @@ class Activos extends BaseController{
     public function create(){
         if($this->session->has('idUsuario')){
             if($this->request->isAJAX()){
-                $aplicaciones = json_decode($this->request->getPost('aplicaciones'),true);
                 $datos = [
                     'noActivo' => $this->request->getPost('noActivo'),
                     'noSerie' => $this->request->getPost('noSerie'),
@@ -83,17 +82,10 @@ class Activos extends BaseController{
                     'memoriaRAM' => $this->request->getPost('memoriaRAM'),
                     'discoDuro' => $this->request->getPost('discoDuro'),
                     'procesador' => $this->request->getPost('procesador'),
+                    'observaciones' => $this->request->getPost('observaciones')
                 ];
                 if($this->activosModel->save($datos)){
-                    $idActivo = $this->activosModel->where('noActivo', $datos['noActivo'])->findColumn('idActivo');
-                    foreach($aplicaciones as $a){
-                        $datos = [
-                            'idActivo' => $idActivo[0],
-                            'idAplicacion' => $a,
-                        ];
-                        $this->aplicacionesActivoModel->save($datos);
-                    }
-
+                   
                     $data = array(
                         "title" => "¡Exito!",
                         "type" => "success",
@@ -166,7 +158,6 @@ class Activos extends BaseController{
     public function update($id){
         if($this->session->has('idUsuario')){
             if($this->request->isAJAX()){
-                $aplicaciones = json_decode($this->request->getPost('aplicaciones'),true);
                 $idActivo = $this->request->getPost('idActivo');
                 $datos = [
                     'marca' => $this->request->getPost('marca'),
@@ -174,21 +165,14 @@ class Activos extends BaseController{
                     'memoriaRAM' => $this->request->getPost('memoriaRAM'),
                     'discoDuro' => $this->request->getPost('discoDuro'),
                     'procesador' => $this->request->getPost('procesador'),
-                ];
+                    'observaciones' => $this->request->getPost('observaciones')
+                ]; 
                 if($this->activosModel->update($idActivo, $datos)){
-                    $this->aplicacionesActivoModel->where('idActivo', $idActivo)->delete();
-                    foreach($aplicaciones as $a){
-                        $datos = [
-                            'idActivo' => $idActivo,
-                            'idAplicacion' => $a,
-                        ];
-                        $this->aplicacionesActivoModel->save($datos);
-                    }
-
+                    
                     $data = array(
                         "title" => "¡Exito!",
                         "type" => "success",
-                        "mensaje" => "El activo ha sido registrado exitosamente",
+                        "mensaje" => "El activo ha sido actualizado exitosamente",
                     );
                     
                     echo json_encode($data);

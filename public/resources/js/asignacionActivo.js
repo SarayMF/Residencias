@@ -2,7 +2,7 @@ $(document).ready(inicio);
 
 function inicio(){
     $("#guardar").attr('disabled', 'disabled');
-    document.getElementById("buscar").onclick = function() {buscarUsuario($("#curp").val())}; 
+    document.getElementById("buscar").onclick = function() {buscarUsuario($("#curp").val().toUpperCase())}; 
     $("#formularioAsignacion").submit(function(ev){
         ev.preventDefault();
         guardarAsignacion();
@@ -43,7 +43,7 @@ function guardarAsignacion(){
     var data = {
         'noActivo':$('#noActivo').val(),
         'usuarioAsignado':$('#idUsuario').val(),
-        'observaciones':$('#observaciones').val(),
+        'observaciones':$('#observaciones').val().toUpperCase(),
     };
     $.ajax({
         url: "guardarAsignacion",

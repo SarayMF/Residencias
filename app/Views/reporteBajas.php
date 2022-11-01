@@ -2,11 +2,11 @@
     <div class="body-container entrada">
 
         <center>
-            <h4 class="titulo">Reporte de bajas</h4>
+            <h4 class="titulo">Reporte de bajas <i class="fas fa-file-excel"></i></h4>
         </center>
         <br><br>
         <div class="float-left">
-            <a class="btn btn-success" href="<?php echo base_url('/Reporte de bajas/generar reporte')?>">Descargar excel</a>
+            <a class="btn btn-success" href="<?php echo base_url('/Reporte de bajas/generar reporte')?>"><i class="fa fa-download"></i> Descargar excel</a>
         </div>
         <div class="float-right d-flex">
             <div class="input-group mb-3 d-contents">
