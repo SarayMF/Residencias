@@ -1,0 +1,89 @@
+ERROR - 2022-11-04 16:48:17 --> Unknown column 'activoaapalicacion.idActivo' in 'where clause'
+CRITICAL - 2022-11-04 16:48:17 --> Unknown column 'activoaapalicacion.idActivo' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `aplicaciones`.`idAplicacion`, `aplicaciones`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicacion`.`idAplicacion`
+WHERE `activoaapalicacion`.`idActivo` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `aplicaciones`.`idAplicacion`, `aplicaciones`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicacion`.`idAplicacion`
+WHERE `activoaapalicacion`.`idActivo` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `aplicaciones`.`idAplicacion`, `aplicaciones`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicacion`.`idAplicacion`
+WHERE `activoaapalicacion`.`idActivo` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `aplicaciones`.`idAplicacion`, `aplicaciones`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicacion`.`idAplicacion`
+WHERE `activoaapalicacion`.`idActivo` = :activoaapalicacion.idActivo:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Activos.php(197): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-04 16:48:34 --> Unknown column 'activoapalicacion.idActivo' in 'where clause'
+CRITICAL - 2022-11-04 16:48:34 --> Unknown column 'activoapalicacion.idActivo' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `aplicaciones`.`idAplicacion`, `aplicaciones`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicacion`.`idAplicacion`
+WHERE `activoapalicacion`.`idActivo` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `aplicaciones`.`idAplicacion`, `aplicaciones`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicacion`.`idAplicacion`
+WHERE `activoapalicacion`.`idActivo` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `aplicaciones`.`idAplicacion`, `aplicaciones`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicacion`.`idAplicacion`
+WHERE `activoapalicacion`.`idActivo` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `aplicaciones`.`idAplicacion`, `aplicaciones`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicacion`.`idAplicacion`
+WHERE `activoapalicacion`.`idActivo` = :activoapalicacion.idActivo:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Activos.php(197): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-04 16:48:45 --> Unknown column 'activoaplicacion.idActivo' in 'where clause'
+CRITICAL - 2022-11-04 16:48:45 --> Unknown column 'activoaplicacion.idActivo' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `aplicaciones`.`idAplicacion`, `aplicaciones`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicacion`.`idAplicacion`
+WHERE `activoaplicacion`.`idActivo` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `aplicaciones`.`idAplicacion`, `aplicaciones`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicacion`.`idAplicacion`
+WHERE `activoaplicacion`.`idActivo` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `aplicaciones`.`idAplicacion`, `aplicaciones`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicacion`.`idAplicacion`
+WHERE `activoaplicacion`.`idActivo` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `aplicaciones`.`idAplicacion`, `aplicaciones`.`nombre`
+FROM `activoaplicaciones`
+JOIN `aplicaciones` ON `aplicaciones`.`idAplicacion` = `activoaplicacion`.`idAplicacion`
+WHERE `activoaplicacion`.`idActivo` = :activoaplicacion.idActivo:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Activos.php(197): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-04 16:49:20 --> Undefined variable $aplicaciones
+in APPPATH\Views\formularioActivos.php on line 104.
+ 1 APPPATH\Views\formularioActivos.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aplicaciones', 'APPPATH\\Views\\formularioActivos.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\formularioActivos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('formularioActivos', [], true)
+ 5 APPPATH\Controllers\Activos.php(201): view('formularioActivos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

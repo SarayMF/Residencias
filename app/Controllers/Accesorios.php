@@ -69,7 +69,7 @@ class Accesorios extends BaseController{
             echo json_encode($datos);
         
         }else{
-            return redirect()->to(base_url('/Entrada de activos'));
+            return redirect()->to(base_url('/Altas'));
         }
     }
 
@@ -133,7 +133,7 @@ class Accesorios extends BaseController{
                 echo json_encode($data);
             }
         }else{
-            return redirect()->to(base_url('/Entrada de activos'));
+            return redirect()->to(base_url('/Altas'));
         }
     }
 }

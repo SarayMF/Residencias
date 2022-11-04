@@ -92,7 +92,23 @@
                 
                 <div style="margin-left: 30px;">
                     <div id="aplicaciones">
-                        
+                        <?php if(isset($apps)):?>
+                            <?php foreach($apps as $a):?>
+                                <div class="row" id="aplicacion<?php echo $a['idAplicacion']?>">
+                                    <div class="input-group mb-3 col-12 col-sm-12">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <input type="checkbox" value="<?php echo $a['idAplicacion']?>" checked="true" disabled>
+                                            </div>
+                                        </div>
+                                        <input type="text" class="form-control" value="<?php echo $a['nombre']?>" readonly>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" onClick="borrarAplicacion(<?php echo $a['idAplicacion']?>)">Borrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach?>
+                        <?php endif?>
                     </div>
 
                    <div class="row">

@@ -74,6 +74,7 @@ class Activos extends BaseController{
     public function create(){
         if($this->session->has('idUsuario')){
             if($this->request->isAJAX()){
+                $aplicaciones = json_decode($this->request->getPost('aplicaciones'),true);
                 $datos = [
                     'noActivo' => $this->request->getPost('noActivo'),
                     'noSerie' => $this->request->getPost('noSerie'),
@@ -85,7 +86,15 @@ class Activos extends BaseController{
                     'observaciones' => $this->request->getPost('observaciones')
                 ];
                 if($this->activosModel->save($datos)){
-                   
+                    $idActivo = $this->activosModel->where('noActivo', $datos['noActivo'])->findColumn('idActivo');
+                    foreach($aplicaciones as $a){
+                        $datos = [
+                            'idActivo' => $idActivo[0],
+                            'idAplicacion' => $a,
+                        ];
+                        $this->aplicacionesActivoModel->save($datos);
+                    }
+
                     $data = array(
                         "title" => "¡Exito!",
                         "type" => "success",
@@ -158,6 +167,7 @@ class Activos extends BaseController{
     public function update($id){
         if($this->session->has('idUsuario')){
             if($this->request->isAJAX()){
+                $aplicaciones = json_decode($this->request->getPost('aplicaciones'),true);
                 $idActivo = $this->request->getPost('idActivo');
                 $datos = [
                     'marca' => $this->request->getPost('marca'),
@@ -168,7 +178,15 @@ class Activos extends BaseController{
                     'observaciones' => $this->request->getPost('observaciones')
                 ]; 
                 if($this->activosModel->update($idActivo, $datos)){
-                    
+                    $this->aplicacionesActivoModel->where('idActivo', $idActivo)->delete();
+                    foreach($aplicaciones as $a){
+                        $datos = [
+                            'idActivo' => $idActivo,
+                            'idAplicacion' => $a,
+                        ];
+                        $this->aplicacionesActivoModel->save($datos);
+                    }
+
                     $data = array(
                         "title" => "¡Exito!",
                         "type" => "success",
@@ -192,7 +210,10 @@ class Activos extends BaseController{
                                                  ->findAll(),
                     'activo' => $this->activosModel->find($id),
                     'aplicaciones' => $this->aplicacionesModel->findAll(),
-                    'apps' => $this->aplicacionesActivoModel->select('idAplicacion')->where('idActivo',$id)->findAll(),
+                    'apps' => $this->aplicacionesActivoModel->select('aplicaciones.idAplicacion, aplicaciones.nombre')
+                                                            ->join('aplicaciones', 'aplicaciones.idAplicacion = activoaplicaciones.idAplicacion')
+                                                            ->where('activoaplicaciones.idActivo',$id)
+                                                            ->findAll(),
                     'titulo' => "Editar activo"
                 ];
                 echo view('templates/header',$datos);

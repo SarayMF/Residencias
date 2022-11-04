@@ -4,6 +4,10 @@ function inicio(){
     $("#formularioActivo").submit(function(ev){
         document.getElementById('loader').classList.add('loader');
         ev.preventDefault();
+        aplicaciones = [];
+        $("input[type=checkbox]:checked").each(function(){
+            aplicaciones.push($(this).val());
+        });
         var data = {
             'idActivo':$('#idActivo').val(),
             'marca':$('#marca').val().toUpperCase(),
@@ -12,6 +16,7 @@ function inicio(){
             'discoDuro':$('#discoDuro').val(),
             'procesador':$('#procesador').val().toUpperCase(),
             'observaciones':$('#observaciones').val().toUpperCase(),
+            'aplicaciones':JSON.stringify(aplicaciones),
         };
         $.ajax({
             url: $('#idActivo').val(),
