@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 class AsignacionModel extends Model
 {
     protected $table      = 'asignacion';
-    protected $primaryKey = 'idAplicacion';
+    protected $primaryKey = 'idAsignacion';
 
     protected $allowedFields = ['usuarioAsigna','usuarioAsignado','observaciones','cantidad','idActivo','idAccesorio'];
 

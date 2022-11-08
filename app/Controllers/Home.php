@@ -53,13 +53,17 @@ class Home extends BaseController
         $email = trim($this->request->getPost('correo'));
         $contraseña = trim($this->request->getPost('contraseña'));
 
-        $datosUsuario = $this->usuarioModel->where('correo', $email)->find();
+        $datosUsuario = $this->usuarioModel->where('correo', $email)->first();
 
         if(count($datosUsuario) > 0){
-            if(isset($datosUsuario[0]['password'])){
-                if(password_verify($contraseña, $datosUsuario[0]['password'])){
+            if(isset($datosUsuario['password'])){
+                if(password_verify($contraseña, $datosUsuario['password'])){
                     $data = [
-                        "idUsuario" => $datosUsuario[0]['idUsuario'],                
+                        "idUsuario" => $datosUsuario['idUsuario'],    
+                        "permisos" => $this->permisoModel->select('permisos.nombre')
+                                                         ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                         ->where('permisosusuario.idUsuario', $datosUsuario['idUsuario'])     
+                                                         ->findAll()       
                     ];
         
                     $session = session();

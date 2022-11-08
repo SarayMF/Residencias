@@ -1,0 +1,104 @@
+CRITICAL - 2022-11-08 11:44:07 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Asignacion.php on line 231.
+ 1 APPPATH\Controllers\Asignacion.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Asignacion.php', 231)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-08 11:44:33 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Asignacion.php on line 231.
+ 1 APPPATH\Controllers\Asignacion.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Asignacion.php', 231)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-08 11:45:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Asignacion.php on line 231.
+ 1 APPPATH\Controllers\Asignacion.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Asignacion.php', 231)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-08 11:45:44 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Asignacion.php on line 231.
+ 1 APPPATH\Controllers\Asignacion.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Asignacion.php', 231)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-08 11:46:06 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Asignacion.php on line 231.
+ 1 APPPATH\Controllers\Asignacion.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Asignacion.php', 231)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-08 11:46:14 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Asignacion.php on line 231.
+ 1 APPPATH\Controllers\Asignacion.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Asignacion.php', 231)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-08 11:47:26 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Asignacion.php on line 231.
+ 1 APPPATH\Controllers\Asignacion.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Asignacion.php', 231)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-08 11:50:12 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Asignacion.php on line 231.
+ 1 APPPATH\Controllers\Asignacion.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Asignacion.php', 231)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-08 12:10:54 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 381.
+ 1 SYSTEMPATH\BaseModel.php(963): CodeIgniter\Model->doDelete(null, false)
+ 2 APPPATH\Controllers\Asignacion.php(313): CodeIgniter\BaseModel->delete(null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->deleteActivo()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-08 12:28:26 --> Unknown column 'asignacion.idAplicacion' in 'where clause'
+CRITICAL - 2022-11-08 12:28:26 --> Unknown column 'asignacion.idAplicacion' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `asignacion`
+WHERE `asignacion`.`fechaBaja` IS NULL
+AND `asignacion`.`idAplicacion` = \'21\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `asignacion`
+WHERE `asignacion`.`fechaBaja` IS NULL
+AND `asignacion`.`idAplicacion` = \'21\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `asignacion`
+WHERE `asignacion`.`fechaBaja` IS NULL
+AND `asignacion`.`idAplicacion` = \'21\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `asignacion`
+WHERE `asignacion`.`fechaBaja` IS NULL
+AND `asignacion`.`idAplicacion` = :asignacion.idAplicacion:', [...], false)
+ 5 SYSTEMPATH\Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+ 7 APPPATH\Controllers\Asignacion.php(326): CodeIgniter\BaseModel->find('21')
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->deleteAccesorio()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-08 12:30:01 --> Undefined variable $accesorios
+in APPPATH\Controllers\Asignacion.php on line 328.
+ 1 APPPATH\Controllers\Asignacion.php(328): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $accesorios', 'APPPATH\\Controllers\\Asignacion.php', 328)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->deleteAccesorio()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-08 13:56:43 --> Undefined variable $aplicaciones
+in APPPATH\Controllers\Reportes.php on line 94.
+ 1 APPPATH\Controllers\Reportes.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aplicaciones', 'APPPATH\\Controllers\\Reportes.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Reportes->generarReporteActivos()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reportes))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

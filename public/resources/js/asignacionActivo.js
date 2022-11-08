@@ -2,7 +2,21 @@ $(document).ready(inicio);
 
 function inicio(){
     $("#guardar").attr('disabled', 'disabled');
-    document.getElementById("buscar").onclick = function() {buscarUsuario($("#curp").val().toUpperCase())}; 
+    $( "#buscarUsuario" ).select2({
+        placeholder: 'Seleccionar usuario',
+        minimumInputLength: 1,
+        ajax: {
+            url: "buscarUsuario",
+            dataType: 'json',
+            delay: 250,
+            processResults: function (data) {
+                return {
+                    results: data
+                };
+            },
+            cache: true
+        }
+    });
     $("#formularioAsignacion").submit(function(ev){
         ev.preventDefault();
         guardarAsignacion();

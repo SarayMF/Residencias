@@ -8,10 +8,11 @@ function inicio(){
         buscar = $("#buscar").val();
         mostrarActivos(buscar,1);
     });
-    /*$("#buscarA").keyup(function(){
+    
+    $("#buscarA").keyup(function(){
         buscar = $("#buscarA").val();
         mostrarAccesorios(buscar,1);
-    });*/
+    });
 
     $("body").on("click",".activos-pag li a", function(e){
         e.preventDefault();
@@ -20,12 +21,12 @@ function inicio(){
         mostrarActivos(valorbuscar,valorhref);
     });
 
-    /*$("body").on("click",".accesorios-pag li a", function(e){
+    $("body").on("click",".accesorios-pag li a", function(e){
         e.preventDefault();
         valorhref = $(this).attr('href');
         valorbuscar = $("#buscarA").val();
         mostrarAccesorios(valorbuscar,valorhref);
-    });*/
+    });
 }
 
 function mostrarActivos(valor, pagina){
@@ -84,6 +85,39 @@ function mostrarActivos(valor, pagina){
     });
 }
 
+function eliminarActivo(id){
+    var base_url = window.location.origin + window.location.pathname;
+    swal({
+        title: "¿Estas seguro de dar de baja este registro?",
+        text: "Una vez eliminado, no seras capaz de recuperarlo",
+        icon: "warning",
+        dangerMode: true,
+        buttons: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+            $.ajax({
+                url: base_url+"/eliminarAsignacionActivo",
+                type:"POST",
+                data: {asignacion:id},
+                dataType:"json",
+                success:function(respuesta){
+                    swal({
+                        title: respuesta.title,
+                        text: respuesta.mensaje,
+                        icon: respuesta.type,
+                    }).then((value) => {
+                        mostrarActivos("", 1);
+                    });
+                },
+            });
+          
+        } else {
+          swal("Accion cancelada");
+        }
+      });
+}
+
 function mostrarAccesorios(valor, pagina){
     document.getElementById('loaderA').classList.add('loader');
     var base_url = window.location.origin + window.location.pathname;
@@ -99,7 +133,7 @@ function mostrarAccesorios(valor, pagina){
             html = "";
             $.each(respuesta.accesorios, function(key, item){
                 html += "<tr><th scope='row'>"+item.nombre+"</th><td>"+item.cantidad+"</td><td>"+item.fechaAsignacion+"</td><td>"+item.observaciones+"</td>";
-                html += "<td><center><button class='btn btn-danger' onClick='eliminarActivo("+item.idAsignacion+")'>Eliminar</button></center></td></tr>";
+                html += "<td><center><button class='btn btn-danger' onClick='eliminarAccesorio("+item.idAsignacion+")'>Eliminar</button></center></td></tr>";
             });
             $("#listaAccesorios").html(html);
 
@@ -139,4 +173,37 @@ function mostrarAccesorios(valor, pagina){
             $("#paginacionA ul").html(paginador);
         }
     });
+}
+
+function eliminarAccesorio(id){
+    var base_url = window.location.origin + window.location.pathname;
+    swal({
+        title: "¿Estas seguro de dar de baja este registro?",
+        text: "Una vez eliminado, no seras capaz de recuperarlo",
+        icon: "warning",
+        dangerMode: true,
+        buttons: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+            $.ajax({
+                url: base_url+"/eliminarAsignacionAccesorio",
+                type:"POST",
+                data: {asignacion:id},
+                dataType:"json",
+                success:function(respuesta){
+                    swal({
+                        title: respuesta.title,
+                        text: respuesta.mensaje,
+                        icon: respuesta.type,
+                    }).then((value) => {
+                        mostrarAccesorios("", 1);
+                    });
+                },
+            });
+          
+        } else {
+          swal("Accion cancelada");
+        }
+      });
 }

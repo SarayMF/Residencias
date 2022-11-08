@@ -30,7 +30,7 @@ class Activos extends BaseController{
     }
 
     public function entradaDeActivos(){
-        if($this->session->has('idUsuario')){
+        if(in_array('Altas', array_column($this->session->permisos, 'nombre'))){
             $this->type = "Entrada";
             $datos = [
                 'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
@@ -51,7 +51,7 @@ class Activos extends BaseController{
     }
 
     public function salidaDeActivos(){
-        if($this->session->has('idUsuario')){
+        if(in_array('Asignar', array_column($this->session->permisos, 'nombre'))){
             $this->type = "Salida";
             $datos = [
                 'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
@@ -59,7 +59,7 @@ class Activos extends BaseController{
                                                  ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
-                'titulo' => "Salida de activos",
+                'titulo' => "Asignar activo",
                 'tipo' => "Salida"
             ];
             echo view('templates/header',$datos);
@@ -72,7 +72,7 @@ class Activos extends BaseController{
     }
 
     public function create(){
-        if($this->session->has('idUsuario')){
+        if(in_array('Altas', array_column($this->session->permisos, 'nombre')) || in_array('Mis activos', array_column($this->session->permisos, 'nombre'))){
             if($this->request->isAJAX()){
                 $aplicaciones = json_decode($this->request->getPost('aplicaciones'),true);
                 $datos = [
@@ -165,7 +165,7 @@ class Activos extends BaseController{
     }
 
     public function update($id){
-        if($this->session->has('idUsuario')){
+        if(in_array('Altas', array_column($this->session->permisos, 'nombre'))){
             if($this->request->isAJAX()){
                 $aplicaciones = json_decode($this->request->getPost('aplicaciones'),true);
                 $idActivo = $this->request->getPost('idActivo');
@@ -221,6 +221,8 @@ class Activos extends BaseController{
                 echo view('templates/footer');
                 echo view('templates/footer_js');
             }
+        }else{
+            return redirect()->to(base_url());
         }
     }
     
@@ -232,7 +234,6 @@ class Activos extends BaseController{
             if($this->activosModel->where('idActivo',$idActivo)->delete()){
                 $this->activosModel->where('idActivo', $idActivo)->set(['usuarioBaja' => $this->session->get('idUsuario'), 'estado' => 0])->update();
                 if(isset($activo['idAsignacion'])){
-                    $this->activosModel->where('idActivo', $idActivo)->set(['idAsignacion' => null])->update();
                     $this->asignacionModel->where('idActivo', $idActivo)->delete();
                 } 
                 $data = array(
@@ -249,6 +250,8 @@ class Activos extends BaseController{
                 );
                 echo json_encode($data);
             }
+        }else{
+            return redirect()->to(base_url());
         }
     }
 
@@ -276,6 +279,8 @@ class Activos extends BaseController{
             }
 
             echo json_encode($data);
+        }else{
+            return redirect()->to(base_url());
         }
     }
 }

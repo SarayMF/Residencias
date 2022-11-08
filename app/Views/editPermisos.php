@@ -25,7 +25,7 @@
                     <?php endforeach?>
                     <div class="float-right">
                         <button type="submit" class="btn btn-primary">Guardar cambios<div id="loader" class=""></div></button>
-                        <a class="btn btn-danger" href="<?php echo base_url("Otorgar permisos")?>" role="button">Cancelar</a>
+                        <a class="btn btn-danger" href="<?php echo base_url("Permisos")?>" role="button">Cancelar</a>
                     </div>
                 </div>
             </div>

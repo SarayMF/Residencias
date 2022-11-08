@@ -14,16 +14,14 @@
                 <input type="hidden" id="idAccesorio" value="<?php echo $accesorio['idAccesorio']?>">
             <?php else:?>
                 <label>
-                Buscar accesorio:
+                Selecciona accesorio:
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="nombreA" id="nombreA" placeholder="# de activo" aria-label="# de activo" aria-describedby="basic-addon1">
-                    <div class="input-group-append">
-                        <span class="input-group-text">
-                            <button type="button" class="close" id="buscarAccesorio">
-                            <span aria-hidden="true"><i class="fas fa-search"></i></span>
-                            </button>
-                        </span>
-                    </div>
+                    <select class="custom-select" id="idAccesorio">
+                        <option selected disabled>Accesorios...</option>
+                        <?php foreach($listaAccesorios as $a):?>
+                            <option value="<?php echo $a['idAccesorio']?>"><?php echo $a['nombre']?></option>
+                        <?php endforeach?>
+                    </select>
                 </div>
                 <input type="hidden" id="idAccesorio">
             <?php endif?>
@@ -32,7 +30,7 @@
         <label>
             Seleccione cantidad
             <div class="input-group mb-3">
-                <input type="number" class="form-control" name="cantidad" id="cantidad" placeholder="Cantidad" min="0" max="<?php echo $accesorio['cantidad']?>" aria-label="# de activo" aria-describedby="basic-addon1">
+                <input type="number" class="form-control" name="cantidad" id="cantidad" placeholder="Cantidad" min="0" max="<?php if(isset($accesorio)) echo $accesorio['cantidad']?>" aria-label="# de activo" aria-describedby="basic-addon1">
                 <div class="input-group-append">
                     <span class="input-group-text">
                         <i class="fas fa-hashtag"></i>
@@ -41,28 +39,7 @@
             </div>
         </label>
 
-        <?php if(!isset($accesorio)):?>
-            <div class="row">
-                <div class="col-6 col-lg-6">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-copyright"></i></span>
-                        </div>
-                        <input type="text" class="form-control" value="" id="marca" placeholder="Marca" aria-label="marca" aria-describedby="basic-addon1" readonly>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-6">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Modelo</span>
-                        </div>
-                        <input type="text" class="form-control" value="" id="modelo" placeholder="Modelo" aria-label="modelo" aria-describedby="basic-addon1" readonly>
-                    </div>
-                </div>
-            </div>
-        <?php endif?>
-
-            <div class="row">
+        <div class="row">
             <div class="col-12 col-md-5">
                 <?php if(isset($usuario)):?>
                     <label for="curp">
@@ -117,7 +94,7 @@
             </div>
 
             <div class="float-right">
-                <button class="btn btn-primary" type="submit" id="guardar" disabled>Guardar</button>
+                <button class="btn btn-primary" type="submit" id="guardar">Guardar</button>
                 <a class="btn btn-danger" href="<?php if(!isset($usuario)){echo base_url('/Entrada de activos'); }else {echo base_url('/Registro de mis activos');} ?>" role="button">Cancelar</a>
             </div>
         </form>
@@ -131,7 +108,7 @@
 
 
 <?php if(isset($usuario)):?>
-    <script src="<?php echo base_url('resources/js/asignacionUsuario.js');?>" ></script>
+    <script src="<?php echo base_url('resources/js/asignacionAccesorioUsuario.js');?>" ></script>
 <?php elseif(isset($accesorio)):?>
     <script src="<?php echo base_url('resources/js/asignacionAccesorio.js');?>" ></script>
 <?php endif?>

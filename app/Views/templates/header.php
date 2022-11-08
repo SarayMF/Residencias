@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
   <link rel="stylesheet" media="screen" href="<?php echo base_url('resources/style/customStyle.css');?>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" type="text/css" />
   <!-- Traductor -->
   <style type="text/css">
     
@@ -82,7 +83,6 @@
       </div>
 
       <?php $session = session();?>
-      
       <?php if($session->has('idUsuario')):?>
         <div class="col-12 veda">
 

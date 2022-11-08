@@ -67,12 +67,10 @@
                         Buscar usuario:
                     </label>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="curp" id="curp" value="<?php if(isset($asignacion)) echo $asignacion['curp']?>" placeholder="CURP" aria-label="curp" aria-describedby="basic-addon1">
+                    <select id="buscarUsuario" name="language" class="itemName form-control" style="width:300px" ></select>
                         <div class="input-group-append">
                             <span class="input-group-text">
-                                <button type="button" class="close" id="buscar">
                                 <span aria-hidden="true"><i class="fas fa-search"></i></span>
-                                </button>
                             </span>
                         </div>
                     </div>
@@ -118,6 +116,7 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 

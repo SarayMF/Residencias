@@ -22,7 +22,7 @@ class Permisos extends BaseController{
     }
 
     public function index(){
-        if($this->session->has('idUsuario')){
+        if(in_array('Permisos', array_column($this->session->permisos, 'nombre'))){
             $datos = [
                 'permisos' => $this->permisoUModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
                                                  ->select('permisos.nombre')
@@ -57,7 +57,7 @@ class Permisos extends BaseController{
     }
 
     public function permisosUsuario($idUsuario){
-        if($this->session->has('idUsuario')){
+        if(in_array('Permisos', array_column($this->session->permisos, 'nombre'))){
             $datos = [
                 'permisos' => $this->permisoUModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
                                                  ->select('permisos.nombre')

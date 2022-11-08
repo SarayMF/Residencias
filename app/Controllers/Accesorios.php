@@ -16,43 +16,47 @@ class Accesorios extends BaseController{
     }
 
     public function create(){
-        if($this->request->isAJAX()){
-            $datos = [
-                'nombre' => $this->request->getPost('nombre'),
-                'cantidad' => $this->request->getPost('cantidad')
-            ];
-            $accesorios = $this->accesoriosModel->where('nombre',$datos['nombre'])->first();
+        if(in_array('Altas', array_column($this->session->permisos, 'nombre')) || in_array('Mis activos', array_column($this->session->permisos, 'nombre'))){
+            if($this->request->isAJAX()){
+                $datos = [
+                    'nombre' => $this->request->getPost('nombre'),
+                    'cantidad' => $this->request->getPost('cantidad')
+                ];
+                $accesorios = $this->accesoriosModel->where('nombre',$datos['nombre'])->first();
 
-            if(is_null($accesorios)){
-                $this->accesoriosModel->save($datos);
-                $respuesta = array(
-                    "tipo" => "success",
-                    "mensaje" => "Accesorio registrado correctamente",
-                    "titulo" => "¡Exito!"
-                );
+                if(is_null($accesorios)){
+                    $this->accesoriosModel->save($datos);
+                    $respuesta = array(
+                        "tipo" => "success",
+                        "mensaje" => "Accesorio registrado correctamente",
+                        "titulo" => "¡Exito!"
+                    );
+                }else{
+                    $this->accesoriosModel->update($accesorios['idAccesorio'],$datos);
+                    $respuesta = array(
+                        "tipo" => "success",
+                        "mensaje" => "El accesorio ya existia, por lo que se actualizo el registro",
+                        "titulo" => "¡Exito!"
+                    );
+                }
+
+                echo json_encode($respuesta);
             }else{
-                $this->accesoriosModel->update($accesorios['idAccesorio'],$datos);
-                $respuesta = array(
-                    "tipo" => "success",
-                    "mensaje" => "El accesorio ya existia, por lo que se actualizo el registro",
-                    "titulo" => "¡Exito!"
-                );
+                $datos = [
+                    'permisos' => $this->permisoUModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                    ->select('permisos.nombre')
+                                                    ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                    ->orderBy('permisos.idPermiso', 'ASC')
+                                                    ->findAll(),
+                    'titulo' => 'Agregar accesorio nuevo',
+                ];
+                echo view('templates/header',$datos);
+                echo view('formularioAccesorio', $datos);
+                echo view('templates/footer');
+                echo view('templates/footer_js');
             }
-
-            echo json_encode($respuesta);
         }else{
-            $datos = [
-                'permisos' => $this->permisoUModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
-                                                 ->select('permisos.nombre')
-                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
-                                                 ->orderBy('permisos.idPermiso', 'ASC')
-                                                 ->findAll(),
-                'titulo' => 'Agregar accesorio nuevo',
-            ];
-            echo view('templates/header',$datos);
-            echo view('formularioAccesorio', $datos);
-            echo view('templates/footer');
-            echo view('templates/footer_js');
+            return redirect()->to(base_url('/'));
         }
     }
 
@@ -74,41 +78,45 @@ class Accesorios extends BaseController{
     }
 
     public function update($id){
-        if($this->request->isAJAX()){
-            $datos = [
-                'nombre' => $this->request->getPost('nombre'),
-                'cantidad' => $this->request->getPost('cantidad'),
-            ];
-            if($this->accesoriosModel->update($id, $datos)){
-                $data = array(
-                    "title" => "¡Exito!",
-                    "type" => "success",
-                    "mensaje" => "El accesorio ha sido editado correctamente",
-                );
-                
-                echo json_encode($data);
+        if(in_array('Altas', array_column($this->session->permisos, 'nombre'))){
+            if($this->request->isAJAX()){
+                $datos = [
+                    'nombre' => $this->request->getPost('nombre'),
+                    'cantidad' => $this->request->getPost('cantidad'),
+                ];
+                if($this->accesoriosModel->update($id, $datos)){
+                    $data = array(
+                        "title" => "¡Exito!",
+                        "type" => "success",
+                        "mensaje" => "El accesorio ha sido editado correctamente",
+                    );
+                    
+                    echo json_encode($data);
+                }else{
+                    $data = array(
+                        "title" => "¡Error!",
+                        "type" => "error",
+                        "mensaje" => "Ah ocurrido un error, intentalo de nuevo",
+                    );
+                    echo json_encode($data);
+                }
             }else{
-                $data = array(
-                    "title" => "¡Error!",
-                    "type" => "error",
-                    "mensaje" => "Ah ocurrido un error, intentalo de nuevo",
-                );
-                echo json_encode($data);
+                $datos = [
+                    'permisos' => $this->permisoUModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                    ->select('permisos.nombre')
+                                                    ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                    ->orderBy('permisos.idPermiso', 'ASC')
+                                                    ->findAll(),
+                    'accesorio' => $this->accesoriosModel->find($id),
+                    'titulo' => 'Editar accesorio',
+                ];
+                echo view('templates/header',$datos);
+                echo view('formularioAccesorio', $datos);
+                echo view('templates/footer');
+                echo view('templates/footer_js');
             }
         }else{
-            $datos = [
-                'permisos' => $this->permisoUModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
-                                                 ->select('permisos.nombre')
-                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
-                                                 ->orderBy('permisos.idPermiso', 'ASC')
-                                                 ->findAll(),
-                'accesorio' => $this->accesoriosModel->find($id),
-                'titulo' => 'Editar accesorio',
-            ];
-            echo view('templates/header',$datos);
-            echo view('formularioAccesorio', $datos);
-            echo view('templates/footer');
-            echo view('templates/footer_js');
+            return redirect()->to(base_url('/'));
         }
     }
 
@@ -117,18 +125,27 @@ class Accesorios extends BaseController{
             $idAccesorio = $this->request->getPost('accesorio');
             $cantidad = $this->accesoriosModel->select('cantidad')->find($idAccesorio);
 
-            if( $this->accesoriosModel->where('idAccesorio', $idAccesorio)->set(['cantidad' => $cantidad['cantidad']-1])->update()){
-                $data = array(
-                    "title" => "¡Registro eliminado!",
-                    "type" => "success",
-                    "mensaje" => "La cantidad ha sido actualizada correctamente",
-                );
-                echo json_encode($data);
+            if($cantidad['cantidad']>0){
+                if( $this->accesoriosModel->where('idAccesorio', $idAccesorio)->set(['cantidad' => $cantidad['cantidad']-1])->update()){
+                    $data = array(
+                        "title" => "¡Registro eliminado!",
+                        "type" => "success",
+                        "mensaje" => "La cantidad ha sido actualizada correctamente",
+                    );
+                    echo json_encode($data);
+                }else{
+                    $data = array(
+                        "title" => "Error",
+                        "type" => "error",
+                        "mensaje" => "Ocurrio un error en la eliminacion del registro",
+                    );
+                    echo json_encode($data);
+                }
             }else{
                 $data = array(
                     "title" => "Error",
                     "type" => "error",
-                    "mensaje" => "Ocurrio un error en la eliminacion del registro",
+                    "mensaje" => "La cantidad en inventario es 0",
                 );
                 echo json_encode($data);
             }

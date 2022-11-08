@@ -10,11 +10,11 @@
         </li>
     </ul>
     <br>
-    
+    <?php $session = session();?>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="Activos" role="tabpanel" aria-labelledby="Activos-tab">
                 <div class="float-left">
-                    <a class="btn btn-success" href="<?php echo base_url('/Mis activos/generar reporte')?>"><i class="fa fa-download"></i> Descargar excel</a>
+                    <a class="btn btn-success" href="<?php echo base_url('/Mis activos/generar reporte/'.$session->idUsuario)?>"><i class="fa fa-download"></i> Descargar excel</a>
                 </div>
                 <div class="float-right d-flex">
                     <div class="input-group mb-3 d-contents">

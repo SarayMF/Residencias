@@ -31,7 +31,7 @@ class Asignacion extends BaseController{
     }
 
     public function index(){
-        if($this->session->has('idUsuario')){
+        if(in_array('Mis activos', array_column($this->session->permisos, 'nombre'))){
             $datos = [
                 'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
                                                  ->select('permisos.nombre')
@@ -49,7 +49,7 @@ class Asignacion extends BaseController{
     }
 
     public function asignacionActivo($id){
-        if($this->session->has('idUsuario')){
+        if(in_array('Asignar', array_column($this->session->permisos, 'nombre'))){
             $datos = [
                 'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
                                                  ->select('permisos.nombre')
@@ -68,7 +68,7 @@ class Asignacion extends BaseController{
     }
 
     public function asignacionUsuario(){
-        if($this->session->has('idUsuario')){
+        if(in_array('Mis activos', array_column($this->session->permisos, 'nombre'))){
             $datos = [
                 'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
                                                  ->select('permisos.nombre')
@@ -87,7 +87,7 @@ class Asignacion extends BaseController{
     }
 
     public function reasignar($id){
-        if($this->session->has('idUsuario')){
+        if(in_array('Asignar', array_column($this->session->permisos, 'nombre'))){
             if($this->request->isAJAX()){
                 $this->asignacionModel->where('idActivo', $id)->delete();
 
@@ -133,7 +133,7 @@ class Asignacion extends BaseController{
     }
 
     public function asignacionAccesorio($id){
-        if($this->session->has('idUsuario')){
+        if(in_array('Asignar', array_column($this->session->permisos, 'nombre'))){
             $datos = [
                 'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
                                                  ->select('permisos.nombre')
@@ -141,6 +141,26 @@ class Asignacion extends BaseController{
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
                 'accesorio' => $this->accesoriosModel->find($id)
+            ];
+            echo view('templates/header',$datos);
+            echo view('asignarAccesorio',$datos);
+            echo view('templates/footer');
+            echo view('templates/footer_js');
+        }else{
+            return redirect()->to(base_url('/'));
+        }
+    }
+
+    public function asignacionAccesorioUsuario(){
+        if(in_array('Mis activos', array_column($this->session->permisos, 'nombre'))){
+            $datos = [
+                'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
+                                                 ->select('permisos.nombre')
+                                                 ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                 ->orderBy('permisos.idPermiso', 'ASC')
+                                                 ->findAll(),
+                'usuario' => $this->usuarioModel->find($this->session->idUsuario),
+                'listaAccesorios' => $this->accesoriosModel->findAll()
             ];
             echo view('templates/header',$datos);
             echo view('asignarAccesorio',$datos);
@@ -172,6 +192,8 @@ class Asignacion extends BaseController{
                                                    ->find())
             );
             echo json_encode($datos);
+        }else{
+            return redirect()->to(base_url('/'));
         }
     }
 
@@ -196,6 +218,8 @@ class Asignacion extends BaseController{
                                                    ->find())
             );
             echo json_encode($datos);
+        }else{
+            return redirect()->to(base_url('/'));
         }
     }
 
@@ -223,6 +247,8 @@ class Asignacion extends BaseController{
             }
             
             echo json_encode($data);
+        }else{
+            return redirect()->to(base_url('/'));
         }
     }
 
@@ -263,6 +289,8 @@ class Asignacion extends BaseController{
                 );
             }
             echo json_encode($data);
+        }else{
+            return redirect()->to(base_url('/'));
         }
     }
 
@@ -283,6 +311,42 @@ class Asignacion extends BaseController{
                 );
             }
             echo json_encode($datos);
+        }else{
+            return redirect()->to(base_url('/'));
+        }
+    }
+
+    public function deleteActivo(){
+        if($this->request->isAJAX()){
+            $idAsignacion = $this->request->getPost('asignacion');
+            $this->activosModel->where('idAsignacion', $idAsignacion)->set(['idAsignacion' => null])->update();
+            $this->asignacionModel->delete($idAsignacion);
+            $data = array(
+                "title" => "¡Exito!",
+                "type" => "success",
+                "mensaje" => "Asignacion eliminada",
+            );
+            echo json_encode($data);
+        }else{
+            return redirect()->to(base_url('/'));
+        }
+    }
+
+    public function deleteAccesorio(){
+        if($this->request->isAJAX()){
+            $idAsignacion = $this->request->getPost('asignacion');
+            $datos = $this->asignacionModel->find($idAsignacion);
+            $accesorio = $this->accesoriosModel->find($datos['idAccesorio']);
+            $this->accesoriosModel->where('idAccesorio', $datos['idAccesorio'])->set(['cantidad' => $accesorio['cantidad'] + $datos['cantidad']])->update();
+            $this->asignacionModel->delete($idAsignacion);
+            $data = array(
+                "title" => "¡Exito!",
+                "type" => "success",
+                "mensaje" => "Asignacion eliminada",
+            );
+            echo json_encode($data);
+        }else{
+            return redirect()->to(base_url('/'));
         }
     }
 }
