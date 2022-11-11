@@ -51,28 +51,20 @@
                 </div>
             </div>
         <?php endif?>
-
         <form id="formularioAsignacion" method="post">
             <div class="row">
             <div class="col-12 col-md-5">
-                <?php if(isset($usuario)):?>
-                    <label for="curp">
-                        Usuario:
-                    </label>
-                    <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="curp" id="curp" value="<?php echo $usuario['curp']?>" aria-label="curp" aria-describedby="basic-addon1" readonly>
-                    </div>
-                <?php else:?>
+                <?php if(!isset($usuario)):?>
+                  
                     <label for="curp">
                         Buscar usuario:
                     </label>
                     <div class="input-group mb-3">
-                    <select id="buscarUsuario" name="language" class="itemName form-control" style="width:300px" ></select>
-                        <div class="input-group-append">
-                            <span class="input-group-text">
-                                <span aria-hidden="true"><i class="fas fa-search"></i></span>
-                            </span>
-                        </div>
+                    <select id="buscarUsuario" name="language" class="form-control" style="width:300px" >
+                        <?php foreach($listaUsuarios as $u):?>
+                            <option value="<?php echo $u['idUsuario']?>" <?php if(isset($asignacion)):?><?=(in_array($u['idUsuario'], $asignacion)?"selected":"")?><?php endif?>><?php echo $u['nombre']?></option>
+                        <?php endforeach?>
+                    </select>
                     </div>
                 <?php endif?>
             </div>
@@ -81,19 +73,22 @@
                 <div id="loader" class=""></div>
             </center>
             <input type="hidden" id="idActivo" value="<?php if(isset($asignacion)) echo $asignacion["idActivo"]?>">
-            <input type="hidden" id="idUsuario" value="<?php if(isset($usuario)) echo $usuario["idUsuario"]?>">
-            <div class="row">
-                <div class="col-12">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="">Nombre completo</span>
+
+            <?php if(isset($usuario)):?>
+                Usuario: 
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="">Nombre completo</span>
+                            </div>
+                            <input type="text" id="nombre" value="<?php if(isset($usuario)) echo $usuario['nombre']?><?php if(isset($asignacion)) echo $asignacion['nombre']?>" class="form-control" readonly>
+                            <input type="text" id="apellidoP" value="<?php if(isset($usuario)) echo $usuario['apellidoP']?><?php if(isset($asignacion)) echo $asignacion['apellidoP']?>" class="form-control" readonly>
+                            <input type="text" id="apellidoM" value="<?php if(isset($usuario))echo $usuario['apellidoM']?><?php if(isset($asignacion))echo $asignacion['apellidoM']?>" class="form-control" readonly>
                         </div>
-                        <input type="text" id="nombre" value="<?php if(isset($usuario)) echo $usuario['nombre']?><?php if(isset($asignacion)) echo $asignacion['nombre']?>" class="form-control" readonly>
-                        <input type="text" id="apellidoP" value="<?php if(isset($usuario)) echo $usuario['apellidoP']?><?php if(isset($asignacion)) echo $asignacion['apellidoP']?>" class="form-control" readonly>
-                        <input type="text" id="apellidoM" value="<?php if(isset($usuario))echo $usuario['apellidoM']?><?php if(isset($asignacion))echo $asignacion['apellidoM']?>" class="form-control" readonly>
                     </div>
                 </div>
-            </div>
+            <?php endif?>
             
             <div class="row">
                 <div class="col-12 ">
@@ -108,14 +103,14 @@
 
             <div class="float-right">
                 <button class="btn btn-primary" type="submit" id="guardar" disabled>Guardar</button>
-                <a class="btn btn-danger" href="<?php if(isset($activo)){echo base_url('/Altas'); }elseif(isset($usuario)) {echo base_url('/Mis activos');}else{echo base_url('/Asignar');} ?>" role="button">Cancelar</a>
+                <a class="btn btn-danger" href="<?php if(isset($activo)){echo base_url('/Asignar'); }elseif(isset($usuario)) {echo base_url('/Mis activos');}else{echo base_url('/Asignar');} ?>" role="button">Cancelar</a>
             </div>
         </form>
 
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

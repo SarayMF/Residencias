@@ -20,6 +20,7 @@ class Asignacion extends BaseController{
     private $session;
 
     public function __construct(){
+        helper(['form']);
         $this->cModel = new CustomModel();  
         $this->usuarioModel = new UsuarioModel();  
         $this->aplicacionesModel = new AplicacionesModel();
@@ -56,7 +57,9 @@ class Asignacion extends BaseController{
                                                  ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
-                'activo' => $this->activosModel->find($id)
+                'activo' => $this->activosModel->find($id),
+                'listaUsuarios' => $this->usuarioModel->select('idUsuario, CONCAT(nombre," ",apellidoP," ",apellidoM) as nombre')
+                                                      ->findAll()
             ];
             echo view('templates/header',$datos);
             echo view('asignarActivo',$datos);
@@ -110,9 +113,10 @@ class Asignacion extends BaseController{
                 echo json_encode($data);
                 
             }else{
-                $asignacion = $this->asignacionModel->select('activo.idActivo, activo.noActivo, activo.marca, activo.modelo, usuario.curp, usuario.nombre, usuario.apellidoP, usuario.apellidoM, asignacion.observaciones')
+                $asignacion = $this->asignacionModel->select('activo.idActivo, activo.noActivo, activo.marca, activo.modelo, usuario.idUsuario, usuario.nombre, usuario.apellidoP, usuario.apellidoM, asignacion.observaciones, asignacion.fechaBaja')
                                                     ->join('usuario', 'usuario.idUsuario = asignacion.usuarioAsignado')
                                                     ->join('activo', 'activo.idActivo = asignacion.idActivo')
+                                                    ->where('activo.idActivo', $id)
                                                     ->first();
                 $datos = [
                     'permisos' => $this->permisoModel->where('permisosusuario.idUsuario',$this->session->idUsuario)
@@ -121,6 +125,8 @@ class Asignacion extends BaseController{
                                                     ->orderBy('permisos.idPermiso', 'ASC')
                                                     ->findAll(),
                     'asignacion' => $asignacion,
+                    'listaUsuarios' => $this->usuarioModel->select('idUsuario, CONCAT(nombre," ",apellidoP," ",apellidoM) as nombre')
+                                                          ->findAll()
                 ];
                 echo view('templates/header',$datos);
                 echo view('asignarActivo',$datos);

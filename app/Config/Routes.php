@@ -52,7 +52,7 @@ $routes->get('/Asignar', 'Activos::salidaDeActivos');
 $routes->post('/Asignar/mostrar activos', 'Activos::read');
 $routes->get('/Altas/agregar activo', 'Activos::create');
 $routes->get('/Asignar/asignar/(:any)', 'Asignacion::asignacionActivo/$1');
-$routes->get('/Asignar/asignar/buscarUsuario', 'Usuarios::usuarios');
+$routes->post('/Asignar/asignar/buscarUsuario', 'Usuarios::usuarios');
 $routes->post('/Asignar/asignar/guardarAsignacion', 'Asignacion::createActivo');
 $routes->get('/Mis activos', 'Asignacion::index');
 $routes->post('/Altas/mostrar accesorios', 'Accesorios::read');

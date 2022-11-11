@@ -124,6 +124,8 @@ class Activos extends BaseController{
                 echo view('templates/footer');
                 echo view('templates/footer_js');
             }
+        }else{
+            return redirect()->to(base_url("/"));
         }
     }
 

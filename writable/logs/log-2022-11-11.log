@@ -1,0 +1,195 @@
+CRITICAL - 2022-11-11 11:06:35 --> CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in C:\xampp\htdocs\ResidenciasSaray\system\Model.php on line 771
+in SYSTEMPATH\Database\BaseBuilder.php on line 954.
+ 1 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->like('CONCAT(nombre," ",apellidoP," ",apellidoM)', null)
+ 2 APPPATH\Controllers\Usuarios.php(19): CodeIgniter\Model->__call('like', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->usuarios()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-11 11:16:43 --> Undefined array key "id"
+in APPPATH\Controllers\Usuarios.php on line 24.
+ 1 APPPATH\Controllers\Usuarios.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Usuarios.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->usuarios()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-11 11:43:47 --> CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in C:\xampp\htdocs\ResidenciasSaray\system\Model.php on line 771
+in SYSTEMPATH\Database\BaseBuilder.php on line 954.
+ 1 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->like('CONCAT(nombre," ",apellidoP," ",apellidoM)', null)
+ 2 APPPATH\Controllers\Usuarios.php(18): CodeIgniter\Model->__call('like', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->usuarios()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-11 11:44:16 --> CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in C:\xampp\htdocs\ResidenciasSaray\system\Model.php on line 771
+in SYSTEMPATH\Database\BaseBuilder.php on line 954.
+ 1 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->like('CONCAT(nombre," ",apellidoP," ",apellidoM)', null)
+ 2 APPPATH\Controllers\Usuarios.php(18): CodeIgniter\Model->__call('like', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->usuarios()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-11 11:56:13 --> Undefined variable $busqueda
+in APPPATH\Controllers\Asignacion.php on line 61.
+ 1 APPPATH\Controllers\Asignacion.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $busqueda', 'APPPATH\\Controllers\\Asignacion.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionActivo('12')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-11 11:56:36 --> Undefined array key "nombre"
+in APPPATH\Views\asignarActivo.php on line 72.
+ 1 APPPATH\Views\asignarActivo.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Views\\asignarActivo.php', 72)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\asignarActivo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(64): view('asignarActivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionActivo('12')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-11 12:05:35 --> Undefined variable $listaUsuarios
+in APPPATH\Views\asignarActivo.php on line 64.
+ 1 APPPATH\Views\asignarActivo.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listaUsuarios', 'APPPATH\\Views\\asignarActivo.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\asignarActivo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(128): view('asignarActivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->reasignar('9')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-11 12:15:34 --> Unsupported operand types: string + string
+in APPPATH\Views\asignarActivo.php on line 65.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 4 APPPATH\Controllers\Asignacion.php(131): view('asignarActivo', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->reasignar('9')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-11 12:26:22 --> Column 'fechaBaja' in where clause is ambiguous
+CRITICAL - 2022-11-11 12:26:22 --> Column 'fechaBaja' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `activo`.`idActivo`, `activo`.`noActivo`, `activo`.`marca`, `activo`.`modelo`, `usuario`.`idUsuario`, `usuario`.`nombre`, `usuario`.`apellidoP`, `usuario`.`apellidoM`, `asignacion`.`observaciones`
+FROM `asignacion`
+JOIN `usuario` ON `usuario`.`idUsuario` = `asignacion`.`usuarioAsignado`
+JOIN `activo` ON `activo`.`idActivo` = `asignacion`.`idActivo`
+WHERE `fechaBaja` is NULL
+AND `asignacion`.`fechaBaja` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `activo`.`idActivo`, `activo`.`noActivo`, `activo`.`marca`, `activo`.`modelo`, `usuario`.`idUsuario`, `usuario`.`nombre`, `usuario`.`apellidoP`, `usuario`.`apellidoM`, `asignacion`.`observaciones`
+FROM `asignacion`
+JOIN `usuario` ON `usuario`.`idUsuario` = `asignacion`.`usuarioAsignado`
+JOIN `activo` ON `activo`.`idActivo` = `asignacion`.`idActivo`
+WHERE `fechaBaja` is NULL
+AND `asignacion`.`fechaBaja` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `activo`.`idActivo`, `activo`.`noActivo`, `activo`.`marca`, `activo`.`modelo`, `usuario`.`idUsuario`, `usuario`.`nombre`, `usuario`.`apellidoP`, `usuario`.`apellidoM`, `asignacion`.`observaciones`
+FROM `asignacion`
+JOIN `usuario` ON `usuario`.`idUsuario` = `asignacion`.`usuarioAsignado`
+JOIN `activo` ON `activo`.`idActivo` = `asignacion`.`idActivo`
+WHERE `fechaBaja` is NULL
+AND `asignacion`.`fechaBaja` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `activo`.`idActivo`, `activo`.`noActivo`, `activo`.`marca`, `activo`.`modelo`, `usuario`.`idUsuario`, `usuario`.`nombre`, `usuario`.`apellidoP`, `usuario`.`apellidoM`, `asignacion`.`observaciones`
+FROM `asignacion`
+JOIN `usuario` ON `usuario`.`idUsuario` = `asignacion`.`usuarioAsignado`
+JOIN `activo` ON `activo`.`idActivo` = `asignacion`.`idActivo`
+WHERE `fechaBaja` is NULL
+AND `asignacion`.`fechaBaja` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Asignacion.php(120): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->reasignar('7')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-11 12:30:45 --> Undefined array key "noActivo"
+in APPPATH\Views\asignarActivo.php on line 16.
+ 1 APPPATH\Views\asignarActivo.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "noActivo"', 'APPPATH\\Views\\asignarActivo.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\asignarActivo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(132): view('asignarActivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->reasignar('7')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-11 12:31:35 --> Undefined array key "noActivo"
+in APPPATH\Views\asignarActivo.php on line 16.
+ 1 APPPATH\Views\asignarActivo.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "noActivo"', 'APPPATH\\Views\\asignarActivo.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\asignarActivo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(135): view('asignarActivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->reasignar('7')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-11 12:32:26 --> Undefined array key "noActivo"
+in APPPATH\Views\asignarActivo.php on line 16.
+ 1 APPPATH\Views\asignarActivo.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "noActivo"', 'APPPATH\\Views\\asignarActivo.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\asignarActivo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(136): view('asignarActivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->reasignar('7')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-11 12:32:34 --> Undefined array key "noActivo"
+in APPPATH\Views\asignarActivo.php on line 16.
+ 1 APPPATH\Views\asignarActivo.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "noActivo"', 'APPPATH\\Views\\asignarActivo.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\asignarActivo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(135): view('asignarActivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->reasignar('7')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-11 12:34:11 --> Undefined variable $asignacion
+in APPPATH\Views\asignarActivo.php on line 65.
+ 1 APPPATH\Views\asignarActivo.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $asignacion', 'APPPATH\\Views\\asignarActivo.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\asignarActivo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('asignarActivo', [], true)
+ 5 APPPATH\Controllers\Asignacion.php(65): view('asignarActivo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->asignacionActivo('12')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-11 12:36:29 --> Cannot add or update a child row: a foreign key constraint fails (`testbd`.`asignacion`, CONSTRAINT `FK_UsuarioAsignado` FOREIGN KEY (`usuarioAsignado`) REFERENCES `usuario` (`idUsuario`))
+CRITICAL - 2022-11-11 12:36:29 --> Cannot add or update a child row: a foreign key constraint fails (`testbd`.`asignacion`, CONSTRAINT `FK_UsuarioAsignado` FOREIGN KEY (`usuarioAsignado`) REFERENCES `usuario` (`idUsuario`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'\', \'15\', \'\', \'2022-11-11 12:36:29\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'\', \'15\', \'\', \'2022-11-11 12:36:29\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'\', \'15\', \'\', \'2022-11-11 12:36:29\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (:usuarioAsigna:, :usuarioAsignado:, :idActivo:, :observaciones:, :fechaAsignacion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Asignacion.php(104): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->reasignar('15')
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-11 12:36:44 --> Cannot add or update a child row: a foreign key constraint fails (`testbd`.`asignacion`, CONSTRAINT `FK_UsuarioAsignado` FOREIGN KEY (`usuarioAsignado`) REFERENCES `usuario` (`idUsuario`))
+CRITICAL - 2022-11-11 12:36:44 --> Cannot add or update a child row: a foreign key constraint fails (`testbd`.`asignacion`, CONSTRAINT `FK_UsuarioAsignado` FOREIGN KEY (`usuarioAsignado`) REFERENCES `usuario` (`idUsuario`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'\', \'15\', \'\', \'2022-11-11 12:36:44\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'\', \'15\', \'\', \'2022-11-11 12:36:44\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'21\', \'\', \'15\', \'\', \'2022-11-11 12:36:44\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (:usuarioAsigna:, :usuarioAsignado:, :idActivo:, :observaciones:, :fechaAsignacion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Asignacion.php(104): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->reasignar('15')
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
