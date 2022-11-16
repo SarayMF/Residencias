@@ -24,15 +24,15 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-card"></i></span>
                     </div>
-                    <input type="text" class="form-control" name="nombre" value="<?= set_value('nombre') ?>" id="nombre" placeholder="Nombres" aria-label="nombre" aria-describedby="basic-addon1" required>
+                    <input type="text" class="form-control" name="nombre" value="<?= set_value('nombre') ?>" id="nombre" placeholder="Nombres" aria-label="nombre" aria-describedby="basic-addon1" required readonly>
                 </div>
 
                 <div class="input-group mb-3 apellidoP">
-                    <input type="text" class="form-control" name="apellidoP" value="<?= set_value('apellidoP') ?>" id="apellidoP" placeholder="Apellido paterno" aria-label="apellidoPaterno" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" name="apellidoP" value="<?= set_value('apellidoP') ?>" id="apellidoP" placeholder="Apellido paterno" aria-label="apellidoPaterno" aria-describedby="basic-addon1" readonly>
                 </div>
 
                 <div class="input-group mb-3 apellidoM">
-                    <input type="text" class="form-control" name="apellidoM" value="<?= set_value('apellidoM') ?>" id="apellidoM" placeholder="Apellido materno" aria-label="apellidoMaterno" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" name="apellidoM" value="<?= set_value('apellidoM') ?>" id="apellidoM" placeholder="Apellido materno" aria-label="apellidoMaterno" aria-describedby="basic-addon1" readonly>
                 </div>
 
                 <div class="input-group mb-3 puesto">
@@ -74,13 +74,15 @@
                 <p class="text-muted">¿Ya tienes una cuenta? <a href="<?php echo base_url()?>">Ingresa aqui</a></p>
             </div>
 
-            
+            <center>
+                <div id="loader" class=""></div>
+            </center>
             <div id="error">
                 
             </div>
-
+            <br>
             <div class="center">
-                <button type="submit" class="btn btn-primary center save-data">Registrarme<div id="loader" class=""></div></button>
+                <button type="submit" class="btn btn-primary center save-data">Registrarme</button>
             </div>
         </form>
     </div>

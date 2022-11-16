@@ -38,3 +38,69 @@ in APPPATH\Controllers\Activos.php on line 185.
  3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
  4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 15:32:55 --> Undefined variable $ch
+in APPPATH\Controllers\Registrar.php on line 118.
+ 1 APPPATH\Controllers\Registrar.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ch', 'APPPATH\\Controllers\\Registrar.php', 118)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->obtenerNombres()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 15:44:47 --> Undefined constant "App\Controllers\ok"
+in APPPATH\Controllers\Registrar.php on line 129.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->obtenerNombres()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 15:45:13 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Registrar.php on line 129.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->obtenerNombres()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 15:48:22 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Registrar.php on line 130.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->obtenerNombres()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 15:51:19 --> Undefined constant "App\Controllers\data"
+in APPPATH\Controllers\Registrar.php on line 132.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->obtenerNombres()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 16:14:16 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Registrar.php on line 130.
+ 1 APPPATH\Controllers\Registrar.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Registrar.php', 130)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->obtenerNombres()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 16:17:49 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Registrar.php on line 130.
+ 1 APPPATH\Controllers\Registrar.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Registrar.php', 130)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->obtenerNombres()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 16:18:13 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Registrar.php on line 130.
+ 1 APPPATH\Controllers\Registrar.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Registrar.php', 130)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->obtenerNombres()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 16:18:18 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Registrar.php on line 130.
+ 1 APPPATH\Controllers\Registrar.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Registrar.php', 130)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->obtenerNombres()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 16:18:20 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Registrar.php on line 130.
+ 1 APPPATH\Controllers\Registrar.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Registrar.php', 130)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->obtenerNombres()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

@@ -1,6 +1,12 @@
 $(document).ready(inicio);
 
 function inicio(){
+    $('#buscar').click(function(){buscarUsuario();});
+    $('#curp').blur(function(){buscarUsuario();});
+    registrar();
+}
+
+function registrar(){
     $("#formulario").submit(function(ev){
         document.getElementById('loader').classList.add('loader');
         ev.preventDefault();
@@ -43,5 +49,28 @@ function inicio(){
                 }
             }
         });
+    });
+}
+
+function buscarUsuario(){
+    curp = $('#curp').val(); 
+    $('#loader').addClass('loader');
+    $.ajax({
+        url: 'buscar',
+        type: 'POST',
+        data: {curp:curp},
+        dataType:"json",
+        success: function(response){
+            $('#loader').removeClass('loader');
+            if(response.status == "success"){
+                $('#nombre').val(response.nombre);
+                $('#apellidoP').val(response.apellidoP);
+                $('#apellidoM').val(response.apellidoM);
+            }else{
+                $('#nombre').val("");
+                $('#apellidoP').val("");
+                $('#apellidoM').val("");
+            }
+        }
     });
 }

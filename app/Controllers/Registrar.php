@@ -106,6 +106,42 @@ class Registrar extends BaseController{
         }
     }
 
+    public function obtenerNombres(){
+        if($this->request->isAJAX()){
+            $url = 'http://187.191.30.131:4401/wsCurp/api/v1/curp/searchCurp/' . $this->request->getPost('curp');
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+                CURLOPT_URL => $url,
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => 'GET',
+                CURLOPT_HTTPHEADER => array(
+                    'Content-Type: application/json; charset= utf-8',
+                    'Authorization: Bearer '
+                ),
+            ));
+            $response = curl_exec($curl);
+            curl_close($curl);
+
+            $response_arr = json_decode($response, true);
+
+            if($response_arr['ok']){
+                $data = array(
+                    "status" => "success",
+                    "nombre" => $response_arr['data']['name'],
+                    "apellidoP" => $response_arr['data']['lastname'],
+                    "apellidoM" => $response_arr['data']['surname']
+                );
+
+                echo json_encode($data);
+            }
+
+
+        }else return redirect()->to(base_url('/'));
+    }
+
     public function generarLinkTemporal($curp){
         $cadena = $curp.rand(1,9999999).date('Y-m-d');
         $token = sha1($cadena);

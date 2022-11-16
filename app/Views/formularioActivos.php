@@ -134,3 +134,4 @@
     <?php else:?>
     <script  src="<?php echo base_url('resources/js/guardarActivo.js');?>" ></script>
 <?php endif?>
+<script  src="<?php echo base_url('resources/js/aplicaciones.js');?>" ></script>

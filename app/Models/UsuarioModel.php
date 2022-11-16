@@ -10,10 +10,14 @@ class UsuarioModel extends Model
     protected $allowedFields = ['curp', 'nombre', 'apellidoP', 'apellidoM', 'puesto', 'area', 'correo', 'password'];
 
     protected $validationRules = [
+        'nombre' => 'required',
         'curp' => 'trim|required|is_unique[usuario.curp]',
         'correo' => 'trim|required|valid_email|is_unique[usuario.correo]'
     ];
     protected $validationMessages = [
+        'nombre' => [
+            'required' => 'Se requiere nombre completo'
+        ],
         'correo' => [
             'is_unique' => 'El correo ya esta registrado',
         ],
