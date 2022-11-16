@@ -90,10 +90,9 @@ CREATE TABLE Aplicaciones(
 CREATE TABLE ActivoAplicaciones(
  idActivoAplicacion INT NOT NULL AUTO_INCREMENT,
  idActivo INT NOT NULL,
- idAplicacion INT NOT NULL,
+ idAplicacion VARCHAR(100) NOT NULL,
  CONSTRAINT PK_ActivoAplicacion PRIMARY KEY (idActivoAplicacion),
  CONSTRAINT FK_Activo FOREIGN KEY (idActivo) REFERENCES Activo(idActivo),
- CONSTRAINT FK_Aplicacion FOREIGN KEY (idAplicacion) REFERENCES Aplicaciones(idAplicacion)
 );
 
 INSERT INTO permisos(nombre) VALUES ('Permisos');

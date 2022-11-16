@@ -1,6 +1,6 @@
 <div class="main-container center">
     <div class="from-container entrada">
-        <center><h3 class="titulo">Asignacion de permisos <i class="fas fa-tasks"></i></h3></center>
+        <center><h3>Asignacion de permisos <i class="fas fa-tasks"></i></h3></center>
         <br><br>
         <div class="permisos-container">
             

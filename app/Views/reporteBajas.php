@@ -2,7 +2,7 @@
     <div class="body-container entrada">
 
         <center>
-            <h4 class="titulo">Reporte de bajas <i class="fas fa-file-excel"></i></h4>
+            <h3>Reporte de bajas <i class="fas fa-file-excel"></i></h3>
         </center>
         <br><br>
         <div class="float-left">

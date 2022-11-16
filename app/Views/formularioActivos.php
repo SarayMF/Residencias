@@ -10,123 +10,98 @@
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                        <div class="input-group-prepend append-sm">
                             <span class="input-group-text" id="basic-addon1"># Activo</span>
                         </div>
-                        <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['noActivo']?><?php if(isset($_GET['idActivo'])) echo $_GET['idActivo']?>" id="noActivo" placeholder="No. Activo" aria-label="No. activo" aria-describedby="basic-addon1" <?php if(isset($activo)) echo "disabled"?> required>
+                        <input type="text" class="form-control form-control-sm" value="<?php if(isset($activo)) echo $activo['noActivo']?><?php if(isset($_GET['idActivo'])) echo $_GET['idActivo']?>" id="noActivo" placeholder="No. Activo" aria-label="No. activo" aria-describedby="basic-addon1" <?php if(isset($activo)) echo "disabled"?> required>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                        <div class="input-group-prepend append-sm">
                             <span class="input-group-text" id="basic-addon1"># Serie</span>
                         </div>
-                        <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['noSerie']?>" id="noSerie" placeholder="No. Serie" aria-label="No. Serie" aria-describedby="basic-addon1" <?php if(isset($activo)) echo "disabled"?> required>
+                        <input type="text" class="form-control form-control-sm" value="<?php if(isset($activo)) echo $activo['noSerie']?>" id="noSerie" placeholder="No. Serie" aria-label="No. Serie" aria-describedby="basic-addon1" <?php if(isset($activo)) echo "disabled"?> required>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                        <div class="input-group-prepend append-sm">
                             <span class="input-group-text" id="basic-addon1"><i class="fa fa-copyright"></i></span>
                         </div>
-                        <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['marca']?>" id="marca" placeholder="Marca" aria-label="marca" aria-describedby="basic-addon1" required>
+                        <input type="text" class="form-control form-control-sm" value="<?php if(isset($activo)) echo $activo['marca']?>" id="marca" placeholder="Marca" aria-label="marca" aria-describedby="basic-addon1" required>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                        <div class="input-group-prepend append-sm">
                             <span class="input-group-text" id="basic-addon1">Modelo</span>
                         </div>
-                        <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['modelo']?>" id="modelo" placeholder="Modelo" aria-label="modelo" aria-describedby="basic-addon1" required>
+                        <input type="text" class="form-control form-control-sm" value="<?php if(isset($activo)) echo $activo['modelo']?>" id="modelo" placeholder="Modelo" aria-label="modelo" aria-describedby="basic-addon1" required>
                     </div>
                 </div>
             </div>
             <div class="row">
             <div class="col-12 col-lg-4">
                     <div class="input-group mb-4">
-                        <div class="input-group-prepend">
+                        <div class="input-group-prepend append-sm">
                             <span class="input-group-text" id="basic-addon1"><i class="fas fa-memory"></i></span>
                         </div>
-                        <input type="number" class="form-control" value="<?php if(isset($activo)) echo $activo['memoriaRAM']?>" id="memoriaRAM" placeholder="Memoria RAM" aria-label="RAM" aria-describedby="basic-addon1">
-                        <div class="input-group-append">
+                        <input type="number" class="form-control form-control-sm" value="<?php if(isset($activo)) echo $activo['memoriaRAM']?>" id="memoriaRAM" placeholder="Memoria RAM" aria-label="RAM" aria-describedby="basic-addon1">
+                        <div class="input-group-append append-sm">
                             <span class="input-group-text" id="basic-addon2">GB</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="input-group mb-4">
-                        <div class="input-group-prepend">
+                        <div class="input-group-prepend append-sm">
                             <span class="input-group-text" id="basic-addon1"><i class="fas fa-hdd"></i></span>
                         </div>
-                        <input type="number" class="form-control" value="<?php if(isset($activo)) echo $activo['discoDuro']?>" id="discoDuro" placeholder="Disco duro" aria-label="Disco duro" aria-describedby="basic-addon1">
-                        <div class="input-group-append">
+                        <input type="number" class="form-control form-control-sm" value="<?php if(isset($activo)) echo $activo['discoDuro']?>" id="discoDuro" placeholder="Disco duro" aria-label="Disco duro" aria-describedby="basic-addon1">
+                        <div class="input-group-append append-sm">
                             <span class="input-group-text" id="basic-addon2">GB</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                        <div class="input-group-prepend append-sm">
                             <span class="input-group-text" id="basic-addon1"><i class="fas fa-microchip"></i></span>
                         </div>
-                        <input type="text" class="form-control" value="<?php if(isset($activo)) echo $activo['procesador']?>" id="procesador" placeholder="Procesador" aria-label="Procesador" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control form-control-sm" value="<?php if(isset($activo)) echo $activo['procesador']?>" id="procesador" placeholder="Procesador" aria-label="Procesador" aria-describedby="basic-addon1">
                     </div>
                 </div>
             </div>          
             <div class="row">
                 <div class="col-12 col-lg-12">
                     <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Observaciones</span>
-                    </div>
-                    <textarea class="form-control" id="observaciones"  aria-label="With textarea"><?php if(isset($activo)) echo $activo['observaciones']?></textarea>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Observaciones</span>
+                        </div>
+                        <textarea class="form-control" id="observaciones"  aria-label="With textarea"><?php if(isset($activo)) echo $activo['observaciones']?></textarea>
                     </div>
                 </div>
             </div>
             <br>
+            <input type="hidden" value="<?php if(isset($apps)) echo $apps['listaApps']?>" id="apps">
             <div class="row">
                 <div class="col-12 col-lg-2"><h6>Aplicaciones:</h6></div>
-                <div class="col-12"></div>
-                
-                <div style="margin-left: 30px;">
-                    <div id="aplicaciones">
-                        <?php if(isset($apps)):?>
-                            <?php foreach($apps as $a):?>
-                                <div class="row" id="aplicacion<?php echo $a['idAplicacion']?>">
-                                    <div class="input-group mb-3 col-12 col-sm-12">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                                <input type="checkbox" value="<?php echo $a['idAplicacion']?>" checked="true" disabled>
-                                            </div>
-                                        </div>
-                                        <input type="text" class="form-control" value="<?php echo $a['nombre']?>" readonly>
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" onClick="borrarAplicacion(<?php echo $a['idAplicacion']?>)">Borrar</button>
-                                        </div>
-                                    </div>
-                                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="input-group">
+                        <select id="listaAplicaciones" multiple>
+                            <?php foreach($aplicaciones as $app):?>
+                                <option value="<?php echo $app['idAplicacion']?>"><?php echo $app['nombre']?></option>
                             <?php endforeach?>
-                        <?php endif?>
+                        </select>
                     </div>
-
-                   <div class="row">
-                     <div class="input-group">
-                         <select class="custom-select" id="listaAplicaciones">
-                             <option selected disabled>Selecciona</option>
-                             <?php foreach($aplicaciones as $app):?>
-                                 <option value="<?php echo $app['idAplicacion']?>"><?php echo $app['nombre']?></option>
-                             <?php endforeach?>
-                         </select>
-                         <div class="input-group-append">
-                             <button class="btn btn-outline-secondary" id="agregar" type="button">Agregar</button>
-                         </div>
-                     </div>
-                   </div>
-                   
                 </div>
             </div>
+                   
 
             <div id="error">
                 
@@ -138,7 +113,13 @@
 
             <div class="float-right">
                 <button class="btn btn-primary" type="submit">Guardar</button>
-                <a class="btn btn-danger" href="<?php echo current_url()?>" role="button">Cancelar</a>
+                <?php if(isset($activo)):?>
+                    <a class="btn btn-danger" href="<?php echo base_url("Altas")?>" role="button">Cancelar</a>
+                    <?php else:?>
+                        <button class="btn btn-danger" type="button" id="cancelar">Cancelar</button>
+                <?php endif?>
+
+                
             </div>
         </form>
     
@@ -153,4 +134,3 @@
     <?php else:?>
     <script  src="<?php echo base_url('resources/js/guardarActivo.js');?>" ></script>
 <?php endif?>
-<script  src="<?php echo base_url('resources/js/aplicaciones.js');?>" ></script>

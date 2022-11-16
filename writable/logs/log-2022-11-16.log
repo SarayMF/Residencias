@@ -1,0 +1,40 @@
+ERROR - 2022-11-16 13:57:00 --> Cannot add or update a child row: a foreign key constraint fails (`testbd`.`activoaplicaciones`, CONSTRAINT `FK_Aplicacion` FOREIGN KEY (`idAplicacion`) REFERENCES `aplicaciones` (`idAplicacion`))
+CRITICAL - 2022-11-16 13:57:00 --> Cannot add or update a child row: a foreign key constraint fails (`testbd`.`activoaplicaciones`, CONSTRAINT `FK_Aplicacion` FOREIGN KEY (`idAplicacion`) REFERENCES `aplicaciones` (`idAplicacion`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `activoaplicaciones` (`idActivo`, `idAplicacion`) VALUES (\'107\', \'[\\"2\\",\\"4\\"]\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activoaplicaciones` (`idActivo`, `idAplicacion`) VALUES (\'107\', \'[\\"2\\",\\"4\\"]\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activoaplicaciones` (`idActivo`, `idAplicacion`) VALUES (\'107\', \'[\\"2\\",\\"4\\"]\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activoaplicaciones` (`idActivo`, `idAplicacion`) VALUES (:idActivo:, :idAplicacion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Activos.php(94): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->create()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 14:31:35 --> Cannot access offset of type string on string
+in APPPATH\Views\formularioActivos.php on line 98.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('formularioActivos', [], true)
+ 4 APPPATH\Controllers\Activos.php(217): view('formularioActivos', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('108')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 14:47:10 --> implode(): Argument #1 ($pieces) must be of type array, string given
+in APPPATH\Controllers\Activos.php on line 77.
+ 1 APPPATH\Controllers\Activos.php(77): implode(',', null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->create()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 15:02:11 --> Undefined variable $a
+in APPPATH\Controllers\Activos.php on line 185.
+ 1 APPPATH\Controllers\Activos.php(185): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $a', 'APPPATH\\Controllers\\Activos.php', 185)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Activos->update('112')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Activos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

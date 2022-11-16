@@ -2,7 +2,7 @@
     <div class="body-container entrada">
 
         <center>
-            <h3 class="titulo">
+            <h3>
                 <?php echo $titulo?>
                 <?php if($tipo == "Entrada"):?>
                     <i class="fas fa-plus-square"></i>

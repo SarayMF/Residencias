@@ -7,6 +7,6 @@ class AplicacionActivoModel extends Model
     protected $table      = 'activoaplicaciones';
     protected $primaryKey = 'idActivoAplicacion';
 
-    protected $allowedFields = ['idActivo','idAplicacion'];
+    protected $allowedFields = ['idActivo','listaApps'];
 
 }

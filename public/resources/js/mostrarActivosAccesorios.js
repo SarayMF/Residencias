@@ -44,12 +44,12 @@ function mostrarActivos(valor, pagina){
             $.each(respuesta.activos, function(key, item){
                 html += "<tr><th scope='row'>"+item.noActivo+"</th><td>"+item.noSerie+"</td><td>"+item.marca+"</td><td>"+item.modelo+"</td><td>"+item.observaciones+"</td><td>"+item.fechaAlta+"</td>";
                 if(type == "Entrada"){ 
-                    html += "<td><center><a class='btn btn-primary' href='"+base_url+"/editar/"+item.idActivo+"' role='button'>Editar</a></center></td></tr>"; 
+                    html += "<td><center><a class='btn btn-primary btn-block' href='"+base_url+"/editar/"+item.idActivo+"' role='button'>Editar</a></center></td></tr>"; 
                 }else if(type == "Salida"){ 
-                    if(item.idAsignacion !== null) html+="<td><center><a class='btn btn-info' href='"+base_url+"/reasignar/"+item.idActivo+"' role='button'>Reasignar</a></center></td></tr>";
-                    else  html+="<td><center><a class='btn btn-info' href='"+base_url+"/asignar/"+item.idActivo+"' role='button'>Asignar</a></center></td></tr>";
+                    if(item.idAsignacion !== null) html+="<td><center><a class='btn btn-info btn-block' href='"+base_url+"/reasignar/"+item.idActivo+"' role='button'>Reasignar</a></center></td></tr>";
+                    else  html+="<td><center><a class='btn btn-info btn-block' href='"+base_url+"/"+item.idActivo+"' role='button'>Asignar</a></center></td></tr>";
                 }else if(type == "Eliminar"){ 
-                    html += "<td><center><button class='btn btn-danger' onClick='eliminarActivo("+item.idActivo+")'>Eliminar</button></center></td></tr>";
+                    html += "<td><center><button class='btn btn-danger btn-block' onClick='eliminarActivo("+item.idActivo+")'>Eliminar</button></center></td></tr>";
                 }
             });
             $("#listaActivos").html(html);

@@ -2,6 +2,7 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
 <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
 <script  src="<?php echo base_url('resources/js/script.js');?>" ></script>
 <script  src="<?php echo base_url('resources/slide/js/swiper.min.js');?>" ></script>
 

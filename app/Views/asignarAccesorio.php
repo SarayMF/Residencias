@@ -41,26 +41,16 @@
 
         <div class="row">
             <div class="col-12 col-md-5">
-                <?php if(isset($usuario)):?>
-                    <label for="curp">
-                        Usuario:
-                    </label>
-                    <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="curp" id="curp" value="<?php echo $usuario['curp']?>" aria-label="curp" aria-describedby="basic-addon1" readonly>
-                    </div>
-                <?php else:?>
-                    <label for="curp">
+                <?php if(!isset($usuario)):?>
+                    <label for="buscarUsuario">
                         Buscar usuario:
                     </label>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="curp" id="curp" placeholder="CURP" aria-label="curp" aria-describedby="basic-addon1">
-                        <div class="input-group-append">
-                            <span class="input-group-text">
-                                <button type="button" class="close" id="buscar">
-                                <span aria-hidden="true"><i class="fas fa-search"></i></span>
-                                </button>
-                            </span>
-                        </div>
+                    <select id="buscarUsuario" name="language" class="form-control" style="width:300px" >
+                        <?php foreach($listaUsuarios as $u):?>
+                            <option value="<?php echo $u['idUsuario']?>" <?php if(isset($asignacion)):?><?=(in_array($u['idUsuario'], $asignacion)?"selected":"")?><?php endif?>><?php echo $u['nombre']?></option>
+                        <?php endforeach?>
+                    </select>
                     </div>
                 <?php endif?>
             </div>
@@ -69,19 +59,24 @@
                 <div id="loader" class=""></div>
             </center>
             <input type="hidden" id="idUsuario" value="<?php if(isset($usuario)) echo $usuario["idUsuario"]?>">
-            <div class="row">
-                <div class="col-12">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="">Nombre completo</span>
+            <?php if(isset($usuario)):?>
+                <label>
+                    Usuario:
+                </label>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="">Nombre completo</span>
+                            </div>
+                            <input type="text" id="nombre" value="<?php if(isset($usuario)) echo $usuario['nombre']?>" class="form-control" readonly>
+                            <input type="text" id="apellidoP" value="<?php if(isset($usuario)) echo $usuario['apellidoP']?>" class="form-control" readonly>
+                            <input type="text" id="apellidoM" value="<?php if(isset($usuario))echo $usuario['apellidoM']?>" class="form-control" readonly>
                         </div>
-                        <input type="text" id="nombre" value="<?php if(isset($usuario)) echo $usuario['nombre']?>" class="form-control" readonly>
-                        <input type="text" id="apellidoP" value="<?php if(isset($usuario)) echo $usuario['apellidoP']?>" class="form-control" readonly>
-                        <input type="text" id="apellidoM" value="<?php if(isset($usuario))echo $usuario['apellidoM']?>" class="form-control" readonly>
                     </div>
                 </div>
-            </div>
-            
+            <?php endif?>
+
             <div class="row">
                 <div class="col-12 ">
                     <div class="input-group">
@@ -102,7 +97,8 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 

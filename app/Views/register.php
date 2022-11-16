@@ -13,6 +13,9 @@
                             <span class="span input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
                         </div>
                         <input type="text" class="input form-control" name="curp" value="<?= set_value('curp') ?>" id="curp" placeholder="Curp" aria-label="curp" aria-describedby="basic-addon1" required><br>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="buscar"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
                     </div>
                     <p class="form-input-err">Curp invalido</p>
                 </div>

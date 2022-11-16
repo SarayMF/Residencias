@@ -16,6 +16,7 @@
   <link rel="stylesheet" media="screen" href="<?php echo base_url('resources/style/customStyle.css');?>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css" rel="stylesheet"></link>
   <!-- Traductor -->
   <style type="text/css">
     

@@ -146,7 +146,9 @@ class Asignacion extends BaseController{
                                                  ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
-                'accesorio' => $this->accesoriosModel->find($id)
+                'accesorio' => $this->accesoriosModel->find($id),
+                'listaUsuarios' => $this->usuarioModel->select('idUsuario, CONCAT(nombre," ",apellidoP," ",apellidoM) as nombre')
+                                                      ->findAll()
             ];
             echo view('templates/header',$datos);
             echo view('asignarAccesorio',$datos);
