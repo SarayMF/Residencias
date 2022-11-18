@@ -10,6 +10,7 @@ class Accesorios extends BaseController{
     private $session;
 
     public function __construct(){
+        helper(['form']);
         $this->accesoriosModel = new AccesoriosModel();
         $this->permisoUModel = new PermisosUsuarioModel();
         $this->session = session();
@@ -49,6 +50,7 @@ class Accesorios extends BaseController{
                                                     ->orderBy('permisos.idPermiso', 'ASC')
                                                     ->findAll(),
                     'titulo' => 'Agregar accesorio nuevo',
+                    'uri' => service('uri'),
                 ];
                 echo view('templates/header',$datos);
                 echo view('formularioAccesorio', $datos);
@@ -109,6 +111,7 @@ class Accesorios extends BaseController{
                                                     ->findAll(),
                     'accesorio' => $this->accesoriosModel->find($id),
                     'titulo' => 'Editar accesorio',
+                    'uri' => service('uri'),
                 ];
                 echo view('templates/header',$datos);
                 echo view('formularioAccesorio', $datos);

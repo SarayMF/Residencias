@@ -31,6 +31,7 @@ class Home extends BaseController
                                                  ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
+                'uri' => service('uri'),
             ];
             echo view('templates/header', $datos);
             echo view('templates/footer');

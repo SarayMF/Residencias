@@ -57,7 +57,6 @@ $(".despliega").on('click', function(){
 
 });
 
-
 function animateCSS(element, animationName, callback) {
     const node = document.querySelector(element)
     node.classList.add('animated', animationName)

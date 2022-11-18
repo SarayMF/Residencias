@@ -39,6 +39,7 @@ class Asignacion extends BaseController{
                                                  ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
+                'uri' => service('uri'),
             ];
             echo view('templates/header',$datos);
             echo view('mostrarAsignaciones',$datos);
@@ -58,6 +59,7 @@ class Asignacion extends BaseController{
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
                 'activo' => $this->activosModel->find($id),
+                'uri' => service('uri'),
                 'listaUsuarios' => $this->usuarioModel->select('idUsuario, CONCAT(nombre," ",apellidoP," ",apellidoM) as nombre')
                                                       ->findAll()
             ];
@@ -78,7 +80,8 @@ class Asignacion extends BaseController{
                                                  ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
-                'usuario' => $this->usuarioModel->find($this->session->idUsuario)
+                'usuario' => $this->usuarioModel->find($this->session->idUsuario),
+                'uri' => service('uri'),
             ];
             echo view('templates/header',$datos);
             echo view('asignarActivo',$datos);
@@ -125,6 +128,7 @@ class Asignacion extends BaseController{
                                                     ->orderBy('permisos.idPermiso', 'ASC')
                                                     ->findAll(),
                     'asignacion' => $asignacion,
+                    'uri' => service('uri'),
                     'listaUsuarios' => $this->usuarioModel->select('idUsuario, CONCAT(nombre," ",apellidoP," ",apellidoM) as nombre')
                                                           ->findAll()
                 ];
@@ -147,6 +151,7 @@ class Asignacion extends BaseController{
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
                 'accesorio' => $this->accesoriosModel->find($id),
+                'uri' => service('uri'),
                 'listaUsuarios' => $this->usuarioModel->select('idUsuario, CONCAT(nombre," ",apellidoP," ",apellidoM) as nombre')
                                                       ->findAll()
             ];
@@ -168,6 +173,7 @@ class Asignacion extends BaseController{
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
                 'usuario' => $this->usuarioModel->find($this->session->idUsuario),
+                'uri' => service('uri'),
                 'listaAccesorios' => $this->accesoriosModel->findAll()
             ];
             echo view('templates/header',$datos);

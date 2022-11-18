@@ -10,7 +10,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">@</span>
                     </div>
-                    <input type="email" class="form-control" name="correo" placeholder="Correo" aria-label="correo" aria-describedby="basic-addon1">
+                    <input type="email" class="form-control" name="correo" value="<?= set_value('correo')?>" placeholder="Correo" aria-label="correo" aria-describedby="basic-addon1">
                 </div>
 
                 <div class="input-group mb-3">

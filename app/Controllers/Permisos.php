@@ -14,6 +14,7 @@ class Permisos extends BaseController{
     private $session;
     
     public function __construct(){
+        helper(['form']);
         $this->permisoUModel = new PermisosUsuarioModel();
         $this->permisoModel = new PermisosModel();
         $this->cModel = new CustomModel();  
@@ -29,6 +30,7 @@ class Permisos extends BaseController{
                                                  ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
                                                  ->orderBy('permisos.idPermiso', 'ASC')
                                                  ->findAll(),
+                'uri' => service('uri'),
             ];
             echo view('templates/header',$datos);
             echo view('permisos');
@@ -67,6 +69,7 @@ class Permisos extends BaseController{
                 'datosUsuario' => $this->usuarioModel->find($idUsuario),
                 'datosPermisoUsuario' => $this->permisoUModel->where('idUsuario',$idUsuario)->findAll(),
                 'listaPermisos' => $this->permisoModel->findAll(),
+                'uri' => service('uri'),
             ];
             
             echo view('templates/header',$datos);

@@ -20,6 +20,7 @@ class Reportes extends BaseController{
     private $session;
 
     public function __construct(){
+        helper(['form']);
         $this->permisoModel = new PermisosUsuarioModel();
         $this->usuarioModel = new UsuarioModel();
         $this->aplicacionesModel = new AplicacionActivoModel();
@@ -38,6 +39,7 @@ class Reportes extends BaseController{
                                                     ->orderBy('permisos.idPermiso', 'ASC')
                                                     ->findAll(),
                 'tipo' => 'Eliminar',
+                'uri' => service('uri'),
                 'titulo' => 'Reporte de activos para TI'
             ];
             echo view('templates/header',$datos);
@@ -58,6 +60,7 @@ class Reportes extends BaseController{
                                                     ->orderBy('permisos.idPermiso', 'ASC')
                                                     ->findAll(),
                 'tipo' => 'Eliminar',
+                'uri' => service('uri'),
                 'titulo' => 'Reporte de activos para TI'
             ];
             echo view('templates/header',$datos);

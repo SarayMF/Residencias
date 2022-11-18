@@ -86,7 +86,6 @@
                 </div>
             </div>
             <br>
-            <input type="hidden" value="<?php if(isset($apps)) echo $apps['listaApps']?>" id="apps">
             <div class="row">
                 <div class="col-12 col-lg-2"><h6>Aplicaciones:</h6></div>
             </div>
@@ -95,7 +94,7 @@
                     <div class="input-group">
                         <select id="listaAplicaciones" multiple>
                             <?php foreach($aplicaciones as $app):?>
-                                <option value="<?php echo $app['idAplicacion']?>"><?php echo $app['nombre']?></option>
+                                <option value="<?php echo $app['idAplicacion']?>" <?php if(isset($apps)):?><?=(in_array($app['idAplicacion'], array_column($apps, 'idAplicacion'))?"selected":"")?><?php endif?>><?php echo $app['nombre']?></option>
                             <?php endforeach?>
                         </select>
                     </div>

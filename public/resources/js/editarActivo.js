@@ -2,11 +2,9 @@ $(document).ready(inicio);
 
 function inicio(){
     var select = new SlimSelect({
-        select: '#listaAplicaciones'
+        select: '#listaAplicaciones',
+        placeholder: 'Seleccione las aplicaciones'
     });
-    listaAplicaciones = $('#apps').val();
-    appArray = listaAplicaciones.split(',');
-    select.set(appArray);
     $("#formularioActivo").submit(function(ev){
         document.getElementById('loader').classList.add('loader');
         ev.preventDefault();

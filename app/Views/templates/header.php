@@ -92,16 +92,15 @@
               <a href="#"></a>
             </div>
           </div>
-
+          
           <div class="col-6 col-md-9 col-lg-9 justify-content-end">
             <ul class="nav d-flex justify-content-end main-menu">
               <li class="nav-item">
-                  <a class="nav-link active" href="#"><span class="fas fa-home"></span></a>
+                  <a class="nav-link <?=(str_replace('%20',' ',$uri->getSegment(1))=='')?'active':''?>" href="<?php echo base_url('/')?>"><span class="fas fa-home"></span></a>
               </li>
-
               <?php foreach($permisos as $permiso):?>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo base_url($permiso['nombre'])?>"><?php echo $permiso['nombre'] ?></a>
+                  <a class="nav-link <?=(str_replace('%20',' ',$uri->getSegment(1))==$permiso['nombre'])?'active':''?>" href="<?php echo base_url($permiso['nombre'])?>"><?php echo $permiso['nombre'] ?></a>
                 </li>
               <?php endforeach?>
               

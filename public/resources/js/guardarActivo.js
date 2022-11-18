@@ -2,13 +2,12 @@ $(document).ready(inicio);
 
 function inicio(){
     var select = new SlimSelect({
-        select: '#listaAplicaciones'
+        select: '#listaAplicaciones',
+        placeholder: 'Seleccione las aplicaciones'
     });
     $("#formularioActivo").submit(function(ev){
         document.getElementById('loader').classList.add('loader');
         ev.preventDefault();
-        apps = select.selected();
-        const appsString = apps.toString();
 
         var data = {
             'noActivo':$('#noActivo').val().toUpperCase(),
