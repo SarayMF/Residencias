@@ -10,6 +10,7 @@ function inicio(){
 }
 
 function guardarAsignacion(){
+    $('#loader').addClass('loader');
     var data = {
         'noActivo':$('#noActivo').val(),
         'usuarioAsignado':$('#buscarUsuario').val(),
@@ -23,6 +24,7 @@ function guardarAsignacion(){
         data: data,
         dataType:"json",
         success:function(respuesta){
+            $('#loader').removeClass('loader');
             if(respuesta.type == "success"){
                 swal({
                     title: respuesta.title,

@@ -13,7 +13,7 @@
                         <div class="input-group-prepend append-sm">
                             <span class="input-group-text" id="basic-addon1"># Activo</span>
                         </div>
-                        <input type="text" class="form-control form-control-sm" value="<?php if(isset($activo)) echo $activo['noActivo']?><?php if(isset($_GET['idActivo'])) echo $_GET['idActivo']?>" id="noActivo" placeholder="No. Activo" aria-label="No. activo" aria-describedby="basic-addon1" <?php if(isset($activo)) echo "disabled"?> required>
+                        <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control form-control-sm" value="<?php if(isset($activo)) echo $activo['noActivo']?><?php if(isset($_GET['idActivo'])) echo $_GET['idActivo']?>" id="noActivo" placeholder="No. Activo" aria-label="No. activo" aria-describedby="basic-addon1" <?php if(isset($activo)) echo "disabled"?> required>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -133,4 +133,4 @@
     <?php else:?>
     <script  src="<?php echo base_url('resources/js/guardarActivo.js');?>" ></script>
 <?php endif?>
-<script  src="<?php echo base_url('resources/js/aplicaciones.js');?>" ></script>
+<script  src="<?php echo base_url('resources/js/redireccionar.js');?>" ></script>

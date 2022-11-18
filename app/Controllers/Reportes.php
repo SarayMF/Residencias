@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\PermisosUsuarioModel;
 use App\Models\ActivosModel;
+use App\Models\AccesoriosModel;
 use App\Models\AplicacionActivoModel;
 use App\Models\AsignacionModel;
 use App\Models\UsuarioModel;
@@ -13,6 +14,7 @@ use \PhpOffice\PhpSpreadsheet\Style\Fill;
 
 class Reportes extends BaseController{
     private $permisoModel;
+    private $accesoriosModel;
     private $usuarioModel;
     private $activosModel;
     private $aplicacionesModel;
@@ -21,6 +23,7 @@ class Reportes extends BaseController{
 
     public function __construct(){
         helper(['form']);
+        $this->accesoriosModel = new AccesoriosModel();
         $this->permisoModel = new PermisosUsuarioModel();
         $this->usuarioModel = new UsuarioModel();
         $this->aplicacionesModel = new AplicacionActivoModel();
@@ -109,7 +112,7 @@ class Reportes extends BaseController{
                             ->setCellValue('H'.$currentRow, $lista)
                             ->setCellValue('I'.$currentRow, $activo['fechaAlta']);
                 foreach($asignaciones as $asignacion){
-                    $spreadsheet->getActiveSheet()->insertNewRowBefore($currentRow+1,1);
+                    if(count($asignaciones) > 1) $spreadsheet->getActiveSheet()->insertNewRowBefore($currentRow+1,1);
                     $spreadsheet->getActiveSheet()
                                 ->setCellValue('J'.$currentRow, $asignacion['nombre']." ".$asignacion['apellidoP']." ".$asignacion['apellidoM'])
                                 ->setCellValue('K'.$currentRow, $asignacion['fechaAsignacion'])
@@ -125,6 +128,54 @@ class Reportes extends BaseController{
             
             header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
             header('Content-Disposition: attachment;filename="reporte de activos.xlsx"');
+            $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
+            $writer->save('php://output');
+        }else{
+            return redirect()->to(base_url('/'));
+        }
+    }
+
+    public function generarReporteAccesorios(){
+        if(in_array('Reporte de activos', array_column($this->session->permisos, 'nombre'))) {
+            $accesorios = $this->accesoriosModel->findAll();
+            $inputFileName = 'templateAccesorios.xlsx';
+
+            $reader = IOFactory::createReader('Xlsx');
+            $spreadsheet = $reader->load($inputFileName);
+
+            $contentStartRow = 10;
+            $currentRow = 10;
+
+            foreach($accesorios as $accesorio){
+                $asignaciones = $this->asignacionModel->select('asignacion.cantidad, usuario.nombre, usuario.apellidoP, usuario.apellidoM, asignacion.fechaAsignacion, asignacion.observaciones, asignacion.fechaBaja')
+                                                    ->join('usuario', 'asignacion.usuarioAsignado = usuario.idUsuario')
+                                                    ->where('asignacion.idAccesorio', $accesorio['idAccesorio'])
+                                                    ->withDeleted()
+                                                    ->findAll();
+
+                $spreadsheet->getActiveSheet()->insertNewRowBefore($currentRow+1,1);
+                $spreadsheet->getActiveSheet()
+                            ->setCellValue('A'.$currentRow, $accesorio['nombre'])
+                            ->setCellValue('B'.$currentRow, $accesorio['cantidad'])
+                            ->setCellValue('C'.$currentRow, $accesorio['fechaRegistro']);
+                foreach($asignaciones as $asignacion){
+                    if(count($asignaciones) > 1) $spreadsheet->getActiveSheet()->insertNewRowBefore($currentRow+1,1);
+                    
+                    $spreadsheet->getActiveSheet()
+                                ->setCellValue('D'.$currentRow, $asignacion['nombre']." ".$asignacion['apellidoP']." ".$asignacion['apellidoM'])
+                                ->setCellValue('E'.$currentRow, $asignacion['fechaAsignacion'])
+                                ->setCellValue('F'.$currentRow, $asignacion['cantidad'])
+                                ->setCellValue('G'.$currentRow, $asignacion['observaciones'])
+                                ->setCellValue('H'.$currentRow, $asignacion['fechaBaja']);
+                    $currentRow++;
+                }
+                if(empty($asignaciones))  $currentRow++;
+            }
+
+            $spreadsheet->getActiveSheet()->removeRow($currentRow, 2);
+            
+            header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+            header('Content-Disposition: attachment;filename="reporte de accesorios.xlsx"');
             $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
             $writer->save('php://output');
         }else{
@@ -175,7 +226,7 @@ class Reportes extends BaseController{
 
     public function generarReporteBajas(){
         if(in_array('Reporte de bajas', array_column($this->session->permisos, 'nombre'))){
-            $activos = $this->activosModel->select('activo.noActivo, activo.noSerie, activo.marca, activo.modelo, activo.fechaAlta ,activo.fechaBaja, usuario.nombre, usuario.apellidoP, usuario.apellidoM')
+            $activos = $this->activosModel->select('activo.noActivo, activo.noSerie, activo.marca, activo.modelo, activo.fechaAlta ,activo.fechaBaja, activo.observaciones, usuario.nombre, usuario.apellidoP, usuario.apellidoM')
                                             ->join('usuario', 'activo.usuarioBaja = usuario.idUsuario')
                                             ->onlyDeleted()
                                             ->find();
@@ -196,8 +247,9 @@ class Reportes extends BaseController{
                             ->setCellValue('C'.$currentRow, $activo['marca'])
                             ->setCellValue('D'.$currentRow, $activo['modelo'])
                             ->setCellValue('E'.$currentRow, $activo['fechaAlta'])
-                            ->setCellValue('F'.$currentRow, $activo['nombre']." ".$activo['apellidoP']." ".$activo['apellidoM'])
-                            ->setCellValue('G'.$currentRow, $activo['fechaBaja']);
+                            ->setCellValue('F'.$currentRow, $activo['observaciones'])
+                            ->setCellValue('G'.$currentRow, $activo['nombre']." ".$activo['apellidoP']." ".$activo['apellidoM'])
+                            ->setCellValue('H'.$currentRow, $activo['fechaBaja']);
                 $currentRow++;
             }
 

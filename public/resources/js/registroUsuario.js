@@ -26,7 +26,7 @@ function registrar(){
             dataType:"json",
             success: function(response){
                 document.getElementById('loader').classList.remove('loader');
-                if(response.type == "success"){
+                if(response.type == "success" ){
                     swal({
                         title: response.title,
                         text: response.mensaje,
@@ -46,6 +46,12 @@ function registrar(){
                     html+="</button></div>";
                     
                     $("#error").html(html);
+                }else{
+                    swal({
+                        title: response.title,
+                        text: response.mensaje,
+                        icon: response.type,
+                    });
                 }
             }
         });

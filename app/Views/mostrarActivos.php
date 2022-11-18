@@ -82,7 +82,7 @@
             <div class="tab-pane fade" id="Accesorios" role="tabpanel" aria-labelledby="Accesorios-tab">
                 <?php if($tipo == "Eliminar"):?>
                     <div class="float-left">
-                        <a class="btn btn-success" href="<?php echo base_url('/Reporte de activos/generar reporte')?>"><i class="fas fa-table"></i> Descargar excel</a>
+                        <a class="btn btn-success" href="<?php echo base_url('/Reporte de activos/generar reporte accesorios')?>"><i class="fas fa-table"></i> Descargar excel</a>
                     </div>
                 <?php endif?>
                 <div class="float-right d-flex">

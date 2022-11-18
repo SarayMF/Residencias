@@ -10,14 +10,14 @@ function inicio(){
 }
 
 function buscarActivo(noActivo){
-    document.getElementById('loader').classList.add('loader');
+    document.getElementById('loaderB').classList.add('loader');
     $.ajax({
         url: "buscarActivo",
         type:"POST",
         data: {noActivo:noActivo},
         dataType:"json",
         success:function(respuesta){
-            document.getElementById('loader').classList.remove('loader');
+            document.getElementById('loaderB').classList.remove('loader');
             $("#guardar").removeAttr("disabled");
 
             if(respuesta.type == "success"){
@@ -67,6 +67,7 @@ function buscarActivo(noActivo){
 }
 
 function guardarAsignacion(){
+    $('#loader').addClass('loader');
     var data = {
         'noActivo':$('#noActivo').val(),
         'usuarioAsignado':$('#idUsuario').val(),
@@ -78,6 +79,7 @@ function guardarAsignacion(){
         data: data,
         dataType:"json",
         success:function(respuesta){
+            $('#loader').removeClass('loader');
             if(respuesta.type == "success"){
                 swal({
                     title: respuesta.title,

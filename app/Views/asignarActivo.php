@@ -70,9 +70,10 @@
             </div>
             </div>
             <center>
-                <div id="loader" class=""></div>
+                <div id="loaderB" class=""></div>
             </center>
             <input type="hidden" id="idActivo" value="<?php if(isset($asignacion)) echo $asignacion["idActivo"]?>">
+            <input type="hidden" id="idUsuario" value="<?php if(isset($usuario)) echo $usuario["idUsuario"]?>">
 
             <?php if(isset($usuario)):?>
                 Usuario: 
@@ -100,6 +101,10 @@
                     </div>
                 </div>
             </div>
+
+            <center>
+                <div id="loader" class=""></div>
+            </center>
 
             <div class="float-right">
                 <button class="btn btn-primary" type="submit" id="guardar" disabled>Guardar</button>

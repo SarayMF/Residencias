@@ -89,6 +89,7 @@ $routes->post('/Mis activos/eliminarAsignacionActivo', 'Asignacion::deleteActivo
 $routes->post('/Mis activos/eliminarAsignacionAccesorio', 'Asignacion::deleteAccesorio');
 $routes->get('/Mis activos/generar reporte/(:any)', 'Reportes::generarReporteMisActivos/$1');
 $routes->post('/buscar', 'Registrar::obtenerNombres');
+$routes->get('/Reporte de activos/generar reporte accesorios', 'Reportes::generarReporteAccesorios');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

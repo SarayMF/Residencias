@@ -88,9 +88,13 @@
                 </div>
             </div>
 
+            <center>
+                <div id="loader" class=""></div>
+            </center>
+
             <div class="float-right">
                 <button class="btn btn-primary" type="submit" id="guardar">Guardar</button>
-                <a class="btn btn-danger" href="<?php if(!isset($usuario)){echo base_url('/Entrada de activos'); }else {echo base_url('/Registro de mis activos');} ?>" role="button">Cancelar</a>
+                <a class="btn btn-danger" href="<?php if(!isset($usuario)){echo base_url('/Asignar'); }else {echo base_url('/Mis activos');} ?>" role="button">Cancelar</a>
             </div>
         </form>
 

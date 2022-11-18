@@ -76,16 +76,25 @@ class Registrar extends BaseController{
                     'correo' => $this->request->getPost('correo'),
                 ];
                 if($this->usuarioModel->save($datos)){
-                    $link = $this->generarLinkTemporal($datos['curp']); //manda a llamar al metodo que genera un link
                     $correo = $datos['correo'];
-
-                    $this->enviarEmail($correo,$link); //se envia el link al correo registrado
+                    $idusuario=$this->usuarioModel->where('curp', $datos['curp'])->findColumn('idUsuario');
+                    $link = $this->generarLinkTemporal($datos['curp'], $idusuario[0]); //manda a llamar al metodo que genera un link*/
                     
-                    $data = array(
-                        "title" => "¡Registrado correctamente!",
-                        "type" => "success",
-                        "mensaje" => "Te hemos enviado un correo para completar tu registro",
-                    );
+                    if($this->enviarCorreo($correo,$link)){ //se envia el link al correo registrado
+                        $data = array(
+                            "title" => "¡Registrado correctamente!",
+                            "type" => "success",
+                            "mensaje" => "Te hemos enviado un correo para completar tu registro",
+                        );
+                    }else{
+                       $this->linkModel->where('idUsuario', $idusuario[0])->delete();
+                        $this->usuarioModel->where('curp', datos['curp']);
+                        $data = array(
+                            "title" => "¡No se envio el correo!",
+                            "type" => "warninng",
+                            "mensaje" => "Error al enviar correo. Verifique su conexión o reporte a TI.",
+                        );
+                    }
                     
                     echo json_encode($data);
                 }else{
@@ -136,49 +145,77 @@ class Registrar extends BaseController{
                 );
 
                 echo json_encode($data);
+            }else{
+                $data = array(
+                    "status" => "error"
+                );
+
+                echo json_encode($data);
             }
 
 
         }else return redirect()->to(base_url('/'));
     }
 
-    public function generarLinkTemporal($curp){
+    public function enviarCorreo($email, $link){
+        $curl = curl_init();
+        $fields = array('subject' => 'Completar registro', 'body' => $this->cuerpoEmail($link), 'addresses' => $email);
+        $fields_json = json_encode($fields);
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'http://187.191.30.131:4401/wsCurp/api/v1/mailer/sendMail',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => $fields_json,
+            CURLOPT_HTTPHEADER => array(
+                'Content-Type: application/json; charset= utf-8',
+                'Authorization: Bearer ',
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        curl_close($curl);
+        $response_arr = json_decode($response, true);
+
+        return $response_arr['ok'];
+    }
+
+    public function generarLinkTemporal($curp,$id){
         $cadena = $curp.rand(1,9999999).date('Y-m-d');
         $token = sha1($cadena);
-        $idusuario=$this->usuarioModel->where('curp', $curp)->findColumn('idUsuario');
         
         $datos = [
-            'idUsuario' => $idusuario[0],
+            'idUsuario' => $id,
             'token' => $token,
         ];
         
         $this->linkModel->save($datos);
 
-        $enlace = base_url().'/completarRegistro/'.$idusuario[0].'/'.$token;
+        $enlace = base_url().'/completarRegistro/'.$id.'/'.$token;
         return $enlace;
     }
 
-    public function enviarEmail( $email, $link ){
+    public function cuerpoEmail($link){
         $mensaje = '<html>
-        <head>
-        <title>Completar registro</title>
-        </head>
-        <body>
-        <p>Hemos recibido una petición para registrarte en el portal de activos juventudesGTO.</p>
-        <p>Si hiciste esta petición, haz clic en el siguiente enlace, si no hiciste esta petición puedes ignorar este correo.</p>
-        <p>Recuerda que el link dejara de funcionar en 12hrs</p>
-        <p>
-        <strong>Enlace para completar tu registro</strong><br>
-        <a href="'.$link.'"> Da clic aqui </a>
-        </p>
-        </body>
-        </html>';
+                        <head>
+                            <title>Completar registro</title>
+                        </head>
+                        <body style="font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif">
+                            
+                           <center>
+                             <div style="border: 5px solid #0361e2; box-shadow: 0px 0px 20px 4px #0361e2; padding:20px; border-radius: 10px; width: fit-content;">
+                                 <center><h2>Portal de gestión de activos </h2>
+                                 <p>Hemos recibido una petición para registrarte en el portal de activos juventudesGTO.</p>
+                                 <p>Si hiciste esta petición, haz clic <a href="'.$link.'"> aqui</a>, de lo contrario puedes ignorar este correo.</p>
+                                 <p>El link dejara de funcionar en 12hrs</p>
+                                 </center>
+                             </div>
+                           </center>
+                        </body>
+                    </html>';
          
-        $cabeceras = 'MIME-Version: 1.0' . "\r\n";
-        $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        $cabeceras .= 'From: smadrigal4935@gmail.com' . "\r\n";
-        // Se envia el correo al usuario
-        mail($email, "completar registro", $mensaje, $cabeceras);
+        return $mensaje;
     }
     
 }

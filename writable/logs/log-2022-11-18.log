@@ -72,3 +72,118 @@ in APPPATH\Views\templates\header.php on line 99.
  7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permisos))
  8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-18 11:09:17 --> Undefined variable $curp
+in APPPATH\Controllers\Registrar.php on line 80.
+ 1 APPPATH\Controllers\Registrar.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $curp', 'APPPATH\\Controllers\\Registrar.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-18 11:10:57 --> Undefined variable $curp
+in APPPATH\Controllers\Registrar.php on line 80.
+ 1 APPPATH\Controllers\Registrar.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $curp', 'APPPATH\\Controllers\\Registrar.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-18 12:15:08 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Registrar.php on line 173.
+ 1 APPPATH\Controllers\Registrar.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Registrar.php', 173)
+ 2 APPPATH\Controllers\Registrar.php(83): App\Controllers\Registrar->enviarCorreo('16240691@leon.tecnm.mx', 'http://localhost/ResidenciasSaray/public/completarRegistro/42/9e3616527e7892e460dac274d82d56583ffdcf5c')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-18 12:20:45 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Registrar.php on line 174.
+ 1 APPPATH\Controllers\Registrar.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Registrar.php', 174)
+ 2 APPPATH\Controllers\Registrar.php(83): App\Controllers\Registrar->enviarCorreo('16240691@leon.tecnm.mx', 'http://localhost/ResidenciasSaray/public/completarRegistro/43/f826db6a6573fcaabdd3b31b046e5a527609464f')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-18 12:22:10 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Registrar.php on line 174.
+ 1 APPPATH\Controllers\Registrar.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Registrar.php', 174)
+ 2 APPPATH\Controllers\Registrar.php(83): App\Controllers\Registrar->enviarCorreo('16240691@leon.tecnm.mx', 'http://localhost/ResidenciasSaray/public/completarRegistro/44/9684c410fab377e41cae24bac61c9b778e7c877d')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-18 12:26:44 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Registrar.php on line 173.
+ 1 APPPATH\Controllers\Registrar.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Registrar.php', 173)
+ 2 APPPATH\Controllers\Registrar.php(83): App\Controllers\Registrar->enviarCorreo('16240691@leon.tecnm.mx', 'http://localhost/ResidenciasSaray/public/completarRegistro/45/acda231c86ec93496669ec9316a79cc629c43537')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-18 12:28:28 --> Undefined variable $correo
+in APPPATH\Controllers\Registrar.php on line 83.
+ 1 APPPATH\Controllers\Registrar.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $correo', 'APPPATH\\Controllers\\Registrar.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-18 12:29:47 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Registrar.php on line 174.
+ 1 APPPATH\Controllers\Registrar.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Registrar.php', 174)
+ 2 APPPATH\Controllers\Registrar.php(83): App\Controllers\Registrar->enviarCorreo('16240691@leon.tecnm.mx', 'link')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-18 12:34:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Registrar.php on line 173.
+ 1 APPPATH\Controllers\Registrar.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Registrar.php', 173)
+ 2 APPPATH\Controllers\Registrar.php(83): App\Controllers\Registrar->enviarCorreo('16240691@leon.tecnm.mx', 'link')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-18 12:37:51 --> Undefined variable $data
+in APPPATH\Controllers\Registrar.php on line 94.
+ 1 APPPATH\Controllers\Registrar.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Registrar.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-18 12:44:50 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Registrar.php on line 139.
+ 1 APPPATH\Controllers\Registrar.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Registrar.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->obtenerNombres()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-18 12:52:24 --> Column 'usuarioAsignado' cannot be null
+CRITICAL - 2022-11-18 12:52:24 --> Column 'usuarioAsignado' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'47\', NULL, \'104\', \'\', \'2022-11-18 12:52:24\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'47\', NULL, \'104\', \'\', \'2022-11-18 12:52:24\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'47\', NULL, \'104\', \'\', \'2022-11-18 12:52:24\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (:usuarioAsigna:, :usuarioAsignado:, :idActivo:, :observaciones:, :fechaAsignacion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Asignacion.php(253): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-18 12:53:53 --> Column 'usuarioAsignado' cannot be null
+CRITICAL - 2022-11-18 12:53:53 --> Column 'usuarioAsignado' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'47\', NULL, \'104\', \'\', \'2022-11-18 12:53:53\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'47\', NULL, \'104\', \'\', \'2022-11-18 12:53:53\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (\'47\', NULL, \'104\', \'\', \'2022-11-18 12:53:53\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `asignacion` (`usuarioAsigna`, `usuarioAsignado`, `idActivo`, `observaciones`, `fechaAsignacion`) VALUES (:usuarioAsigna:, :usuarioAsignado:, :idActivo:, :observaciones:, :fechaAsignacion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Asignacion.php(253): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
