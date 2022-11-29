@@ -8,11 +8,11 @@ CREATE TABLE Usuario(
  nombre VARCHAR(50) NOT NULL,
  apellidoP VARCHAR(40) NOT NULL,
  apellidoM VARCHAR(40) NOT NULL,
- puesto VARCHAR(40) NOT NULL,
- area VARCHAR(40) NOT NULL,
+ idPuesto VARCHAR(40) NOT NULL,
  correo VARCHAR(100) NOT NULL UNIQUE,
  password VARCHAR(255),
- CONSTRAINT PK_Usuario PRIMARY KEY (idUsuario)
+ CONSTRAINT PK_Usuario PRIMARY KEY (idUsuario),
+ CONSTRAINT FK_UsuarioPuesto FOREIGN KEY (idPuesto) REFERENCES puestos(idPuesto)
 );
 
 CREATE TABLE linkPassword(

@@ -35,27 +35,24 @@
                     <input type="text" class="form-control" name="apellidoM" value="<?= set_value('apellidoM') ?>" id="apellidoM" placeholder="Apellido materno" aria-label="apellidoMaterno" aria-describedby="basic-addon1" readonly>
                 </div>
 
-                <div class="input-group mb-3 puesto">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="puesto"><i class="fa fa-building"></i></label>
-                    </div>
-                    <select class="custom-select" name="puesto" id="puesto" required>
-                        <option disabled="disabled" value="" selected>Selecciona puesto</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-
                 <div class="input-group mb-3 area">
                     <div class="input-group-prepend">
                         <label class="input-group-text" for="area"><i class="fa fa-briefcase"></i></label>
                     </div>
                     <select class="custom-select" name="area" id="area" required>
-                        <option disabled="disabled" value="" selected>Selecciona area</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option disabled="disabled" selected>Selecciona area</option>
+                        <?php foreach($areas as $a):?>
+                            <option value="<?php echo $a['idArea']?>"><?php echo $a['area']?></option>
+                        <?php endforeach?>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3 puesto">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="puesto"><i class="fa fa-building"></i></label>
+                    </div>
+                    <select class="custom-select" name="puesto" id="puesto" required>
+                        <option disabled="disabled" selected>Selecciona puesto</option>
                     </select>
                 </div>
 
@@ -82,7 +79,7 @@
             </div>
             <br>
             <div class="center">
-                <button type="submit" class="btn btn-primary center save-data">Registrarme</button>
+                <button type="submit" id="submit" class="btn btn-primary center save-data">Registrarme</button>
             </div>
         </form>
     </div>

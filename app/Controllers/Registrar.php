@@ -5,6 +5,8 @@ use App\Models\UsuarioModel;
 use App\Models\CustomModel;
 use App\Models\LinkModel;
 use App\Models\PermisosUsuarioModel;
+use App\Models\AreaModel;
+use App\Models\PuestoModel;
 
 class Registrar extends BaseController{
 
@@ -12,6 +14,8 @@ class Registrar extends BaseController{
     private $linkModel;
     private $usuarioModel;
     private $permisoModel;
+    private $areaModel;
+    private $puestoModel;
     
     public function __construct(){
         helper(['form']);
@@ -19,6 +23,8 @@ class Registrar extends BaseController{
         $this->linkModel = new LinkModel();
         $this->usuarioModel = new UsuarioModel();
         $this->permisoModel = new PermisosUsuarioModel();
+        $this->areaModel = new AreaModel();
+        $this->puestoModel = new PuestoModel();
     }
 
     public function completar($id, $token){
@@ -105,8 +111,10 @@ class Registrar extends BaseController{
                     echo json_encode($data);
                 }
             }else{
+                    'areas' => $this->areaModel->findAll()
+                ];
                 echo view('templates/header');
-                echo view('register');
+                echo view('register',$datos);
                 echo view('templates/footer');
                 echo view('templates/footer_js');
             }
@@ -154,6 +162,16 @@ class Registrar extends BaseController{
             }
 
 
+        }else return redirect()->to(base_url('/'));
+    }
+
+    public function obtenerPuestos(){
+        if($this->request->isAJAX()){
+           $idArea = $this->request->getPost('idArea');
+
+           $puestos = $this->puestoModel->where('idArea', $idArea)->findAll();
+
+           return json_encode($puestos);
         }else return redirect()->to(base_url('/'));
     }
 

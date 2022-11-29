@@ -1,6 +1,7 @@
 $(document).ready(inicio);
 
 function inicio(){
+    $('#area').change(function(){buscarPuestos($(this).val())});
     $('#buscar').click(function(){buscarUsuario();});
     $('#curp').blur(function(){buscarUsuario();});
     registrar();
@@ -16,7 +17,6 @@ function registrar(){
             'apellidoP':$('#apellidoP').val(),
             'apellidoM':$('#apellidoM').val(),
             'puesto':$('#puesto').val(),
-            'area':$('#area').val(),
             'correo':$('#correo').val(),
         };
         $.ajax({
@@ -61,6 +61,7 @@ function registrar(){
 function buscarUsuario(){
     curp = $('#curp').val(); 
     $('#loader').addClass('loader');
+    $('#submit').prop('disabled',true);
     $.ajax({
         url: 'buscar',
         type: 'POST',
@@ -68,6 +69,7 @@ function buscarUsuario(){
         dataType:"json",
         success: function(response){
             $('#loader').removeClass('loader');
+            $('#submit').prop('disabled',false);
             if(response.status == "success"){
                 $('#nombre').val(response.nombre);
                 $('#apellidoP').val(response.apellidoP);
@@ -76,6 +78,26 @@ function buscarUsuario(){
                 $('#nombre').val("");
                 $('#apellidoP').val("");
                 $('#apellidoM').val("");
+            }
+        }
+    });
+}
+
+function buscarPuestos(id){
+    $.ajax({
+        url: 'buscarPuesto',
+        type: 'POST',
+        data: {idArea:id},
+        dataType:"json",
+        success: function(response){
+            var len = response.length;
+
+            $("#puesto").empty();
+            $("#puesto").append("<option disabled='disabled' selected>Selecciona puesto</option>");
+            for( var i = 0; i<len; i++){
+                var id = response[i]['idPuesto'];
+                var name = response[i]['puesto'];
+                $("#puesto").append("<option value='"+id+"'>"+name+"</option>");
             }
         }
     });

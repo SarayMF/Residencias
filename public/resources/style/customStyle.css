@@ -60,12 +60,12 @@
     grid-row: 3;
 }
 
-.grid-form .puesto{
+.grid-form .area{
     grid-column: 1/4;
     grid-row: 4;
 }
 
-.grid-form .area{
+.grid-form .puesto{
     grid-column: 4/7;
     grid-row: 4;
 }
