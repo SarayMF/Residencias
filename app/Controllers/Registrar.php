@@ -78,7 +78,6 @@ class Registrar extends BaseController{
                     'apellidoP' => $this->request->getPost('apellidoP'),
                     'apellidoM' => $this->request->getPost('apellidoM'),
                     'puesto' => $this->request->getPost('puesto'),
-                    'area' => $this->request->getPost('area'),
                     'correo' => $this->request->getPost('correo'),
                 ];
                 if($this->usuarioModel->save($datos)){
@@ -111,6 +110,7 @@ class Registrar extends BaseController{
                     echo json_encode($data);
                 }
             }else{
+                $datos = [
                     'areas' => $this->areaModel->findAll()
                 ];
                 echo view('templates/header');
