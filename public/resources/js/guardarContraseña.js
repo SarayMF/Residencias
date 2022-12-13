@@ -30,6 +30,7 @@ function inicio(){
                 }
             });
         }else{
+            document.getElementById('loader').classList.remove('loader');
             html="<div class='alert alert-danger alert-dismissible fade show' role='alert'>";
             html+="<p class='error-form-validation'>Las contraseñas no coinciden</p>";
             html+="<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";

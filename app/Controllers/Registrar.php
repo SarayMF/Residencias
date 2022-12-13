@@ -77,7 +77,7 @@ class Registrar extends BaseController{
                     'nombre' => $this->request->getPost('nombre'),
                     'apellidoP' => $this->request->getPost('apellidoP'),
                     'apellidoM' => $this->request->getPost('apellidoM'),
-                    'puesto' => $this->request->getPost('puesto'),
+                    'idPuesto' => $this->request->getPost('puesto'),
                     'correo' => $this->request->getPost('correo'),
                 ];
                 if($this->usuarioModel->save($datos)){

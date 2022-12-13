@@ -7,7 +7,7 @@ class UsuarioModel extends Model
     protected $table      = 'usuario';
     protected $primaryKey = 'idUsuario';
 
-    protected $allowedFields = ['curp', 'nombre', 'apellidoP', 'apellidoM', 'puesto', 'correo', 'password'];
+    protected $allowedFields = ['curp', 'nombre', 'apellidoP', 'apellidoM', 'idPuesto', 'correo', 'password'];
 
     protected $validationRules = [
         'nombre' => 'required',

@@ -84,6 +84,7 @@ function buscarUsuario(){
 }
 
 function buscarPuestos(id){
+    $('#puesto').prop('disabled',true);
     $.ajax({
         url: 'buscarPuesto',
         type: 'POST',
@@ -92,6 +93,7 @@ function buscarPuestos(id){
         success: function(response){
             var len = response.length;
 
+            $('#puesto').prop('disabled',false);
             $("#puesto").empty();
             $("#puesto").append("<option disabled='disabled' selected>Selecciona puesto</option>");
             for( var i = 0; i<len; i++){

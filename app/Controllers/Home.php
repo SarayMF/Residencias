@@ -51,40 +51,49 @@ class Home extends BaseController
     }
 
     public function attemptLogin(){
-        $email = trim($this->request->getPost('correo'));
-        $contraseña = trim($this->request->getPost('contraseña'));
+        if($this->request->isAJAX()){
+            $email = trim($this->request->getPost('correo'));
+            $contraseña = trim($this->request->getPost('contraseña'));
 
-        $datosUsuario = $this->usuarioModel->where('correo', $email)->first();
+            $datosUsuario = $this->usuarioModel->where('correo', $email)->first();
 
-        if(count($datosUsuario) > 0){
-            if(isset($datosUsuario['password'])){
-                if(password_verify($contraseña, $datosUsuario['password'])){
-                    $data = [
-                        "idUsuario" => $datosUsuario['idUsuario'],    
-                        "permisos" => $this->permisoModel->select('permisos.nombre')
-                                                         ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
-                                                         ->where('permisosusuario.idUsuario', $datosUsuario['idUsuario'])     
-                                                         ->findAll()       
-                    ];
-        
-                    $session = session();
-                    $session->set($data);
-                    return redirect()->to(base_url('/'));
+            if(count($datosUsuario) > 0){
+                if(isset($datosUsuario['password'])){
+                    if(password_verify($contraseña, $datosUsuario['password'])){
+                        $data = [
+                            "idUsuario" => $datosUsuario['idUsuario'],    
+                            "permisos" => $this->permisoModel->select('permisos.nombre')
+                                                            ->join('permisos', 'permisos.idPermiso = permisosusuario.idPermiso')
+                                                            ->where('permisosusuario.idUsuario', $datosUsuario['idUsuario'])     
+                                                            ->findAll()       
+                        ];
+            
+                        $session = session();
+                        $session->set($data);
+                        $respuesta = array(
+                            "type" => "success"
+                        );
+                    }else{
+                        $respuesta = array(
+                            "type" => "error",
+                            "msg" => "Credenciales invalidas"
+                        );
+                    }
                 }else{
-                    return redirect()->to(base_url('/'))->with('msg', [
-                        'body' => 'Credenciales invalidas',
-                    ]);
+                    $respuesta = array(
+                        "type" => "error",
+                        "msg" => "Aun no has completado tu registro"
+                    );
                 }
             }else{
-                return redirect()->to(base_url('/'))->with('msg', [
-                    'body' => 'Aun no has completado tu registro',
-                ]);
+                $respuesta = array(
+                    "type" => "error",
+                    "msg" => "Este usuario no se encuentra resigtrado en el sistema"          
+                );
             }
+            echo json_encode($respuesta);
         }else{
-            return redirect()->to(base_url('/'))->with('msg', [
-                'body' => 'Este usuario no se encuentra resigtrado en el sistema',
-            ]);
+            return redirect()->to(base_url('/'));
         }
-
     }
 }
