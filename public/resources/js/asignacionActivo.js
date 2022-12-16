@@ -33,6 +33,7 @@ function guardarAsignacion(){
                 }).then((value) => {  
                     var array = window.location.pathname.split( '/' );
                     array.pop();    
+                    array.pop(); 
                     window.location.replace(window.location.origin + array.join("/"));
                 });
             }

@@ -24,15 +24,10 @@
                     <p class="text-muted">¿No tienes cuenta? <a href="<?php echo base_url('registro')?>">Registrate aqui</a></p>
                 </div>
 
-                <?php if (session('msg')): ?>
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <p class="error-form-validation"><?= session('msg.body') ?></p>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                <?php endif ?>
+                <div id="alerta">
 
+                </div>
+                
                 <div class="center">
                     <button type="submit" class="btn btn-primary center">Acceder</button>
                 </div>

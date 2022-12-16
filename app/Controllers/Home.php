@@ -57,7 +57,7 @@ class Home extends BaseController
 
             $datosUsuario = $this->usuarioModel->where('correo', $email)->first();
 
-            if(count($datosUsuario) > 0){
+            if(!is_null($datosUsuario)){
                 if(isset($datosUsuario['password'])){
                     if(password_verify($contraseña, $datosUsuario['password'])){
                         $data = [
@@ -76,18 +76,21 @@ class Home extends BaseController
                     }else{
                         $respuesta = array(
                             "type" => "error",
+                            "div" => "danger",
                             "msg" => "Credenciales invalidas"
                         );
                     }
                 }else{
                     $respuesta = array(
                         "type" => "error",
+                        "div" => "warning",
                         "msg" => "Aun no has completado tu registro"
                     );
                 }
             }else{
                 $respuesta = array(
                     "type" => "error",
+                    "div" => "danger",
                     "msg" => "Este usuario no se encuentra resigtrado en el sistema"          
                 );
             }

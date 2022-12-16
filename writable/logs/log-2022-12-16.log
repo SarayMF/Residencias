@@ -1,0 +1,48 @@
+CRITICAL - 2022-12-16 12:31:05 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Controllers\Home.php on line 60.
+ 1 APPPATH\Controllers\Home.php(60): count(null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->attemptLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 12:31:15 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Controllers\Home.php on line 60.
+ 1 APPPATH\Controllers\Home.php(60): count(null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->attemptLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 12:32:07 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Controllers\Home.php on line 60.
+ 1 APPPATH\Controllers\Home.php(60): count(null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->attemptLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 12:56:30 --> Undefined constant "App\Controllers\datos"
+in APPPATH\Controllers\Registrar.php on line 96.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Registrar->registro()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 14:26:29 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Asignacion.php on line 255.
+ 1 APPPATH\Controllers\Asignacion.php(255): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Asignacion.php', 255)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 14:30:40 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Asignacion.php on line 255.
+ 1 APPPATH\Controllers\Asignacion.php(255): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Asignacion.php', 255)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 14:32:50 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Asignacion.php on line 255.
+ 1 APPPATH\Controllers\Asignacion.php(255): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Asignacion.php', 255)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Asignacion->createActivo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Asignacion))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
